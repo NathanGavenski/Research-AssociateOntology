@@ -1,0 +1,10 @@
+extract:
+  host: http://localhost:11434
+  model: qwen3.5:9b
+  think: true
+  temperature: 0
+  num_ctx: 16384
+  num_predict: 8192
+  prompt: prompts/extract.md
+  chunks_dir: data/chunks
+  out_dir: data/extracted

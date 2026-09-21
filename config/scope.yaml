@@ -1,0 +1,27 @@
+articles:
+  - 3        # Definitions
+  - 5        # Prohibited AI practices
+  - 6        # High-risk classification rules
+  - 8        # Requirements for high-risk systems (8-15)
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16       # Provider obligations
+  - 17       # Quality management system
+  - 26       # Deployer obligations
+  - 27       # Fundamental rights impact assessment
+  - 50       # Transparency obligations
+  - 51       # General-purpose AI models (51-55)
+  - 52
+  - 53
+  - 54
+  - 55
+  - 64       # AI Office
+  - 70       # National competent authorities
+annexes:
+  - I        # Union harmonisation legislation
+  - III      # High-risk areas
