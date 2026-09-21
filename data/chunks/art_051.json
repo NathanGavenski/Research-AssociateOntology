@@ -1,0 +1,50 @@
+{
+  "id": "art_51",
+  "type": "article",
+  "article_number": "51",
+  "title": "Classification of general-purpose AI models as general-purpose AI models with systemic risk",
+  "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_51/oj",
+  "paragraphs": [
+    {
+      "ref": "51(1)",
+      "number": 1,
+      "text": "A general-purpose AI model shall be classified as a general-purpose AI model with systemic risk if it meets any of the following conditions:",
+      "subparagraphs": [],
+      "points": [
+        {
+          "ref": "51(1)(a)",
+          "label": "a",
+          "text": "it has high impact capabilities evaluated on the basis of appropriate technical tools and methodologies, including indicators and benchmarks;",
+          "points": []
+        },
+        {
+          "ref": "51(1)(b)",
+          "label": "b",
+          "text": "based on a decision of the Commission, ex officio or following a qualified alert from the scientific panel, it has capabilities or an impact equivalent to those set out in point (a) having regard to the criteria set out in Annex XIII.",
+          "points": []
+        }
+      ]
+    },
+    {
+      "ref": "51(2)",
+      "number": 2,
+      "text": "A general-purpose AI model shall be presumed to have high impact capabilities pursuant to paragraph 1, point (a), when the cumulative amount of computation used for its training measured in floating point operations is greater than 1025.",
+      "subparagraphs": [],
+      "points": []
+    },
+    {
+      "ref": "51(3)",
+      "number": 3,
+      "text": "The Commission shall adopt delegated acts in accordance with Article 97 to amend the thresholds listed in paragraphs 1 and 2 of this Article, as well as to supplement benchmarks and indicators in light of evolving technological developments, such as algorithmic improvements or increased hardware efficiency, when necessary, for these thresholds to reflect the state of the art.",
+      "subparagraphs": [],
+      "points": []
+    }
+  ],
+  "text": "Article 51 Classification of general-purpose AI models as general-purpose AI models with systemic risk 1. A general-purpose AI model shall be classified as a general-purpose AI model with systemic risk if it meets any of the following conditions: (a) it has high impact capabilities evaluated on the basis of appropriate technical tools and methodologies, including indicators and benchmarks; (b) based on a decision of the Commission, ex officio or following a qualified alert from the scientific panel, it has capabilities or an impact equivalent to those set out in point (a) having regard to the criteria set out in Annex XIII. 2. A general-purpose AI model shall be presumed to have high impact capabilities pursuant to paragraph 1, point (a), when the cumulative amount of computation used for its training measured in floating point operations is greater than 1025. 3. The Commission shall adopt delegated acts in accordance with Article 97 to amend the thresholds listed in paragraphs 1 and 2 of this Article, as well as to supplement benchmarks and indicators in light of evolving technological developments, such as algorithmic improvements or increased hardware efficiency, when necessary, for these thresholds to reflect the state of the art.",
+  "metadata": {
+    "source_url": "http://publications.europa.eu/resource/celex/32024R1689",
+    "celex": "32024R1689",
+    "retrieved_at": "2026-09-21T13:03:23+00:00",
+    "sha256": "8f0b656302f9864cc87e040c371f209a9d65ae1a6cecc25ca5eb737e872d721a"
+  }
+}

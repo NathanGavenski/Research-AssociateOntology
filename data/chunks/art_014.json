@@ -1,0 +1,97 @@
+{
+  "id": "art_14",
+  "type": "article",
+  "article_number": "14",
+  "title": "Human oversight",
+  "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_14/oj",
+  "paragraphs": [
+    {
+      "ref": "14(1)",
+      "number": 1,
+      "text": "High-risk AI systems shall be designed and developed in such a way, including with appropriate human-machine interface tools, that they can be effectively overseen by natural persons during the period in which they are in use.",
+      "subparagraphs": [],
+      "points": []
+    },
+    {
+      "ref": "14(2)",
+      "number": 2,
+      "text": "Human oversight shall aim to prevent or minimise the risks to health, safety or fundamental rights that may emerge when a high-risk AI system is used in accordance with its intended purpose or under conditions of reasonably foreseeable misuse, in particular where such risks persist despite the application of other requirements set out in this Section.",
+      "subparagraphs": [],
+      "points": []
+    },
+    {
+      "ref": "14(3)",
+      "number": 3,
+      "text": "The oversight measures shall be commensurate with the risks, level of autonomy and context of use of the high-risk AI system, and shall be ensured through either one or both of the following types of measures:",
+      "subparagraphs": [],
+      "points": [
+        {
+          "ref": "14(3)(a)",
+          "label": "a",
+          "text": "measures identified and built, when technically feasible, into the high-risk AI system by the provider before it is placed on the market or put into service;",
+          "points": []
+        },
+        {
+          "ref": "14(3)(b)",
+          "label": "b",
+          "text": "measures identified by the provider before placing the high-risk AI system on the market or putting it into service and that are appropriate to be implemented by the deployer.",
+          "points": []
+        }
+      ]
+    },
+    {
+      "ref": "14(4)",
+      "number": 4,
+      "text": "For the purpose of implementing paragraphs 1, 2 and 3, the high-risk AI system shall be provided to the deployer in such a way that natural persons to whom human oversight is assigned are enabled, as appropriate and proportionate:",
+      "subparagraphs": [],
+      "points": [
+        {
+          "ref": "14(4)(a)",
+          "label": "a",
+          "text": "to properly understand the relevant capacities and limitations of the high-risk AI system and be able to duly monitor its operation, including in view of detecting and addressing anomalies, dysfunctions and unexpected performance;",
+          "points": []
+        },
+        {
+          "ref": "14(4)(b)",
+          "label": "b",
+          "text": "to remain aware of the possible tendency of automatically relying or over-relying on the output produced by a high-risk AI system (automation bias), in particular for high-risk AI systems used to provide information or recommendations for decisions to be taken by natural persons;",
+          "points": []
+        },
+        {
+          "ref": "14(4)(c)",
+          "label": "c",
+          "text": "to correctly interpret the high-risk AI system’s output, taking into account, for example, the interpretation tools and methods available;",
+          "points": []
+        },
+        {
+          "ref": "14(4)(d)",
+          "label": "d",
+          "text": "to decide, in any particular situation, not to use the high-risk AI system or to otherwise disregard, override or reverse the output of the high-risk AI system;",
+          "points": []
+        },
+        {
+          "ref": "14(4)(e)",
+          "label": "e",
+          "text": "to intervene in the operation of the high-risk AI system or interrupt the system through a ‘stop’ button or a similar procedure that allows the system to come to a halt in a safe state.",
+          "points": []
+        }
+      ]
+    },
+    {
+      "ref": "14(5)",
+      "number": 5,
+      "text": "For high-risk AI systems referred to in point 1(a) of Annex III, the measures referred to in paragraph 3 of this Article shall be such as to ensure that, in addition, no action or decision is taken by the deployer on the basis of the identification resulting from the system unless that identification has been separately verified and confirmed by at least two natural persons with the necessary competence, training and authority.",
+      "subparagraphs": [
+        "The requirement for a separate verification by at least two natural persons shall not apply to high-risk AI systems used for the purposes of law enforcement, migration, border control or asylum, where Union or national law considers the application of this requirement to be disproportionate."
+      ],
+      "points": []
+    }
+  ],
+  "text": "Article 14 Human oversight 1. High-risk AI systems shall be designed and developed in such a way, including with appropriate human-machine interface tools, that they can be effectively overseen by natural persons during the period in which they are in use. 2. Human oversight shall aim to prevent or minimise the risks to health, safety or fundamental rights that may emerge when a high-risk AI system is used in accordance with its intended purpose or under conditions of reasonably foreseeable misuse, in particular where such risks persist despite the application of other requirements set out in this Section. 3. The oversight measures shall be commensurate with the risks, level of autonomy and context of use of the high-risk AI system, and shall be ensured through either one or both of the following types of measures: (a) measures identified and built, when technically feasible, into the high-risk AI system by the provider before it is placed on the market or put into service; (b) measures identified by the provider before placing the high-risk AI system on the market or putting it into service and that are appropriate to be implemented by the deployer. 4. For the purpose of implementing paragraphs 1, 2 and 3, the high-risk AI system shall be provided to the deployer in such a way that natural persons to whom human oversight is assigned are enabled, as appropriate and proportionate: (a) to properly understand the relevant capacities and limitations of the high-risk AI system and be able to duly monitor its operation, including in view of detecting and addressing anomalies, dysfunctions and unexpected performance; (b) to remain aware of the possible tendency of automatically relying or over-relying on the output produced by a high-risk AI system (automation bias), in particular for high-risk AI systems used to provide information or recommendations for decisions to be taken by natural persons; (c) to correctly interpret the high-risk AI system’s output, taking into account, for example, the interpretation tools and methods available; (d) to decide, in any particular situation, not to use the high-risk AI system or to otherwise disregard, override or reverse the output of the high-risk AI system; (e) to intervene in the operation of the high-risk AI system or interrupt the system through a ‘stop’ button or a similar procedure that allows the system to come to a halt in a safe state. 5. For high-risk AI systems referred to in point 1(a) of Annex III, the measures referred to in paragraph 3 of this Article shall be such as to ensure that, in addition, no action or decision is taken by the deployer on the basis of the identification resulting from the system unless that identification has been separately verified and confirmed by at least two natural persons with the necessary competence, training and authority. The requirement for a separate verification by at least two natural persons shall not apply to high-risk AI systems used for the purposes of law enforcement, migration, border control or asylum, where Union or national law considers the application of this requirement to be disproportionate.",
+  "metadata": {
+    "source_url": "http://publications.europa.eu/resource/celex/32024R1689",
+    "celex": "32024R1689",
+    "retrieved_at": "2026-09-21T13:03:23+00:00",
+    "sha256": "8f0b656302f9864cc87e040c371f209a9d65ae1a6cecc25ca5eb737e872d721a"
+  }
+}
