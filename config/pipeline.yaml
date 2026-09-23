@@ -1,10 +1,62 @@
 extract:
   host: http://localhost:11434
-  model: qwen3.5:9b
+  model: qwen3.5:4b
   think: true
   temperature: 0
-  num_ctx: 16384
-  num_predict: 8192
+  num_ctx: 40960                 # number of tokens to keep in context; decrease to ~16384 if think is false
+  num_predict: 32768             # includes thinking tokens; decrease to ~8192 if think is false
   prompt: prompts/extract.md
   chunks_dir: data/chunks
   out_dir: data/extracted
+
+verify:
+  host: http://localhost:11434
+  model: qwen3.5:4b
+  think: false                   # true took ~460s and ~5k tokens per record on an RTX 5050, vs ~11s off
+  temperature: 0
+  num_ctx: 40960                 # number of tokens to keep in context; raise to ~16384 if think is false 
+  num_predict: 32768             # includes thinking tokens; raise to ~2048 if think is false
+  prompt: prompts/critic.md
+  fuzzy_threshold: 95            # min rapidfuzz partial ratio when the quote is not an exact match
+  dedup_threshold: 90            # min term similarity to merge records of the same type and bearer
+  chunks_dir: data/chunks
+  in_dir: data/extracted
+  out_dir: data/verified
+
+curate:
+  in_file: data/verified/entities.jsonl
+  out_dir: data/curated          # decisions.jsonl (append-only log) and entities.json (source of truth for S6)
+  chunks_dir: data/chunks
+
+build:
+  in_file: data/curated/entities.json
+  namespaces: config/namespaces.yaml
+  core: ontology/aiact-core.ttl
+  alignments: ontology/aiact-alignments.ttl
+  out_ttl: ontology/aiact-generated.ttl
+  out_owl: ontology/aiact-merged.owl
+  robot: robot                   # ROBOT is used when on PATH; rdflib writes the RDF/XML otherwise
+
+validate:
+  ontology: ontology/aiact-merged.owl
+  examples: ontology/examples.ttl
+  shapes: shapes/aiact-shapes.ttl
+  combined: ontology/aiact-with-examples.ttl
+  out_dir: reports
+  engine: auto                   # auto uses ROBOT (local, else the Docker image), python falls back to owlrl
+  robot: robot
+  docker_image: obolibrary/robot
+  reasoner: hermit
+
+evaluate:
+  ontology: ontology/aiact-merged.owl
+  examples: ontology/examples.ttl
+  core: ontology/aiact-core.ttl
+  alignments: ontology/aiact-alignments.ttl
+  queries: queries
+  extracted: data/extracted
+  verified: data/verified
+  curated: data/curated
+  gold: data/gold
+  validation: reports/validation.json
+  out_file: reports/metrics.json

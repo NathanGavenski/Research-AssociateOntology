@@ -1,0 +1,17 @@
+# CQ6: Which AI systems are prohibited or high-risk, and why?
+#
+# This is the only competency question that needs a reasoner: the risk class of each example system
+# is inferred from the practice it uses or the area it is used in, never asserted. Run it against
+# ontology/aiact-with-examples.ttl after reasoning (S7 writes reports/.work/reasoned.owl).
+PREFIX aiact: <https://w3id.org/aiact-poc#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?system ?label ?riskClass ?reason
+WHERE {
+  VALUES ?riskClass { aiact:ProhibitedAISystem aiact:AnnexIIIHighRiskAISystem }
+  ?system a ?riskClass ;
+          rdfs:label ?label .
+  OPTIONAL { ?system aiact:usesPractice ?reason }
+  OPTIONAL { ?system aiact:usedInArea ?reason }
+}
+ORDER BY ?riskClass ?label

@@ -19,3 +19,8 @@ class ExtractedEntity(BaseModel):
 
 class ExtractionResult(BaseModel):
     entities: list[ExtractedEntity]
+
+
+class CriticVerdict(BaseModel):
+    reason: str                    # one or two sentences, written before the verdict
+    verdict: Literal["supported", "partially", "unsupported"]

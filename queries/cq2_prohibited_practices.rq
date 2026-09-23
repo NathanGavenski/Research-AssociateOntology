@@ -1,0 +1,12 @@
+# CQ2: Which AI practices does the Act prohibit, and which article prohibits each one?
+PREFIX aiact: <https://w3id.org/aiact-poc#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?practice ?label ?article ?quote
+WHERE {
+  ?practice a aiact:ProhibitedPractice ;
+            rdfs:label ?label ;
+            aiact:articleRef ?article ;
+            aiact:sourceQuote ?quote .
+}
+ORDER BY ?article

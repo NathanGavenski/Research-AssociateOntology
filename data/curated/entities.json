@@ -1,0 +1,3873 @@
+[
+  {
+    "id": "0d02ef5a0681",
+    "term": "AI system",
+    "entity_type": "AISystemCategory",
+    "label": "AI system",
+    "definition": "A machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(1)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "44861c7b8713",
+    "term": "AI System Generating Deepfake Content",
+    "entity_type": "AISystemCategory",
+    "label": "AI system that generates or manipulates image, audio or video content constituting a deep fake",
+    "definition": "AI systems that generate or manipulate image, audio or video content constituting a deep fake.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 50(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(4)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "AI system that generates or manipulates image, audio or video content constituting a deep fake"
+      }
+    ],
+    "confidence": 0.9,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "088b300ac2d9",
+    "term": "AI System Generating Public Interest Text",
+    "entity_type": "AISystemCategory",
+    "label": "AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest",
+    "definition": "AI systems that generate or manipulate text which is published with the purpose of informing the public on matters of public interest.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 50(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(4)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest"
+      }
+    ],
+    "confidence": 0.9,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "029515d459ea",
+    "term": "AI Systems Generating Synthetic Content",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems generating synthetic audio, image, video or text content",
+    "definition": "AI systems that generate synthetic audio, image, video or text content.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 50(2)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(2)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "generating synthetic audio, image, video or text content"
+      }
+    ],
+    "confidence": 0.9,
+    "critic_verdict": "unsupported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "836b5850bb87",
+    "term": "AI Systems Intended to Interact Directly with Natural Persons",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to interact directly with natural persons",
+    "definition": "AI systems intended to interact directly with natural persons.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 50(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(1)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "AI systems intended to interact directly with natural persons"
+      }
+    ],
+    "confidence": 0.9,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "941f216fb89b",
+    "term": "Asylum Application Examination Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assist competent public authorities for the examination of applications for asylum, visa or residence permits and for associated complaints with regard to the eligibility of the natural persons applying for a status",
+    "definition": "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assist competent public authorities for the examination of applications for asylum, visa or residence permits and for associated complaints with regard to the eligibility of the natural persons applying for a status, including related assessments of the reliability of evidence.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(7)(c)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(7)(c)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assist competent public authorities for the examination of applications for asylum, visa or residence permits and for associated complaints with regard to the eligibility of the natural persons applying for a status, including related assessments of the reliability of evidence;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "247110d0fd48",
+    "term": "biometric categorisation system",
+    "entity_type": "AISystemCategory",
+    "label": "biometric categorisation system",
+    "definition": "An AI system for the purpose of assigning natural persons to specific categories on the basis of their biometric data, unless it is ancillary to another commercial service and strictly necessary for objective technical reasons.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(1)(b)",
+      "Art. 3(40)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(1)(b)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used for biometric categorisation, according to sensitive or protected attributes or characteristics based on the inference of those attributes or characteristics;"
+      },
+      {
+        "article_ref": "Art. 3(40)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means an AI system for the purpose of assigning natural persons to specific categories on the basis of their biometric data, unless it is ancillary to another commercial service and strictly necessary for objective technical reasons;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "89d00f885e15",
+    "term": "Creditworthiness Evaluation Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score",
+    "definition": "AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score, with the exception of AI systems used for the purpose of detecting financial fraud.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(5)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(5)(b)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score, with the exception of AI systems used for the purpose of detecting financial fraud;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "349563e20b0c",
+    "term": "Criminal Profiling Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 in the course of the detection, investigation or prosecution of criminal offences",
+    "definition": "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 in the course of the detection, investigation or prosecution of criminal offences.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(6)(e)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(6)(e)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 in the course of the detection, investigation or prosecution of criminal offences."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "7cb33b1630d1",
+    "term": "Criminal Risk Assessment Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies in support of law enforcement authorities or on their behalf to assess the risk of a natural person becoming the victim of criminal offences",
+    "definition": "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies in support of law enforcement authorities or on their behalf to assess the risk of a natural person becoming the victim of criminal offences.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(6)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(6)(a)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies in support of law enforcement authorities or on their behalf to assess the risk of a natural person becoming the victim of criminal offences;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "5450164f51b3",
+    "term": "Education Access Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used to determine access or admission",
+    "definition": "AI systems intended to be used to determine access or admission or to assign natural persons to educational and vocational training institutions.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(3)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(3)(a)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used to determine access or admission or to assign natural persons to educational and vocational training institutions at all levels;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "2f3bc77dd12e",
+    "term": "Education Level Assessment Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used for the purpose of assessing the appropriate level of education",
+    "definition": "AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or will be able to access.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(3)(c)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(3)(c)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or will be able to access, in the context of or within educational and vocational training institutions at all levels;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "db58de5a84b8",
+    "term": "Election Outcome Influence Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used for influencing the outcome of an election or referendum or the voting behaviour of natural persons in the exercise of their vote in elections or referenda",
+    "definition": "AI systems intended to be used for influencing the outcome of an election or referendum or the voting behaviour of natural persons in the exercise of their vote in elections or referenda, excluding tools used to organise, optimise or structure political campaigns from an administrative or logistical point of view.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(8)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(8)(b)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used for influencing the outcome of an election or referendum or the voting behaviour of natural persons in the exercise of their vote in elections or referenda. This does not include AI systems to the output of which natural persons are not directly exposed, such as tools used to organise, optimise or structure political campaigns from an administrative or logistical point of view."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "a4e048a87159",
+    "term": "Emergency Call Evaluation Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services",
+    "definition": "AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid, as well as of emergency healthcare patient triage systems.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(5)(d)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(5)(d)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid, as well as of emergency healthcare patient triage systems."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "02107fc71595",
+    "term": "emotion recognition system",
+    "entity_type": "AISystemCategory",
+    "label": "emotion recognition system",
+    "definition": "An AI system for the purpose of identifying or inferring emotions or intentions of natural persons on the basis of their biometric data.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(1)(c)",
+      "Art. 3(39)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(1)(c)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used for emotion recognition."
+      },
+      {
+        "article_ref": "Art. 3(39)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means an AI system for the purpose of identifying or inferring emotions or intentions of natural persons on the basis of their biometric data;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "0bf1813af6d0",
+    "term": "Evidence Reliability Evaluation Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies, in support of law enforcement authorities to evaluate the reliability of evidence in the course of the investigation or prosecution of criminal offences",
+    "definition": "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies, in support of law enforcement authorities to evaluate the reliability of evidence in the course of the investigation or prosecution of criminal offences.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(6)(c)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(6)(c)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies, in support of law enforcement authorities to evaluate the reliability of evidence in the course of the investigation or prosecution of criminal offences;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "bbcc1c071d91",
+    "term": "general-purpose AI model",
+    "entity_type": "AISystemCategory",
+    "label": "general-purpose AI model",
+    "definition": "An AI model that displays significant generality, can competently perform a wide range of distinct tasks and can be integrated into downstream systems, except models used for research, development or prototyping before being placed on the market.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(63)",
+      "Art. 53(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(63)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means an AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market"
+      },
+      {
+        "article_ref": "Art. 53(1)",
+        "chunk_id": "art_53",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_53/oj",
+        "source_quote": "general-purpose AI model"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "ce6f3ac3b800",
+    "term": "General-Purpose AI Model With Systemic Risk",
+    "entity_type": "AISystemCategory",
+    "label": "general-purpose AI model with systemic risk",
+    "definition": "A general-purpose AI model classified as such if it possesses high impact capabilities evaluated via technical tools, or has equivalent capabilities based on Commission decision or scientific panel alert.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 51(1)",
+      "Art. 52(3)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 51(1)",
+        "chunk_id": "art_51",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_51/oj",
+        "source_quote": "A general-purpose AI model shall be classified as a general-purpose AI model with systemic risk if it meets any of the following conditions"
+      },
+      {
+        "article_ref": "Art. 52(3)",
+        "chunk_id": "art_52",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_52/oj",
+        "source_quote": "the general-purpose AI model shall be considered to be a general-purpose AI model with systemic risk"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:9b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "fd818cda5134",
+    "term": "general-purpose AI system",
+    "entity_type": "AISystemCategory",
+    "label": "general-purpose AI system",
+    "definition": "An AI system which is based on a general-purpose AI model and which has the capability to serve a variety of purposes, both for direct use as well as for integration in other AI systems.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(66)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(66)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means an AI system which is based on a general-purpose AI model and which has the capability to serve a variety of purposes, both for direct use as well as for integration in other AI systems;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "2d36742b9801",
+    "term": "Irregular Migration Risk Assessment Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assess a risk, including a security risk, a risk of irregular migration, or a health risk, posed by a natural person who intends to enter or who has entered into the territory of a Member State",
+    "definition": "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assess a risk, including a security risk, a risk of irregular migration, or a health risk, posed by a natural person who intends to enter or who has entered into the territory of a Member State.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(7)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(7)(b)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assess a risk, including a security risk, a risk of irregular migration, or a health risk, posed by a natural person who intends to enter or who has entered into the territory of a Member State;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "a0a6331883d2",
+    "term": "Judicial Research and Interpretation Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or to be used in a similar way in alternative dispute resolution",
+    "definition": "AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or to be used in a similar way in alternative dispute resolution.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(8)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(8)(a)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or to be used in a similar way in alternative dispute resolution;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "16c414801afd",
+    "term": "Learning Outcome Evaluation Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used to evaluate learning outcomes",
+    "definition": "AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(3)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(3)(b)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons in educational and vocational training institutions at all levels;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "dbcb27538eb3",
+    "term": "Life and Health Insurance Risk Assessment Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance",
+    "definition": "AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(5)(c)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(5)(c)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "3832a66bd813",
+    "term": "Natural Person Identification Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by or on behalf of competent public authorities, or by Union institutions, bodies, offices or agencies, in the context of migration, asylum or border control management, for the purpose of detecting, recognising or identifying natural persons",
+    "definition": "AI systems intended to be used by or on behalf of competent public authorities, or by Union institutions, bodies, offices or agencies, in the context of migration, asylum or border control management, for the purpose of detecting, recognising or identifying natural persons, with the exception of the verification of travel documents.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(7)(d)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(7)(d)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by or on behalf of competent public authorities, or by Union institutions, bodies, offices or agencies, in the context of migration, asylum or border control management, for the purpose of detecting, recognising or identifying natural persons, with the exception of the verification of travel documents."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "8117c8682859",
+    "term": "Polygraph Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities as polygraphs or similar tools",
+    "definition": "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities as polygraphs or similar tools.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(6)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(6)(b)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities as polygraphs or similar tools;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "333c26bfeb8c",
+    "term": "Public Assistance Eligibility Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services",
+    "definition": "AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services, including healthcare services, as well as to grant, reduce, revoke, or reclaim such benefits and services.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(5)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(5)(a)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services, including healthcare services, as well as to grant, reduce, revoke, or reclaim such benefits and services;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "d0a3946f17b3",
+    "term": "Re-offending Risk Assessment Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used by law enforcement authorities or on their behalf or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for assessing the risk of a natural person offending or re-offending not solely on the basis of the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680",
+    "definition": "AI systems intended to be used by law enforcement authorities or on their behalf or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for assessing the risk of a natural person offending or re-offending not solely on the basis of the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680, or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(6)(d)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(6)(d)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used by law enforcement authorities or on their behalf or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for assessing the risk of a natural person offending or re-offending not solely on the basis of the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680, or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "9394a68e6aeb",
+    "term": "real-time remote biometric identification system",
+    "entity_type": "AISystemCategory",
+    "label": "real-time remote biometric identification system",
+    "definition": "A remote biometric identification system, whereby the capturing of biometric data, the comparison and the identification all occur without a significant delay, comprising not only instant identification, but also limited short delays in order to avoid circumvention.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(42)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(42)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a remote biometric identification system, whereby the capturing of biometric data, the comparison and the identification all occur without a significant delay, comprising not only instant identification, but also limited short delays in order to avoid circumvention;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "8fe8fa746ca1",
+    "term": "Recruitment and Selection Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used for the recruitment or selection of natural persons",
+    "definition": "AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(4)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(4)(a)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates;"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "2480968e3aae",
+    "term": "remote biometric identification system",
+    "entity_type": "AISystemCategory",
+    "label": "remote biometric identification system",
+    "definition": "An AI system for the purpose of identifying natural persons, without their active involvement, typically at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(1)(a)",
+      "Art. 3(41)",
+      "Art. 3(43)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(1)(a)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "remote biometric identification systems. This shall not include AI systems intended to be used for biometric verification the sole purpose of which is to confirm that a specific natural person is the person he or she claims to be;"
+      },
+      {
+        "article_ref": "Art. 3(41)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means an AI system for the purpose of identifying natural persons, without their active involvement, typically at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database;"
+      },
+      {
+        "article_ref": "Art. 3(43)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a remote biometric identification system other than a real-time remote biometric identification system;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "ffac4f1fd947",
+    "term": "Student Behaviour Monitoring Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used for monitoring and detecting prohibited behaviour of students",
+    "definition": "AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational and vocational training institutions.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(3)(d)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(3)(d)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational and vocational training institutions at all levels."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "fc0ff2d982db",
+    "term": "Work-Related Relationship Decision Systems",
+    "entity_type": "AISystemCategory",
+    "label": "AI systems intended to be used to make decisions affecting terms of work-related relationships",
+    "definition": "AI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics or to monitor and evaluate the performance and behaviour of persons in such relationships.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(4)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(4)(b)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "AI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics or to monitor and evaluate the performance and behaviour of persons in such relationships."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "0a45e8ec03e8",
+    "term": "authorised representative",
+    "entity_type": "Actor",
+    "label": "authorised representative",
+    "definition": "A natural or legal person located or established in the Union who has received and accepted a written mandate from a provider of an AI system or a general-purpose AI model to, respectively, perform and carry out on its behalf the obligations and procedures established by this Regulation.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(5)",
+      "Art. 54(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(5)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a natural or legal person located or established in the Union who has received and accepted a written mandate from a provider of an AI system or a general-purpose AI model to, respectively, perform and carry out on its behalf the obligations and procedures established by this Regulation;"
+      },
+      {
+        "article_ref": "Art. 54(1)",
+        "chunk_id": "art_54",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_54/oj",
+        "source_quote": "appoint an authorised representative which is established in the Union"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "d8bf2c150bd7",
+    "term": "deployer",
+    "entity_type": "Actor",
+    "label": "deployer",
+    "definition": "A natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(4)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "03253fcdde4f",
+    "term": "distributor",
+    "entity_type": "Actor",
+    "label": "distributor",
+    "definition": "A natural or legal person in the supply chain, other than the provider or the importer, that makes an AI system available on the Union market.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(7)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(7)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a natural or legal person in the supply chain, other than the provider or the importer, that makes an AI system available on the Union market;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "7c34347d9549",
+    "term": "downstream provider",
+    "entity_type": "Actor",
+    "label": "downstream provider",
+    "definition": "A provider of an AI system, including a general-purpose AI system, which integrates an AI model, regardless of whether the AI model is provided by themselves and vertically integrated or provided by another entity based on contractual relations.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(68)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(68)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a provider of an AI system, including a general-purpose AI system, which integrates an AI model, regardless of whether the AI model is provided by themselves and vertically integrated or provided by another entity based on contractual relations."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "68567b2322b5",
+    "term": "importer",
+    "entity_type": "Actor",
+    "label": "importer",
+    "definition": "A natural or legal person located or established in the Union that places on the market an AI system that bears the name or trademark of a natural or legal person established in a third country.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(6)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(6)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a natural or legal person located or established in the Union that places on the market an AI system that bears the name or trademark of a natural or legal person established in a third country;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "d398ca476b9b",
+    "term": "operator",
+    "entity_type": "Actor",
+    "label": "operator",
+    "definition": "A provider, product manufacturer, deployer, authorised representative, importer or distributor.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(8)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(8)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a provider, product manufacturer, deployer, authorised representative, importer or distributor;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "e366dd348d5b",
+    "term": "provider",
+    "entity_type": "Actor",
+    "label": "provider",
+    "definition": "A natural or legal person, public authority, agency or other body that develops an AI system or general-purpose AI model, or has one developed, and places it on the market or puts it into service under its own name or trademark.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(3)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(3)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a natural or legal person, public authority, agency or other body that develops an AI system or a general-purpose AI model"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "5cf7be1114f0",
+    "term": "AI Office",
+    "entity_type": "Authority",
+    "label": "AI Office",
+    "definition": "The Commission’s function of contributing to the implementation, monitoring and supervision of AI systems and general-purpose AI models, and AI governance, provided for in Commission Decision of 24 January 2024.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(47)",
+      "Art. 50(7)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(47)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means the Commission’s function of contributing to the implementation, monitoring and supervision of AI systems and general-purpose AI models, and AI governance, provided for in Commission Decision of 24 January 2024;"
+      },
+      {
+        "article_ref": "Art. 50(7)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "The AI Office shall encourage and facilitate the drawing up of codes of practice at Union level"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "954ada31e9ac",
+    "term": "law enforcement authority",
+    "entity_type": "Authority",
+    "label": "law enforcement authority",
+    "definition": "Any public authority competent for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(45)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(45)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "any public authority competent for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "127050342785",
+    "term": "market surveillance authority",
+    "entity_type": "Authority",
+    "label": "market surveillance authority",
+    "definition": "The national authority carrying out the activities and taking the measures pursuant to Regulation (EU) 2019/1020.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(26)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(26)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means the national authority carrying out the activities and taking the measures pursuant to Regulation (EU) 2019/1020;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "323052322250",
+    "term": "national competent authority",
+    "entity_type": "Authority",
+    "label": "national competent authority",
+    "definition": "A notifying authority or a market surveillance authority.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(48)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(48)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means a notifying authority or a market surveillance authority;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "6b16d079cc8b",
+    "term": "notifying authority",
+    "entity_type": "Authority",
+    "label": "notifying authority",
+    "definition": "The national authority responsible for setting up and carrying out the necessary procedures for the assessment, designation and notification of conformity assessment bodies and for their monitoring.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 3(19)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 3(19)",
+        "chunk_id": "art_3",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_3/oj",
+        "source_quote": "means the national authority responsible for setting up and carrying out the necessary procedures for the assessment, designation and notification of conformity assessment bodies and for their monitoring;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "3dd6e32fcd1f",
+    "term": "Access to Essential Services and Benefits",
+    "entity_type": "HighRiskArea",
+    "label": "access to and enjoyment of essential private and public services and benefits",
+    "definition": "An area where AI systems are high-risk, covering eligibility for essential public assistance benefits and services, creditworthiness evaluation, risk assessment and pricing in life and health insurance, and the handling of emergency calls.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(5)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(5)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "Access to and enjoyment of essential private services and essential public services and benefits:"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "23fc94e54092",
+    "term": "Administration of Justice and Democratic Processes",
+    "entity_type": "HighRiskArea",
+    "label": "Administration of justice and democratic processes",
+    "definition": "An area where AI systems are high-risk, covering assistance to judicial authorities in researching and interpreting the law, and influencing the outcome of elections, referenda or voting behaviour.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(8)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(8)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "Administration of justice and democratic processes:"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "cfdcf3c53b93",
+    "term": "Biometrics",
+    "entity_type": "HighRiskArea",
+    "label": "Biometrics",
+    "definition": "An area where AI systems are high-risk, specifically biometric systems whose use is permitted under relevant Union or national law.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(1)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "Biometrics, in so far as their use is permitted under relevant Union or national law:"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "f961d26cc470",
+    "term": "Critical Infrastructure",
+    "entity_type": "HighRiskArea",
+    "label": "Critical infrastructure",
+    "definition": "An area where AI systems are high-risk, specifically safety components in the management and operation of critical digital infrastructure, road traffic, or supply of utilities.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(2)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(2)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "Critical infrastructure: AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, road traffic, or in the supply of water, gas, heating or electricity."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "6ab0a21dbc09",
+    "term": "Employment and Workers Management",
+    "entity_type": "HighRiskArea",
+    "label": "employment, workers’ management and access to self-employment",
+    "definition": "An area where AI systems are high-risk, covering recruitment and selection, decisions on the terms of work-related relationships, task allocation, and the monitoring and evaluation of performance and behaviour.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(4)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "Employment, workers’ management and access to self-employment:"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "fbc6eca09f8d",
+    "term": "Law Enforcement",
+    "entity_type": "HighRiskArea",
+    "label": "Law enforcement",
+    "definition": "An area where AI systems are high-risk, covering law enforcement uses such as victim and offending risk assessment, polygraphs, evaluation of the reliability of evidence, and the profiling of natural persons.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(6)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(6)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "Law enforcement, in so far as their use is permitted under relevant Union or national law:"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "e82040c7ef9c",
+    "term": "Migration, Asylum and Border Control Management",
+    "entity_type": "HighRiskArea",
+    "label": "Migration, asylum and border control management",
+    "definition": "An area where AI systems are high-risk, covering migration, asylum and border control uses such as polygraphs, risk assessment of persons entering a Member State, examination of applications, and the identification of natural persons.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Annex III(7)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Annex III(7)",
+        "chunk_id": "anx_III",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/anx_III/oj",
+        "source_quote": "Migration, asylum and border control management, in so far as their use is permitted under relevant Union or national law:"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "e0c03a0295b5",
+    "term": "Affix CE Marking",
+    "entity_type": "Obligation",
+    "label": "affix the CE marking to the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation, to indicate conformity with this Regulation, in accordance with Article 48",
+    "definition": "Providers must affix the CE marking to the system or packaging to indicate conformity.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(h)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(h)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "affix the CE marking to the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation, to indicate conformity with this Regulation, in accordance with Article 48"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "5ee481bf4d58",
+    "term": "Alternative Compliance Demonstration",
+    "entity_type": "Obligation",
+    "label": "Providers of general-purpose AI models with systemic risks who do not adhere to an approved code of practice or do not comply with a European harmonised standard shall demonstrate alternative adequate means of compliance for assessment by the Commission",
+    "definition": "Providers of general-purpose AI models with systemic risks who do not adhere to an approved code of practice or do not comply with a European harmonised standard shall demonstrate alternative adequate means of compliance for assessment by the Commission.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model With Systemic Risk",
+    "article_refs": [
+      "Art. 55(2)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 55(2)",
+        "chunk_id": "art_55",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_55/oj",
+        "source_quote": "Providers of general-purpose AI models with systemic risks who do not adhere to an approved code of practice or do not comply with a European harmonised standard shall demonstrate alternative adequate means of compliance for assessment by the Commission"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:11+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "a03806f95849",
+    "term": "Appointment of Authorised Representative",
+    "entity_type": "Obligation",
+    "label": "appoint an authorised representative which is established in the Union",
+    "definition": "Providers established in third countries must, prior to placing a general-purpose AI model on the Union market, appoint an authorised representative by written mandate.",
+    "bearer": "Provider",
+    "applies_to": "General-purpose AI Model",
+    "article_refs": [
+      "Art. 54(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 54(1)",
+        "chunk_id": "art_54",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_54/oj",
+        "source_quote": "Prior to placing a general-purpose AI model on the Union market, providers established in third countries shall, by written mandate, appoint an authorised representative which is established in the Union."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "60732831a6e9",
+    "term": "Assign human oversight",
+    "entity_type": "Obligation",
+    "label": "assign human oversight to natural persons who have the necessary competence, training and authority",
+    "definition": "Deployers shall assign human oversight to natural persons who have the necessary competence, training and authority, as well as the necessary support.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(2)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(2)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Deployers shall assign human oversight to natural persons who have the necessary competence, training and authority, as well as the necessary support."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "ad518a3c4c47",
+    "term": "Built-in Oversight Measures",
+    "entity_type": "Obligation",
+    "label": "measures identified and built... into the high-risk AI system",
+    "definition": "The provider shall identify and build measures into the high-risk AI system before it is placed on the market or put into service, when technically feasible.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 14(3)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 14(3)(a)",
+        "chunk_id": "art_14",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_14/oj",
+        "source_quote": "measures identified and built, when technically feasible, into the high-risk AI system by the provider before it is placed on the market or put into service"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "755b3cc31106",
+    "term": "Carry out data protection impact assessment",
+    "entity_type": "Obligation",
+    "label": "carry out a data protection impact assessment under Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680",
+    "definition": "Where applicable, deployers of high-risk AI systems shall use the information provided under Article 13 of this Regulation to comply with their obligation to carry out a data protection impact assessment under Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(9)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(9)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Where applicable, deployers of high-risk AI systems shall use the information provided under Article 13 of this Regulation to comply with their obligation to carry out a data protection impact assessment under Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "f70f62ef4a34",
+    "term": "Comply with Registration Obligations",
+    "entity_type": "Obligation",
+    "label": "comply with the registration obligations referred to in Article 49(1)",
+    "definition": "Providers must comply with the registration obligations referred to in Article 49(1).",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(i)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(i)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "comply with the registration obligations referred to in Article 49(1)"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "02faacea2142",
+    "term": "Comply with Registration Obligations (Deployer)",
+    "entity_type": "Obligation",
+    "label": "comply with registration obligations",
+    "definition": "Deployers of high-risk AI systems that are public authorities, or Union institutions, bodies, offices or agencies shall comply with the registration obligations referred to in Article 49.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(8)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(8)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Deployers of high-risk AI systems that are public authorities, or Union institutions, bodies, offices or agencies shall comply with the registration obligations referred to in Article 49. When such deployers find that the high-risk AI system that they envisage using has not been registered in the EU database referred to in Article 71, they shall not use that system and shall inform the provider or the distributor."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "ceb34f0bf864",
+    "term": "Consideration of Adverse Impact on Persons Under 18",
+    "entity_type": "Obligation",
+    "label": "give consideration to whether in view of its intended purpose the high-risk AI system is likely to have an adverse impact on persons under the age of 18 and, as appropriate, other vulnerable groups.",
+    "definition": "Providers shall give consideration to whether the high-risk AI system is likely to have an adverse impact on persons under the age of 18 and, as appropriate, other vulnerable groups.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 9(9)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 9(9)",
+        "chunk_id": "art_9",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_9/oj",
+        "source_quote": "providers shall give consideration to whether in view of its intended purpose the high-risk AI system is likely to have an adverse impact on persons under the age of 18 and, as appropriate, other vulnerable groups."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "314e81508dc4",
+    "term": "Cooperate As Necessary With The Commission And The National Competent Authorities",
+    "entity_type": "Obligation",
+    "label": "cooperate as necessary with the Commission and the national competent authorities",
+    "definition": "The duty to cooperate as necessary with the Commission and the national competent authorities in the exercise of their competences and powers pursuant to this Regulation.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 53(3)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 53(3)",
+        "chunk_id": "art_53",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_53/oj",
+        "source_quote": "cooperate as necessary with the Commission and the national competent authorities"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "af3bc0ce908b",
+    "term": "Cooperate with authorities",
+    "entity_type": "Obligation",
+    "label": "cooperate with the relevant competent authorities in any action those authorities take in relation to the high-risk AI system in order to implement this Regulation",
+    "definition": "Deployers shall cooperate with the relevant competent authorities in any action those authorities take in relation to the high-risk AI system in order to implement this Regulation.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(12)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(12)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Deployers shall cooperate with the relevant competent authorities in any action those authorities take in relation to the high-risk AI system in order to implement this Regulation."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "4a9d9f3dc292",
+    "term": "Cooperation with Authorities",
+    "entity_type": "Obligation",
+    "label": "cooperate with the AI Office and competent authorities, upon a reasoned request",
+    "definition": "The authorised representative shall cooperate with the AI Office and competent authorities, upon a reasoned request, in any action they take in relation to the general-purpose AI model.",
+    "bearer": "Authorised Representative",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 54(3)(d)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 54(3)(d)",
+        "chunk_id": "art_54",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_54/oj",
+        "source_quote": "cooperate with the AI Office and competent authorities, upon a reasoned request, in any action they take in relation to the general-purpose AI model"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:58:52+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "2e8b05afebea",
+    "term": "Cybersecurity Protection",
+    "entity_type": "Obligation",
+    "label": "ensure an adequate level of cybersecurity protection for the general-purpose AI model with systemic risk and the physical infrastructure of the model",
+    "definition": "Ensure an adequate level of cybersecurity protection for the general-purpose AI model with systemic risk and the physical infrastructure of the model.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model With Systemic Risk",
+    "article_refs": [
+      "Art. 55(1)(d)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 55(1)(d)",
+        "chunk_id": "art_55",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_55/oj",
+        "source_quote": "ensure an adequate level of cybersecurity protection for the general-purpose AI model with systemic risk and the physical infrastructure of the model"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:11+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "f1a61cef8659",
+    "term": "Demonstrate Conformity upon Request",
+    "entity_type": "Obligation",
+    "label": "upon a reasoned request of a national competent authority, demonstrate the conformity of the high-risk AI system with the requirements set out in Section 2",
+    "definition": "Providers must demonstrate conformity upon a reasoned request of a national competent authority.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(k)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(k)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "upon a reasoned request of a national competent authority, demonstrate the conformity of the high-risk AI system with the requirements set out in Section 2"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "7635338b387c",
+    "term": "Deployer-Implementable Oversight Measures",
+    "entity_type": "Obligation",
+    "label": "measures identified... appropriate to be implemented by the deployer",
+    "definition": "The provider shall identify measures before placing the high-risk AI system on the market or putting it into service that are appropriate to be implemented by the deployer.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 14(3)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 14(3)(b)",
+        "chunk_id": "art_14",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_14/oj",
+        "source_quote": "measures identified by the provider before placing the high-risk AI system on the market or putting it into service and that are appropriate to be implemented by the deployer."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "727f62cecb00",
+    "term": "Develop Union AI Expertise and Capabilities",
+    "entity_type": "Obligation",
+    "label": "develop Union expertise and capabilities in the field of AI",
+    "definition": "The Commission's duty to develop Union expertise and capabilities in the field of AI through the AI Office.",
+    "bearer": "Commission",
+    "applies_to": null,
+    "article_refs": [
+      "Art. 64(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 64(1)",
+        "chunk_id": "art_64",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_64/oj",
+        "source_quote": "The Commission shall develop Union expertise and capabilities in the field of AI through the AI Office."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:11+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "0b812a9d6e3d",
+    "term": "Disclose Deepfake Content",
+    "entity_type": "Obligation",
+    "label": "disclose that the content has been artificially generated or manipulated",
+    "definition": "Deployers of an AI system that generates or manipulates image, audio or video content constituting a deep fake shall disclose that the content has been artificially generated or manipulated.",
+    "bearer": "Deployer",
+    "applies_to": "AI System Generating Deepfake Content",
+    "article_refs": [
+      "Art. 50(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(4)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "Deployers of an AI system that generates or manipulates image, audio or video content constituting a deep fake, shall disclose that the content has been artificially generated or manipulated."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "e53b5e9bcf24",
+    "term": "Disclose Public Interest Text",
+    "entity_type": "Obligation",
+    "label": "disclose that the text has been artificially generated or manipulated",
+    "definition": "Deployers of an AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest shall disclose that the text has been artificially generated or manipulated.",
+    "bearer": "Deployer",
+    "applies_to": "AI System Generating Public Interest Text",
+    "article_refs": [
+      "Art. 50(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(4)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "Deployers of an AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest shall disclose that the text has been artificially generated or manipulated."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "ee1fbda95b3e",
+    "term": "Documentation of Assessment",
+    "entity_type": "Obligation",
+    "label": "document its assessment",
+    "definition": "A provider who considers an AI system referred to in Annex III is not high-risk shall document its assessment before that system is placed on the market or put into service.",
+    "bearer": "Provider",
+    "applies_to": null,
+    "article_refs": [
+      "Art. 6(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 6(4)",
+        "chunk_id": "art_6",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_6/oj",
+        "source_quote": "A provider who considers that an AI system referred to in Annex III is not high-risk shall document its assessment before that system is placed on the market or put into service."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:11+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "1ed30d5c4adb",
+    "term": "Draw Up And Keep Up-To-Date Technical Documentation",
+    "entity_type": "Obligation",
+    "label": "draw up and keep up-to-date the technical documentation of the model",
+    "definition": "The duty to draw up and keep up-to-date the technical documentation of the model, including its training and testing process and the results of its evaluation.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 53(1)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 53(1)(a)",
+        "chunk_id": "art_53",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_53/oj",
+        "source_quote": "draw up and keep up-to-date the technical documentation of the model"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "73272376b641",
+    "term": "Draw Up And Make Publicly Available A Summary About Training Content",
+    "entity_type": "Obligation",
+    "label": "draw up and make publicly available a sufficiently detailed summary about the content used for training",
+    "definition": "The duty to draw up and make publicly available a sufficiently detailed summary about the content used for training of the general-purpose AI model, according to a template provided by the AI Office.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 53(1)(d)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 53(1)(d)",
+        "chunk_id": "art_53",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_53/oj",
+        "source_quote": "draw up and make publicly available a sufficiently detailed summary about the content used for training"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "6bfc809959d6",
+    "term": "Draw up EU Declaration of Conformity",
+    "entity_type": "Obligation",
+    "label": "draw up an EU declaration of conformity in accordance with Article 47",
+    "definition": "Providers must draw up an EU declaration of conformity in accordance with Article 47.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(g)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(g)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "draw up an EU declaration of conformity in accordance with Article 47"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "a961de6b8433",
+    "term": "Enablement of Tasks",
+    "entity_type": "Obligation",
+    "label": "enable its authorised representative to perform the tasks specified in the mandate",
+    "definition": "The provider shall enable its authorised representative to perform the tasks specified in the mandate received from the provider.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 54(2)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 54(2)",
+        "chunk_id": "art_54",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_54/oj",
+        "source_quote": "The provider shall enable its authorised representative to perform the tasks specified in the mandate received from the provider."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "3ee5651c84a2",
+    "term": "Encourage Codes of Practice",
+    "entity_type": "Obligation",
+    "label": "encourage and facilitate the drawing up of codes of practice at Union level",
+    "definition": "The AI Office shall encourage and facilitate the drawing up of codes of practice at Union level to facilitate the effective implementation of the obligations regarding the detection and labelling of artificially generated or manipulated content.",
+    "bearer": "AI Office",
+    "applies_to": null,
+    "article_refs": [
+      "Art. 50(7)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(7)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "The AI Office shall encourage and facilitate the drawing up of codes of practice at Union level to facilitate the effective implementation of the obligations regarding the detection and labelling of artificially generated or manipulated content."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "51b3e25946c0",
+    "term": "Ensure Accessibility Compliance",
+    "entity_type": "Obligation",
+    "label": "ensure that the high-risk AI system complies with accessibility requirements in accordance with Directives (EU) 2016/2102 and (EU) 2019/882",
+    "definition": "Providers must ensure their high-risk AI systems comply with accessibility requirements in accordance with specific EU Directives.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(l)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(l)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "ensure that the high-risk AI system complies with accessibility requirements in accordance with Directives (EU) 2016/2102 and (EU) 2019/882"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "8c71fb7650c7",
+    "term": "Ensure Compliance with Section 2 Requirements",
+    "entity_type": "Obligation",
+    "label": "ensure that their high-risk AI systems are compliant with the requirements set out in Section 2",
+    "definition": "Providers of high-risk AI systems must ensure their systems comply with Section 2 requirements.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(a)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "ensure that their high-risk AI systems are compliant with the requirements set out in Section 2"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "38dd6bb6e0ae",
+    "term": "Ensure Conformity Assessment",
+    "entity_type": "Obligation",
+    "label": "ensure that the high-risk AI system undergoes the relevant conformity assessment procedure as referred to in Article 43, prior to its being placed on the market or put into service",
+    "definition": "Providers must ensure their high-risk AI systems undergo a conformity assessment procedure before placement.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(f)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(f)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "ensure that the high-risk AI system undergoes the relevant conformity assessment procedure as referred to in Article 43, prior to its being placed on the market or put into service"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "4061686d1c9c",
+    "term": "Ensure input data relevance",
+    "entity_type": "Obligation",
+    "label": "ensure that input data is relevant and sufficiently representative in view of the intended purpose of the high-risk AI system",
+    "definition": "To the extent the deployer exercises control over the input data, that deployer shall ensure that input data is relevant and sufficiently representative in view of the intended purpose of the high-risk AI system.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(4)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Without prejudice to paragraphs 1 and 2, to the extent the deployer exercises control over the input data, that deployer shall ensure that input data is relevant and sufficiently representative in view of the intended purpose of the high-risk AI system."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "ef064480e052",
+    "term": "Facilitate the Tasks of the AI Office",
+    "entity_type": "Obligation",
+    "label": "facilitate the tasks entrusted to the AI Office",
+    "definition": "The Member States' duty to facilitate the tasks entrusted to the AI Office, as reflected in this Regulation.",
+    "bearer": "Member States",
+    "applies_to": null,
+    "article_refs": [
+      "Art. 64(2)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 64(2)",
+        "chunk_id": "art_64",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_64/oj",
+        "source_quote": "Member States shall facilitate the tasks entrusted to the AI Office, as reflected in this Regulation."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "unsupported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:11+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "b3c7cd1e6ef6",
+    "term": "Financial institutions logs obligation",
+    "entity_type": "Obligation",
+    "label": "maintain the logs as part of the documentation kept pursuant to the relevant Union financial service law",
+    "definition": "Deployers that are financial institutions subject to requirements regarding their internal governance, arrangements or processes under Union financial services law shall maintain the logs as part of the documentation kept pursuant to the relevant Union financial service law.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(6)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(6)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Deployers that are financial institutions subject to requirements regarding their internal governance, arrangements or processes under Union financial services law shall maintain the logs as part of the documentation kept pursuant to the relevant Union financial service law."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "51c784ae04a6",
+    "term": "Financial institutions monitoring obligation",
+    "entity_type": "Obligation",
+    "label": "the monitoring obligation set out in the first subparagraph shall be deemed to be fulfilled by complying with the rules on internal governance arrangements, processes and mechanisms pursuant to the relevant financial service law",
+    "definition": "For deployers that are financial institutions subject to requirements regarding their internal governance, arrangements or processes under Union financial services law, the monitoring obligation set out in the first subparagraph shall be deemed to be fulfilled by complying with the rules on internal governance arrangements, processes and mechanisms pursuant to the relevant financial service law.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(5)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(5)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "For deployers that are financial institutions subject to requirements regarding their internal governance, arrangements or processes under Union financial services law, the monitoring obligation set out in the first subparagraph shall be deemed to be fulfilled by complying with the rules on internal governance arrangements, processes and mechanisms pursuant to the relevant financial service law."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "9c6a910b6d2a",
+    "term": "Fundamental Rights Impact Assessment",
+    "entity_type": "Obligation",
+    "label": "perform fundamental rights impact assessment",
+    "definition": "The duty to perform a fundamental rights impact assessment prior to deploying certain high-risk AI systems, consisting of specific descriptions regarding usage, affected persons, risks, and oversight measures.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 27(1)",
+      "Art. 27(2)",
+      "Art. 27(3)",
+      "Art. 27(4)",
+      "Art. 27(5)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 27(1)",
+        "chunk_id": "art_27",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_27/oj",
+        "source_quote": "deployers that are bodies governed by public law, or are private entities providing public services, and deployers of high-risk AI systems referred to in points 5 (b) and (c) of Annex III, shall perform an assessment of the impact on fundamental rights"
+      },
+      {
+        "article_ref": "Art. 27(2)",
+        "chunk_id": "art_27",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_27/oj",
+        "source_quote": "If, during the use of the high-risk AI system, the deployer considers that any of the elements listed in paragraph 1 has changed or is no longer up to date, the deployer shall take the necessary steps to update the information."
+      },
+      {
+        "article_ref": "Art. 27(3)",
+        "chunk_id": "art_27",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_27/oj",
+        "source_quote": "Once the assessment referred to in paragraph 1 of this Article has been performed, the deployer shall notify the market surveillance authority of its results, submitting the filled-out template referred to in paragraph 5 of this Article as part of the notification."
+      },
+      {
+        "article_ref": "Art. 27(4)",
+        "chunk_id": "art_27",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_27/oj",
+        "source_quote": "If any of the obligations laid down in this Article is already met through the data protection impact assessment conducted pursuant to Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680, the fundamental rights impact assessment referred to in paragraph 1 of this Article shall complement that data protection impact assessment."
+      },
+      {
+        "article_ref": "Art. 27(5)",
+        "chunk_id": "art_27",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_27/oj",
+        "source_quote": "The AI Office shall develop a template for a questionnaire, including through an automated tool, to facilitate deployers in complying with their obligations under this Article in a simplified manner."
+      },
+      {
+        "article_ref": "Art. 27(1)",
+        "chunk_id": "art_27",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_27/oj",
+        "source_quote": "perform an assessment of the impact on fundamental rights that the use of such system may produce. For that purpose, deployers shall perform an assessment consisting of: a description of the deployer's processes in which the high-risk AI system will be used in line with its intended purpose; a description of the period of time within which, and the frequency with which, each high-risk AI system is intended to be used; the categories of natural persons and groups likely to be affected by its use in the specific context; the specific risks of harm likely to have an impact on the categories of natural persons or groups of persons identified pursuant to point (c) of this paragraph, taking into account the information given by the provider pursuant to Article 13; a description of the implementation of human oversight measures, according to the instructions for use; the measures to be taken in the case of the materialisation of those risks, including the arrangements for internal governance and complaint mechanisms."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:9b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": [
+      "1387979c33b3"
+    ]
+  },
+  {
+    "id": "b408ecdfc716",
+    "term": "Human Oversight Enablement",
+    "entity_type": "Obligation",
+    "label": "natural persons... are enabled, as appropriate and proportionate",
+    "definition": "The high-risk AI system shall be provided to the deployer in such a way that natural persons to whom human oversight is assigned are enabled, as appropriate and proportionate, to properly understand the relevant capacities and limitations of the high-risk AI system and be able to duly monitor its operation, including in view of detecting and addressing anomalies, dysfunctions and unexpected performance; to remain aware of the possible tendency of automatically relying or over-relying on the output produced by a high-risk AI system (automation bias), in particular for high-risk AI systems used to provide information or recommendations for decisions to be taken by natural persons; to correctly interpret the high-risk AI system’s output, taking into account, for example, the interpretation tools and methods available; to decide, in any particular situation, not to use the high-risk AI system or to otherwise disregard, override or reverse the output of the high-risk AI system; to intervene in the operation of the high-risk AI system or interrupt the system through a ‘stop’ button or a similar procedure that allows the system to come to a halt in a safe state.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 14(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 14(4)",
+        "chunk_id": "art_14",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_14/oj",
+        "source_quote": "the high-risk AI system shall be provided to the deployer in such a way that natural persons to whom human oversight is assigned are enabled, as appropriate and proportionate:"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "ee7b3a46646f",
+    "term": "Implementation Guidelines",
+    "entity_type": "Obligation",
+    "label": "provide guidelines",
+    "definition": "The Commission shall provide guidelines specifying the practical implementation of this Article in line with Article 96 together with a comprehensive list of practical examples of use cases of AI systems that are high-risk and not high-risk.",
+    "bearer": "Commission",
+    "applies_to": null,
+    "article_refs": [
+      "Art. 6(5)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 6(5)",
+        "chunk_id": "art_6",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_6/oj",
+        "source_quote": "The Commission shall, after consulting the European Artificial Intelligence Board (the 'Board'), and no later than 2 February 2026, provide guidelines specifying the practical implementation of this Article in line with Article 96 together with a comprehensive list of practical examples of use cases of AI systems that are high-risk and not high-risk."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:11+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "dbfa56852226",
+    "term": "Incident Reporting",
+    "entity_type": "Obligation",
+    "label": "keep track of, document, and report, without undue delay, to the AI Office and, as appropriate, to national competent authorities, relevant information about serious incidents and possible corrective measures to address them",
+    "definition": "Keep track of, document, and report, without undue delay, to the AI Office and, as appropriate, to national competent authorities, relevant information about serious incidents and possible corrective measures to address them.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model With Systemic Risk",
+    "article_refs": [
+      "Art. 55(1)(c)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 55(1)(c)",
+        "chunk_id": "art_55",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_55/oj",
+        "source_quote": "keep track of, document, and report, without undue delay, to the AI Office and, as appropriate, to national competent authorities, relevant information about serious incidents and possible corrective measures to address them"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:11+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "0f76fcea553c",
+    "term": "Indicate Name and Contact Details",
+    "entity_type": "Obligation",
+    "label": "indicate on the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation, as applicable, their name, registered trade name or registered trade mark, the address at which they can be contacted",
+    "definition": "Providers must indicate on the high-risk AI system or, where that is not possible, on its packaging or accompanying documentation, their name, registered trade name or registered trade mark, and contact address.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(b)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "indicate on the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation, as applicable, their name, registered trade name or registered trade mark, the address at which they can be contacted"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "333f1677ab0d",
+    "term": "Inform natural persons",
+    "entity_type": "Obligation",
+    "label": "inform the natural persons that they are subject to the use of the high-risk AI system",
+    "definition": "Where applicable, deployers of high-risk AI systems referred to in Annex III that make decisions or assist in making decisions related to natural persons shall inform the natural persons that they are subject to the use of the high-risk AI system.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(11)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(11)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Where applicable, deployers of high-risk AI systems referred to in Annex III that make decisions or assist in making decisions related to natural persons shall inform the natural persons that they are subject to the use of the high-risk AI system."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "c1343ab129ca",
+    "term": "Inform Natural Persons of System Operation",
+    "entity_type": "Obligation",
+    "label": "inform the natural persons exposed thereto of the operation of the system",
+    "definition": "Deployers of an emotion recognition system or a biometric categorisation system shall inform the natural persons exposed thereto of the operation of the system.",
+    "bearer": "Deployer",
+    "applies_to": null,
+    "article_refs": [
+      "Art. 50(3)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(3)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "Deployers of an emotion recognition system or a biometric categorisation system shall inform the natural persons exposed thereto of the operation of the system"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "9374f92b7180",
+    "term": "Inform Users of AI Interaction",
+    "entity_type": "Obligation",
+    "label": "inform users of AI interaction",
+    "definition": "Providers shall ensure AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system.",
+    "bearer": "Provider",
+    "applies_to": "AI Systems Intended to Interact Directly with Natural Persons",
+    "article_refs": [
+      "Art. 50(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(1)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "4d718d52e7da",
+    "term": "Inform workers",
+    "entity_type": "Obligation",
+    "label": "inform workers’ representatives and the affected workers that they will be subject to the use of the high-risk AI system",
+    "definition": "Before putting into service or using a high-risk AI system at the workplace, deployers who are employers shall inform workers’ representatives and the affected workers that they will be subject to the use of the high-risk AI system.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(7)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(7)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Before putting into service or using a high-risk AI system at the workplace, deployers who are employers shall inform workers’ representatives and the affected workers that they will be subject to the use of the high-risk AI system."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "383120ade598",
+    "term": "Keep Documentation",
+    "entity_type": "Obligation",
+    "label": "keep the documentation referred to in Article 18",
+    "definition": "Providers must keep the documentation referred to in Article 18.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(d)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(d)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "keep the documentation referred to in Article 18"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "75a4c061d5a4",
+    "term": "Keep Logs",
+    "entity_type": "Obligation",
+    "label": "when under their control, keep the logs automatically generated by their high-risk AI systems as referred to in Article 19",
+    "definition": "Providers must keep logs automatically generated by their high-risk AI systems when under their control.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(e)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(e)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "when under their control, keep the logs automatically generated by their high-risk AI systems as referred to in Article 19"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "1a1226ca051a",
+    "term": "Keep Logs (Deployer)",
+    "entity_type": "Obligation",
+    "label": "keep logs",
+    "definition": "Deployers of high-risk AI systems shall keep the logs automatically generated by that high-risk AI system to the extent such logs are under their control, for a period appropriate to the intended purpose of the high-risk AI system, of at least six months.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(6)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(6)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Deployers of high-risk AI systems shall keep the logs automatically generated by that high-risk AI system to the extent such logs are under their control, for a period appropriate to the intended purpose of the high-risk AI system, of at least six months, unless provided otherwise in applicable Union or national law, in particular in Union law on the protection of personal data."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "1e53f9909715",
+    "term": "Maintain Quality Management System",
+    "entity_type": "Obligation",
+    "label": "have a quality management system in place which complies with Article 17",
+    "definition": "Providers must have a quality management system that complies with Article 17.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(c)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(c)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "have a quality management system in place which complies with Article 17"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "f3e294aec8cd",
+    "term": "Mark Synthetic Content Outputs",
+    "entity_type": "Obligation",
+    "label": "mark outputs as artificially generated or manipulated",
+    "definition": "Providers of AI systems generating synthetic audio, image, video or text content shall ensure that the outputs are marked in a machine-readable format and detectable as artificially generated or manipulated.",
+    "bearer": "Provider",
+    "applies_to": "AI Systems Generating Synthetic Content",
+    "article_refs": [
+      "Art. 50(2)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 50(2)",
+        "chunk_id": "art_50",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_50/oj",
+        "source_quote": "Providers of AI systems, including general-purpose AI systems, generating synthetic audio, image, video or text content, shall ensure that the outputs of the AI system are marked in a machine-readable format and detectable as artificially generated or manipulated."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "e2248025112b",
+    "term": "Model Evaluation",
+    "entity_type": "Obligation",
+    "label": "perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting adversarial testing of the model with a view to identifying and mitigating systemic risks",
+    "definition": "Perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting adversarial testing of the model with a view to identifying and mitigating systemic risks.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model With Systemic Risk",
+    "article_refs": [
+      "Art. 55(1)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 55(1)(a)",
+        "chunk_id": "art_55",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_55/oj",
+        "source_quote": "perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting adversarial testing of the model with a view to identifying and mitigating systemic risks"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "bd968efe223b",
+    "term": "Monitor operation",
+    "entity_type": "Obligation",
+    "label": "monitor the operation of the high-risk AI system on the basis of the instructions for use",
+    "definition": "Deployers shall monitor the operation of the high-risk AI system on the basis of the instructions for use and, where relevant, inform providers in accordance with Article 72.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(5)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(5)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Deployers shall monitor the operation of the high-risk AI system on the basis of the instructions for use and, where relevant, inform providers in accordance with Article 72."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "45214cbff57f",
+    "term": "Notification of Systemic Risk",
+    "entity_type": "Obligation",
+    "label": "notify",
+    "definition": "The provider must notify the Commission without delay and within two weeks after meeting a specific requirement or knowing it will be met.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 52(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 52(1)",
+        "chunk_id": "art_52",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_52/oj",
+        "source_quote": "the relevant provider shall notify the Commission without delay and in any event within two weeks after that requirement is met or it becomes known that it will be met"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "8663fc299ddd",
+    "term": "Provide Information And Documentation To Integrators",
+    "entity_type": "Obligation",
+    "label": "draw up, keep up-to-date and make available information and documentation to providers of AI systems",
+    "definition": "The duty to draw up, keep up-to-date and make available information and documentation to providers of AI systems who intend to integrate the general-purpose AI model into their AI systems.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 53(1)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 53(1)(b)",
+        "chunk_id": "art_53",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_53/oj",
+        "source_quote": "draw up, keep up-to-date and make available information and documentation to providers of AI systems"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "962e1af34c17",
+    "term": "Provision of Information",
+    "entity_type": "Obligation",
+    "label": "provide the AI Office, upon a reasoned request, with all the information and documentation",
+    "definition": "The authorised representative shall provide the AI Office, upon a reasoned request, with all the information and documentation, including that referred to in point (b), necessary to demonstrate compliance with the obligations in this Chapter.",
+    "bearer": "Authorised Representative",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 54(3)(c)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 54(3)(c)",
+        "chunk_id": "art_54",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_54/oj",
+        "source_quote": "provide the AI Office, upon a reasoned request, with all the information and documentation, including that referred to in point (b), necessary to demonstrate compliance with the obligations in this Chapter;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:58:52+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "b7ed0a734326",
+    "term": "Put In Place A Policy To Comply With Union Law On Copyright",
+    "entity_type": "Obligation",
+    "label": "put in place a policy to comply with Union law on copyright and related rights",
+    "definition": "The duty to put in place a policy to comply with Union law on copyright and related rights, and in particular to identify and comply with, including through state-of-the-art technologies, a reservation of rights expressed pursuant to Article 4(3) of Directive (EU) 2019/790.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 53(1)(c)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 53(1)(c)",
+        "chunk_id": "art_53",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_53/oj",
+        "source_quote": "put in place a policy to comply with Union law on copyright and related rights"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "c31549d832bb",
+    "term": "Put in Place a Quality Management System",
+    "entity_type": "Obligation",
+    "label": "put in place a quality management system",
+    "definition": "A documented system ensuring compliance with the Regulation, including strategies for regulatory compliance, design controls, data management, risk management, post-market monitoring, incident reporting, and accountability frameworks.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 17(1)",
+      "Art. 17(1)(a)",
+      "Art. 17(1)(b)",
+      "Art. 17(1)(c)",
+      "Art. 17(1)(d)",
+      "Art. 17(1)(e)",
+      "Art. 17(1)(f)",
+      "Art. 17(1)(g)",
+      "Art. 17(1)(h)",
+      "Art. 17(1)(i)",
+      "Art. 17(1)(j)",
+      "Art. 17(1)(k)",
+      "Art. 17(1)(l)",
+      "Art. 17(1)(m)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 17(1)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "Providers of high-risk AI systems shall put a quality management system in place that ensures compliance with this Regulation"
+      },
+      {
+        "article_ref": "Art. 17(1)(a)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "a strategy for regulatory compliance, including compliance with conformity assessment procedures and procedures for the management of modifications to the high-risk AI system"
+      },
+      {
+        "article_ref": "Art. 17(1)(b)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "techniques, procedures and systematic actions to be used for the design, design control and design verification of the high-risk AI system"
+      },
+      {
+        "article_ref": "Art. 17(1)(c)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "techniques, procedures and systematic actions to be used for the development, quality control and quality assurance of the high-risk AI system"
+      },
+      {
+        "article_ref": "Art. 17(1)(d)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "examination, test and validation procedures to be carried out before, during and after the development of the high-risk AI system"
+      },
+      {
+        "article_ref": "Art. 17(1)(e)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "technical specifications, including standards, to be applied and, where the relevant harmonised standards are not applied in full or do not cover all of the relevant requirements set out in Section 2, the means to be used to ensure that the high-risk AI system complies with those requirements"
+      },
+      {
+        "article_ref": "Art. 17(1)(f)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "systems and procedures for data management, including data acquisition, data collection, data analysis, data labelling, data storage, data filtration, data mining, data aggregation, data retention and any other operation regarding the data that is performed before and for the purpose of the placing on the market or the putting into service of high-risk AI systems"
+      },
+      {
+        "article_ref": "Art. 17(1)(g)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "the risk management system referred to in Article 9"
+      },
+      {
+        "article_ref": "Art. 17(1)(h)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "the setting-up, implementation and maintenance of a post-market monitoring system, in accordance with Article 72"
+      },
+      {
+        "article_ref": "Art. 17(1)(i)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "procedures related to the reporting of a serious incident in accordance with Article 73"
+      },
+      {
+        "article_ref": "Art. 17(1)(j)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "the handling of communication with national competent authorities, other relevant authorities, including those providing or supporting the access to data, notified bodies, other operators, customers or other interested parties"
+      },
+      {
+        "article_ref": "Art. 17(1)(k)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "systems and procedures for record-keeping of all relevant documentation and information"
+      },
+      {
+        "article_ref": "Art. 17(1)(l)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "resource management, including security-of-supply related measures"
+      },
+      {
+        "article_ref": "Art. 17(1)(m)",
+        "chunk_id": "art_17",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_17/oj",
+        "source_quote": "an accountability framework setting out the responsibilities of the management and other staff with regard to all the aspects listed in this paragraph"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:9b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": [
+      "08af2daf2845",
+      "3b6ffd7d7ae1",
+      "1fbf547d37b2",
+      "f577cc0ee779",
+      "4ef0e1106635",
+      "d16a3841947e",
+      "95a83db0e9ee",
+      "0216636ff795",
+      "2464a394c67f",
+      "4b289da95793",
+      "907bb4ae8ece",
+      "18c90bd86170",
+      "e137a6b19688"
+    ]
+  },
+  {
+    "id": "cdb601811e0c",
+    "term": "Report Post-Remote Biometric Identification Use",
+    "entity_type": "Obligation",
+    "label": "report on the use of post-remote biometric identification",
+    "definition": "Deployers shall submit annual reports to the relevant market surveillance and national data protection authorities on their use of post-remote biometric identification systems, excluding the disclosure of sensitive operational data related to law enforcement.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(10)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(10)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Deployers shall submit annual reports to the relevant market surveillance and national data protection authorities on their use of post-remote biometric identification systems, excluding the disclosure of sensitive operational data related to law enforcement. The reports may be aggregated to cover more than one deployment."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "630b670176d3",
+    "term": "Request authorisation",
+    "entity_type": "Obligation",
+    "label": "request an authorisation, ex ante, or without undue delay and no later than 48 hours, by a judicial authority or an administrative authority whose decision is binding and subject to judicial review, for the use of that system",
+    "definition": "In the framework of an investigation for the targeted search of a person suspected or convicted of having committed a criminal offence, the deployer of a high-risk AI system for post-remote biometric identification shall request an authorisation, ex ante, or without undue delay and no later than 48 hours, by a judicial authority or an administrative authority whose decision is binding and subject to judicial review, for the use of that system.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(10)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(10)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Without prejudice to Directive (EU) 2016/680, in the framework of an investigation for the targeted search of a person suspected or convicted of having committed a criminal offence, the deployer of a high-risk AI system for post-remote biometric identification shall request an authorisation, ex ante, or without undue delay and no later than 48 hours, by a judicial authority or an administrative authority whose decision is binding and subject to judicial review, for the use of that system, except when it is used for the initial identification of a potential suspect based on objective and verifiable facts directly linked to the offence."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "0f7b3f65062b",
+    "term": "Retention of Technical Documentation",
+    "entity_type": "Obligation",
+    "label": "keep a copy of the technical documentation specified in Annex XI at the disposal",
+    "definition": "The authorised representative shall keep a copy of the technical documentation specified in Annex XI at the disposal of the AI Office and national competent authorities, for a period of 10 years after the general-purpose AI model has been placed on the market.",
+    "bearer": "Authorised Representative",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 54(3)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 54(3)(b)",
+        "chunk_id": "art_54",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_54/oj",
+        "source_quote": "keep a copy of the technical documentation specified in Annex XI at the disposal of the AI Office and national competent authorities, for a period of 10 years after the general-purpose AI model has been placed on the market"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:58:52+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "72b4c856969d",
+    "term": "Separate Verification",
+    "entity_type": "Obligation",
+    "label": "identification has been separately verified and confirmed by at least two natural persons",
+    "definition": "For high-risk AI systems referred to in point 1(a) of Annex III, no action or decision is taken by the deployer on the basis of the identification resulting from the system unless that identification has been separately verified and confirmed by at least two natural persons with the necessary competence, training and authority.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 14(5)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 14(5)",
+        "chunk_id": "art_14",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_14/oj",
+        "source_quote": "no action or decision is taken by the deployer on the basis of the identification resulting from the system unless that identification has been separately verified and confirmed by at least two natural persons with the necessary competence, training and authority."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "0a329726a89b",
+    "term": "Stop use on rejection",
+    "entity_type": "Obligation",
+    "label": "stop with immediate effect and the personal data linked to the use of the high-risk AI system for which the authorisation was requested shall be deleted",
+    "definition": "If the authorisation requested pursuant to the first subparagraph is rejected, the use of the post-remote biometric identification system linked to that requested authorisation shall be stopped with immediate effect and the personal data linked to the use of the high-risk AI system for which the authorisation was requested shall be deleted.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(10)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(10)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "If the authorisation requested pursuant to the first subparagraph is rejected, the use of the post-remote biometric identification system linked to that requested authorisation shall be stopped with immediate effect and the personal data linked to the use of the high-risk AI system for which the authorisation was requested shall be deleted."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "c5a5d3eaa516",
+    "term": "Systemic Risk Assessment",
+    "entity_type": "Obligation",
+    "label": "assess and mitigate possible systemic risks at Union level, including their sources, that may stem from the development, the placing on the market, or the use of general-purpose AI models with systemic risk",
+    "definition": "Assess and mitigate possible systemic risks at Union level, including their sources, that may stem from the development, the placing on the market, or the use of general-purpose AI models with systemic risk.",
+    "bearer": "Provider",
+    "applies_to": "General-Purpose AI Model With Systemic Risk",
+    "article_refs": [
+      "Art. 55(1)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 55(1)(b)",
+        "chunk_id": "art_55",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_55/oj",
+        "source_quote": "assess and mitigate possible systemic risks at Union level, including their sources, that may stem from the development, the placing on the market, or the use of general-purpose AI models with systemic risk"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:11+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "118ba3f13d7a",
+    "term": "Take Corrective Actions",
+    "entity_type": "Obligation",
+    "label": "take the necessary corrective actions and provide information as required in Article 20",
+    "definition": "Providers must take necessary corrective actions and provide information as required in Article 20.",
+    "bearer": "Provider",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 16(j)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 16(j)",
+        "chunk_id": "art_16",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_16/oj",
+        "source_quote": "take the necessary corrective actions and provide information as required in Article 20"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "7f41ab4dfd83",
+    "term": "Termination of Mandate",
+    "entity_type": "Obligation",
+    "label": "terminate the mandate if it considers or has reason to consider the provider to be acting contrary to its obligations",
+    "definition": "The authorised representative shall terminate the mandate if it considers or has reason to consider the provider to be acting contrary to its obligations pursuant to this Regulation. In such a case, it shall also immediately inform the AI Office about the termination of the mandate and the reasons therefor.",
+    "bearer": "Authorised Representative",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 54(5)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 54(5)",
+        "chunk_id": "art_54",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_54/oj",
+        "source_quote": "The authorised representative shall terminate the mandate if it considers or has reason to consider the provider to be acting contrary to its obligations pursuant to this Regulation."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:58:52+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "ec4ed7f67db9",
+    "term": "Use in accordance with instructions",
+    "entity_type": "Obligation",
+    "label": "use such systems in accordance with the instructions for use accompanying the systems",
+    "definition": "Deployers of high-risk AI systems shall take appropriate technical and organisational measures to ensure they use such systems in accordance with the instructions for use accompanying the systems.",
+    "bearer": "Deployer",
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 26(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 26(1)",
+        "chunk_id": "art_26",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_26/oj",
+        "source_quote": "Deployers of high-risk AI systems shall take appropriate technical and organisational measures to ensure they use such systems in accordance with the instructions for use accompanying the systems, pursuant to paragraphs 3 and 6."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "572603b23daa",
+    "term": "Verification of Technical Documentation",
+    "entity_type": "Obligation",
+    "label": "verify that the technical documentation specified in Annex XI has been drawn up",
+    "definition": "The authorised representative shall verify that the technical documentation specified in Annex XI has been drawn up and all obligations referred to in Article 53 and, where applicable, Article 55 have been fulfilled by the provider.",
+    "bearer": "Authorised Representative",
+    "applies_to": "General-Purpose AI Model",
+    "article_refs": [
+      "Art. 54(3)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 54(3)(a)",
+        "chunk_id": "art_54",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_54/oj",
+        "source_quote": "verify that the technical documentation specified in Annex XI has been drawn up and all obligations referred to in Article 53 and, where applicable, Article 55 have been fulfilled by the provider;"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:58:52+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "f37bc47fa65e",
+    "term": "Biometric Categorisation",
+    "entity_type": "ProhibitedPractice",
+    "label": "biometric categorisation systems that categorise individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation",
+    "definition": "The placing on the market, putting into service for this specific purpose, or use of biometric categorisation systems that categorise individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 5(1)(g)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 5(1)(g)",
+        "chunk_id": "art_5",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_5/oj",
+        "source_quote": "biometric categorisation systems that categorise individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "aba0d9d38f91",
+    "term": "Criminal Risk Assessment",
+    "entity_type": "ProhibitedPractice",
+    "label": "risk assessments of natural persons in order to assess or predict the risk of a natural person committing a criminal offence",
+    "definition": "The placing on the market, putting into service for this specific purpose, or use of an AI system for making risk assessments of natural persons in order to assess or predict the risk of a natural person committing a criminal offence, based solely on the profiling of a natural person or on assessing their personality traits and characteristics.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 5(1)(d)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 5(1)(d)",
+        "chunk_id": "art_5",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_5/oj",
+        "source_quote": "an AI system for making risk assessments of natural persons in order to assess or predict the risk of a natural person committing a criminal offence, based solely on the profiling of a natural person"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "d0573317e8f3",
+    "term": "Emotion Inference",
+    "entity_type": "ProhibitedPractice",
+    "label": "infer emotions of a natural person in the areas of workplace and education institutions",
+    "definition": "The placing on the market, putting into service for this specific purpose, or use of an AI system to infer emotions of a natural person in the areas of workplace and education institutions, except where the use of the AI system is intended to be put in place or into the market for medical or safety reasons.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 5(1)(f)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 5(1)(f)",
+        "chunk_id": "art_5",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_5/oj",
+        "source_quote": "AI systems to infer emotions of a natural person in the areas of workplace and education institutions"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "supported",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "b5c37aed56a5",
+    "term": "Exploiting Vulnerabilities",
+    "entity_type": "ProhibitedPractice",
+    "label": "exploits any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability or a specific social or economic situation",
+    "definition": "An AI system that exploits any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability or a specific social or economic situation, with the objective of materially distorting the behaviour of that person or a person belonging to that group.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 5(1)(b)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 5(1)(b)",
+        "chunk_id": "art_5",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_5/oj",
+        "source_quote": "an AI system that exploits any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability or a specific social or economic situation"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "cde1d504fe6c",
+    "term": "Facial Recognition Databases",
+    "entity_type": "ProhibitedPractice",
+    "label": "facial recognition databases through the untargeted scraping of facial images from the internet or CCTV footage",
+    "definition": "The placing on the market, putting into service for this specific purpose, or use of an AI system that create or expand facial recognition databases through the untargeted scraping of facial images from the internet or CCTV footage.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 5(1)(e)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 5(1)(e)",
+        "chunk_id": "art_5",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_5/oj",
+        "source_quote": "AI systems that create or expand facial recognition databases through the untargeted scraping of facial images from the internet or CCTV footage"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "b2b48012590c",
+    "term": "Real-time Remote Biometric Identification",
+    "entity_type": "ProhibitedPractice",
+    "label": "real-time remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement",
+    "definition": "The use of 'real-time' remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement, unless and in so far as such use is strictly necessary for one of the following objectives.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 5(1)(h)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 5(1)(h)",
+        "chunk_id": "art_5",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_5/oj",
+        "source_quote": "the use of ‘real-time’ remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "1ae4e22cfac0",
+    "term": "Social Scoring",
+    "entity_type": "ProhibitedPractice",
+    "label": "social scoring",
+    "definition": "The placing on the market, putting into service or use of AI systems that evaluate or classify natural persons over a period of time on the basis of their social behaviour or personal characteristics, where the resulting social score leads to detrimental or unfavourable treatment that is unrelated to the original context or is unjustified or disproportionate.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 5(1)(c)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 5(1)(c)",
+        "chunk_id": "art_5",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_5/oj",
+        "source_quote": "the placing on the market, the putting into service or the use of AI systems for the evaluation or classification of natural persons or groups of persons over a certain period of time based on their social behaviour"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "be2d32e347ed",
+    "term": "Subliminal Techniques and Manipulation",
+    "entity_type": "ProhibitedPractice",
+    "label": "subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive techniques",
+    "definition": "An AI system that deploys subliminal techniques beyond a person's consciousness or purposefully manipulative or deceptive techniques, with the objective of materially distorting the behaviour of a person or group of persons by appreciably impairing their ability to make an informed decision.",
+    "bearer": null,
+    "applies_to": null,
+    "article_refs": [
+      "Art. 5(1)(a)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 5(1)(a)",
+        "chunk_id": "art_5",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_5/oj",
+        "source_quote": "an AI system that deploys subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive techniques"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "8d62e34db231",
+    "term": "Accuracy",
+    "entity_type": "Requirement",
+    "label": "accuracy",
+    "definition": "High-risk AI systems shall be designed and developed in such a way that they achieve an appropriate level of accuracy.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 15(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 15(1)",
+        "chunk_id": "art_15",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_15/oj",
+        "source_quote": "that they achieve an appropriate level of accuracy"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "fbdf09fda1bc",
+    "term": "Automatic Recording of Events",
+    "entity_type": "Requirement",
+    "label": "automatic recording of events (logs)",
+    "definition": "High-risk AI systems must technically allow for the automatic recording of events over the lifetime of the system.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 12(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 12(1)",
+        "chunk_id": "art_12",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_12/oj",
+        "source_quote": "High-risk AI systems shall technically allow for the automatic recording of events (logs) over the lifetime of the system."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "01b3ec09c025",
+    "term": "Bias Detection and Correction",
+    "entity_type": "Requirement",
+    "label": "bias detection and correction",
+    "definition": "Training, validation and testing data sets must be examined for biases likely to affect health and safety, have a negative impact on fundamental rights or lead to discrimination prohibited by Union law, and appropriate measures must be taken to detect, prevent and mitigate them.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 10(2)(f)",
+      "Art. 10(2)(g)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 10(2)(f)",
+        "chunk_id": "art_10",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_10/oj",
+        "source_quote": "examination in view of possible biases that are likely to affect the health and safety of persons, have a negative impact on fundamental rights or lead to discrimination prohibited under Union law"
+      },
+      {
+        "article_ref": "Art. 10(2)(g)",
+        "chunk_id": "art_10",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_10/oj",
+        "source_quote": "appropriate measures to detect, prevent and mitigate possible biases identified according to point (f)"
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:9b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "2be0b3c7c979",
+    "term": "Cybersecurity",
+    "entity_type": "Requirement",
+    "label": "cybersecurity",
+    "definition": "High-risk AI systems shall be designed and developed in such a way that they achieve an appropriate level of cybersecurity.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 15(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 15(1)",
+        "chunk_id": "art_15",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_15/oj",
+        "source_quote": "that they achieve an appropriate level of accuracy, robustness, and cybersecurity"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "1308a2a8e63c",
+    "term": "Data Governance and Management Practices",
+    "entity_type": "Requirement",
+    "label": "data governance and management practices",
+    "definition": "Training, validation and testing data sets must be subject to appropriate data governance and management practices for the intended purpose of the high-risk AI system.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 10(2)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 10(2)",
+        "chunk_id": "art_10",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_10/oj",
+        "source_quote": "Training, validation and testing data sets shall be subject to data governance and management practices appropriate for the intended purpose of the high-risk AI system."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:9b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "2b3110e6dc9f",
+    "term": "Data Quality Criteria",
+    "entity_type": "Requirement",
+    "label": "data quality criteria",
+    "definition": "Training, validation and testing data sets must be relevant, sufficiently representative, free of errors, complete, and have appropriate statistical properties.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 10(3)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 10(3)",
+        "chunk_id": "art_10",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_10/oj",
+        "source_quote": "Training, validation and testing data sets shall be relevant, sufficiently representative, and to the best extent possible, free of errors and complete in view of the intended purpose."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:9b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "31d1d4cfd472",
+    "term": "Effective Human Oversight Capability",
+    "entity_type": "Requirement",
+    "label": "effectively overseen by natural persons",
+    "definition": "High-risk AI systems shall be designed and developed in such a way that they can be effectively overseen by natural persons during the period in which they are in use.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 14(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 14(1)",
+        "chunk_id": "art_14",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_14/oj",
+        "source_quote": "High-risk AI systems shall be designed and developed in such a way, including with appropriate human-machine interface tools, that they can be effectively overseen by natural persons during the period in which they are in use."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "81d41ca8d49a",
+    "term": "Instructions for use",
+    "entity_type": "Requirement",
+    "label": "instructions for use",
+    "definition": "High-risk AI systems shall be accompanied by instructions for use in an appropriate digital format or otherwise that include concise, complete, correct and clear information that is relevant, accessible and comprehensible to deployers.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 13(2)",
+      "Art. 13(3)(a)",
+      "Art. 13(3)(b)",
+      "Art. 13(3)(c)",
+      "Art. 13(3)(d)",
+      "Art. 13(3)(e)",
+      "Art. 13(3)(f)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 13(2)",
+        "chunk_id": "art_13",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_13/oj",
+        "source_quote": "High-risk AI systems shall be accompanied by instructions for use in an appropriate digital format or otherwise that include concise, complete, correct and clear information that is relevant, accessible and comprehensible to deployers."
+      },
+      {
+        "article_ref": "Art. 13(3)(a)",
+        "chunk_id": "art_13",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_13/oj",
+        "source_quote": "the identity and the contact details of the provider and, where applicable, of its authorised representative;"
+      },
+      {
+        "article_ref": "Art. 13(3)(b)",
+        "chunk_id": "art_13",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_13/oj",
+        "source_quote": "the characteristics, capabilities and limitations of performance of the high-risk AI system, including:"
+      },
+      {
+        "article_ref": "Art. 13(3)(c)",
+        "chunk_id": "art_13",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_13/oj",
+        "source_quote": "the changes to the high-risk AI system and its performance which have been pre-determined by the provider at the moment of the initial conformity assessment, if any;"
+      },
+      {
+        "article_ref": "Art. 13(3)(d)",
+        "chunk_id": "art_13",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_13/oj",
+        "source_quote": "the human oversight measures referred to in Article 14, including the technical measures put in place to facilitate the interpretation of the outputs of the high-risk AI systems by the deployers;"
+      },
+      {
+        "article_ref": "Art. 13(3)(e)",
+        "chunk_id": "art_13",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_13/oj",
+        "source_quote": "the computational and hardware resources needed, the expected lifetime of the high-risk AI system and any necessary maintenance and care measures, including their frequency, to ensure the proper functioning of that AI system, including as regards software updates;"
+      },
+      {
+        "article_ref": "Art. 13(3)(f)",
+        "chunk_id": "art_13",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_13/oj",
+        "source_quote": "where relevant, a description of the mechanisms included within the high-risk AI system that allows deployers to properly collect, store and interpret the logs in accordance with Article 12."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": [
+      "9ca64e2a8a5b",
+      "69974d82c370",
+      "43f35eb2f9fe",
+      "05d2eaac0c97",
+      "b34f368466f1",
+      "10c0a76a86b6"
+    ]
+  },
+  {
+    "id": "c4bf1dde2f4b",
+    "term": "Resilience",
+    "entity_type": "Requirement",
+    "label": "resilience",
+    "definition": "High-risk AI systems shall be as resilient as possible regarding errors, faults or inconsistencies that may occur within the system or the environment in which the system operates.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 15(4)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 15(4)",
+        "chunk_id": "art_15",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_15/oj",
+        "source_quote": "High-risk AI systems shall be as resilient as possible regarding errors, faults or inconsistencies"
+      }
+    ],
+    "confidence": 0.97,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "b9ad0e89c620",
+    "term": "Risk Management System",
+    "entity_type": "Requirement",
+    "label": "risk management system",
+    "definition": "A risk management system that must be established, implemented, documented and maintained in relation to high-risk AI systems.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 9(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 9(1)",
+        "chunk_id": "art_9",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_9/oj",
+        "source_quote": "A risk management system shall be established, implemented, documented and maintained in relation to high-risk AI systems."
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "ec5a914fa2b1",
+    "term": "Robustness",
+    "entity_type": "Requirement",
+    "label": "robustness",
+    "definition": "High-risk AI systems shall be designed and developed in such a way that they achieve an appropriate level of robustness.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 15(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 15(1)",
+        "chunk_id": "art_15",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_15/oj",
+        "source_quote": "that they achieve an appropriate level of accuracy, robustness, and cybersecurity"
+      }
+    ],
+    "confidence": 0.98,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "accepted",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "0878ecbfa09f",
+    "term": "Testing",
+    "entity_type": "Requirement",
+    "label": "testing",
+    "definition": "High-risk AI systems shall be tested for the purpose of identifying the most appropriate and targeted risk management measures.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 9(6)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 9(6)",
+        "chunk_id": "art_9",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_9/oj",
+        "source_quote": "High-risk AI systems shall be tested for the purpose of identifying the most appropriate and targeted risk management measures."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  },
+  {
+    "id": "5724b9b8979f",
+    "term": "Transparency",
+    "entity_type": "Requirement",
+    "label": "sufficiently transparent",
+    "definition": "High-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently transparent to enable deployers to interpret a system's output and use it appropriately.",
+    "bearer": null,
+    "applies_to": "High-Risk AI System",
+    "article_refs": [
+      "Art. 13(1)"
+    ],
+    "sources": [
+      {
+        "article_ref": "Art. 13(1)",
+        "chunk_id": "art_13",
+        "eli_uri": "http://data.europa.eu/eli/reg/2024/1689/art_13/oj",
+        "source_quote": "High-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently transparent to enable deployers to interpret a system's output and use it appropriately."
+      }
+    ],
+    "confidence": 0.95,
+    "critic_verdict": "partially",
+    "model": "qwen3.5:4b",
+    "curation_status": "edited",
+    "reviewer": "claude-opus-5 (AI stand-in for the human reviewer)",
+    "decided_at": "2026-09-23T12:06:10+00:00",
+    "merged_ids": []
+  }
+]

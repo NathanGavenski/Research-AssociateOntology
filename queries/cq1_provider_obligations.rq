@@ -1,0 +1,20 @@
+# CQ1: Which obligations does a provider of a high-risk AI system hold, and where do they come from?
+#
+# The curated role aiact:Provider and the hand-authored aiact:ProviderRole are asserted equivalent,
+# but an equivalence between classes says nothing about the same IRIs used as individuals (OWL 2
+# punning), so both are listed here. This query needs no reasoner.
+PREFIX aiact: <https://w3id.org/aiact-poc#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?obligation ?label ?article ?definition
+WHERE {
+  VALUES ?role { aiact:Provider aiact:ProviderRole }
+  ?obligation a aiact:Obligation ;
+              aiact:obligationOf ?role ;
+              aiact:appliesToSystem aiact:HighRiskAISystem ;
+              rdfs:label ?label ;
+              aiact:articleRef ?article ;
+              skos:definition ?definition .
+}
+ORDER BY ?article

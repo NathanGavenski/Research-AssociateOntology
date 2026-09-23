@@ -1,0 +1,22 @@
+digraph classification {
+  rankdir=LR; node [style=filled, shape=box, fontname="Helvetica", fontsize=10];
+  edge [fontname="Helvetica", fontsize=9];
+  "AcmeAI" [label="Acme AI", fillcolor="#fdf3d8", shape=ellipse];
+  "AcmeProviderRole" [label="Acme AI as provider of the CV screening tool", fillcolor="#fdf3d8", shape=ellipse];
+  "AcmeAI" -> "AcmeProviderRole" [label="has role", color="#666666"];
+  "AcmeProviderRole" [label="Acme AI as provider of the CV screening tool", fillcolor="#fdf3d8", shape=ellipse];
+  "CVScreeningTool" [label="CV screening tool", fillcolor="#fdf3d8", shape=ellipse];
+  "AcmeProviderRole" -> "CVScreeningTool" [label="role in relation to", color="#666666"];
+  "CVScreeningTool" [label="CV screening tool", fillcolor="#fdf3d8", shape=ellipse];
+  "EmploymentAndWorkersManagement" [label="employment, workers’ management and access to…", fillcolor="#fdf3d8", shape=ellipse];
+  "CVScreeningTool" -> "EmploymentAndWorkersManagement" [label="used in area", color="#666666"];
+  "AnnexIIIHighRiskAISystem" [label="Annex III high-risk AI system", fillcolor="#f8d7da"];
+  "CVScreeningTool" -> "AnnexIIIHighRiskAISystem" [label="inferred type", style=dashed, color="#c0392b"];
+  "ChatAssistant" [label="chat assistant", fillcolor="#fdf3d8", shape=ellipse];
+  "SocialScoringPlatform" [label="social scoring platform", fillcolor="#fdf3d8", shape=ellipse];
+  "SocialScoring" [label="social scoring", fillcolor="#fdf3d8", shape=ellipse];
+  "SocialScoringPlatform" -> "SocialScoring" [label="uses practice", color="#666666"];
+  "ProhibitedAISystem" [label="prohibited AI system", fillcolor="#f8d7da"];
+  "SocialScoringPlatform" -> "ProhibitedAISystem" [label="inferred type", style=dashed, color="#c0392b"];
+  subgraph cluster_key { label="key"; fontname="Helvetica"; fontsize=10; "asserted" [fillcolor="#fdf3d8", shape=ellipse]; "inferred by HermiT" [fillcolor="#f8d7da"]; }
+}

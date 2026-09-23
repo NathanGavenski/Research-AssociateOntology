@@ -1,0 +1,100 @@
+{
+  "size": {
+    "axiom_count": 1709,
+    "class_count": 69,
+    "individual_count": 160,
+    "logical_axiom_count": 471,
+    "classes": 69,
+    "object_properties": 11,
+    "datatype_properties": 1,
+    "annotation_properties": 11,
+    "named_individuals": 124,
+    "triples": 1774
+  },
+  "structure": {
+    "max_depth": 2,
+    "mean_depth": 1.07,
+    "mean_children_per_parent": 7.12
+  },
+  "annotation": {
+    "entities": 157,
+    "with_label": 100.0,
+    "with_definition": 100.0,
+    "with_article_ref": 96.2,
+    "generated_entities": 127,
+    "generated_with_source_quote": 100.0,
+    "generated_with_eli_link": 100.0,
+    "obligations_with_bearer": 100.0
+  },
+  "reuse": {
+    "core_classes": 30,
+    "aligned_core_classes": 8,
+    "aligned_percent": 26.7
+  },
+  "competency_questions": {
+    "questions": 6,
+    "answered": 6,
+    "answered_percent": 100.0,
+    "rows": {
+      "cq1_provider_obligations": 30,
+      "cq2_prohibited_practices": 8,
+      "cq3_high_risk_areas": 7,
+      "cq4_high_risk_requirements": 20,
+      "cq5_gpai_obligations": 18,
+      "cq6_classified_systems": 2
+    }
+  },
+  "pipeline": {
+    "extracted_records": 181,
+    "grounding_rejected": 2,
+    "grounding_pass_percent": 98.9,
+    "exact_quote_percent": 98.8,
+    "verified_records": 160,
+    "critic_verdicts": {
+      "partially": 113,
+      "supported": 44,
+      "unsupported": 3
+    },
+    "curated_entities": 134,
+    "decisions": {
+      "accept": 76,
+      "edit": 58,
+      "reject": 6,
+      "merge": 20
+    },
+    "decision_percent": {
+      "accept": 47.5,
+      "edit": 36.2,
+      "reject": 3.8,
+      "merge": 12.5
+    },
+    "unchanged_percent": 47.5,
+    "critic_reviewer_agreement_percent": 60.6,
+    "critic_reviewer_kappa": 0.249,
+    "entities_by_type": {
+      "AISystemCategory": 32,
+      "Actor": 7,
+      "Authority": 5,
+      "HighRiskArea": 7,
+      "Obligation": 62,
+      "ProhibitedPractice": 8,
+      "Requirement": 13
+    }
+  },
+  "logical": {
+    "available": true,
+    "engine": "robot",
+    "checks": {
+      "parses": "pass",
+      "profile": "pass",
+      "consistency": "pass",
+      "classification": "pass",
+      "shacl": "pass",
+      "robot_report": "pass"
+    }
+  },
+  "gold_sample": {
+    "annotated_articles": 0,
+    "note": "No gold sample yet. Annotating 3-5 articles by hand before running the pipeline would give precision and recall per entity type, the most defensible accuracy number."
+  }
+}

@@ -278,7 +278,7 @@ class Chunk:
 
 
 if __name__ == "__main__":
-    from ingest import Ingest
+    from aiact_onto.ingest import Ingest
 
     ingest = Ingest()
     text = ingest.ingest()

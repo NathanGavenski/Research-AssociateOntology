@@ -1,0 +1,46 @@
+@prefix aiact: <https://w3id.org/aiact-poc#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+
+# Annotation completeness (README §7). SHACL is a closed-world check on the annotations, which the
+# reasoner cannot do: it says what must be present, not what follows.
+
+aiact:AnnotatedEntityShape a sh:NodeShape ;
+    sh:targetSubjectsOf aiact:curationStatus ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Every entity needs an English rdfs:label." ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:languageIn ( "en" ) ;
+        sh:message "Every entity needs an English skos:definition." ] ;
+    sh:property [
+        sh:path aiact:curationStatus ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "accepted" "edited" "hand-authored" ) ;
+        sh:message "curationStatus must be accepted, edited or hand-authored." ] .
+
+# Entities that came out of the pipeline must also be traceable to the Act. Hand-authored entities
+# are exempt, because a core class such as aiact:Organisation has no single article behind it.
+aiact:GeneratedEntityShape a sh:NodeShape ;
+    sh:targetSubjectsOf aiact:curationStatus ;
+    sh:or (
+        [ sh:property [ sh:path aiact:curationStatus ; sh:hasValue "hand-authored" ] ]
+        [ sh:property [ sh:path aiact:articleRef ; sh:minCount 1 ] ;
+          sh:property [ sh:path aiact:sourceQuote ; sh:minCount 1 ] ;
+          sh:property [ sh:path aiact:hasLegalSource ; sh:minCount 1 ] ]
+    ) ;
+    sh:message "A curated entity needs an articleRef, a sourceQuote and a hasLegalSource link." .
+
+# Obligations carry a bearer, or the competency question asking who holds them returns nothing.
+aiact:ObligationShape a sh:NodeShape ;
+    sh:targetClass aiact:Obligation ;
+    sh:property [
+        sh:path aiact:obligationOf ;
+        sh:minCount 1 ;
+        sh:message "Every obligation needs an obligationOf link to the role that holds it." ] .

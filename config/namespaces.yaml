@@ -1,0 +1,20 @@
+# Prefixes and IRIs (README §5.1). The base IRI is a placeholder; replace it with your own.
+base: https://w3id.org/aiact-poc#
+ontology:
+  top: https://w3id.org/aiact-poc
+  core: https://w3id.org/aiact-poc/core
+  alignments: https://w3id.org/aiact-poc/alignments
+  generated: https://w3id.org/aiact-poc/generated
+  examples: https://w3id.org/aiact-poc/examples
+license: https://creativecommons.org/licenses/by/4.0/
+source: http://data.europa.eu/eli/reg/2024/1689/oj
+prefixes:
+  aiact: https://w3id.org/aiact-poc#
+  ex: https://w3id.org/aiact-poc/examples#
+  airo: https://w3id.org/airo#
+  vair: https://w3id.org/vair#
+  dpv: https://w3id.org/dpv#
+  eli: http://data.europa.eu/eli/ontology#
+  dcterms: http://purl.org/dc/terms/
+  skos: http://www.w3.org/2004/02/skos/core#
+  prov: http://www.w3.org/ns/prov#

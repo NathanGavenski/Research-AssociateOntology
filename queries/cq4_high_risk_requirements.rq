@@ -1,0 +1,16 @@
+# CQ4: What must a high-risk AI system satisfy, and who must act on it?
+#
+# Requirements are properties of the system and carry no bearer; the obligations that make someone
+# responsible for them are listed beside each one where the ontology records a bearer.
+PREFIX aiact: <https://w3id.org/aiact-poc#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?requirement ?label ?article ?bearer
+WHERE {
+  ?requirement a aiact:Requirement ;
+               aiact:appliesToSystem aiact:HighRiskAISystem ;
+               rdfs:label ?label ;
+               aiact:articleRef ?article .
+  OPTIONAL { ?requirement aiact:obligationOf ?bearer }
+}
+ORDER BY ?article

@@ -1,0 +1,13 @@
+# CQ3: Which areas make an AI system high-risk, and which Annex III point establishes each one?
+PREFIX aiact: <https://w3id.org/aiact-poc#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?area ?label ?article ?definition
+WHERE {
+  ?area a aiact:HighRiskArea ;
+        rdfs:label ?label ;
+        aiact:articleRef ?article ;
+        skos:definition ?definition .
+}
+ORDER BY ?article

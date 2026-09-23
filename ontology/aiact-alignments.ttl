@@ -1,0 +1,30 @@
+@prefix aiact: <https://w3id.org/aiact-poc#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix airo:  <https://w3id.org/airo#> .
+@prefix vair:  <https://w3id.org/vair#> .
+@prefix dpv:   <https://w3id.org/dpv#> .
+@prefix eli:   <http://data.europa.eu/eli/ontology#> .
+
+# Hand-authored alignments (README §5, ADR-6). SKOS is used where the match is close but not
+# certain, because skos:closeMatch records the relationship without importing the other
+# ontology's axioms. Every external IRI below must be checked against the copy pinned in
+# ontology/imports/ before release; an IRI that does not resolve there should be removed.
+
+skos:closeMatch a owl:AnnotationProperty .
+
+<https://w3id.org/aiact-poc/alignments> a owl:Ontology ;
+    dcterms:title "AIAct-Onto alignments"@en ;
+    dcterms:description "Mappings from the core classes to AIRO, VAIR, DPV and ELI."@en ;
+    owl:versionInfo "0.1.0" .
+
+aiact:AISystem            skos:closeMatch airo:AISystem .
+aiact:ProviderRole        skos:closeMatch airo:AIProvider .
+aiact:DeployerRole        skos:closeMatch airo:AIDeployer .
+aiact:HighRiskAISystem    skos:closeMatch airo:HighRiskAISystem .
+aiact:HighRiskArea        skos:closeMatch vair:AICapability .
+aiact:Organisation        skos:closeMatch dpv:Organisation .
+aiact:Obligation          skos:closeMatch dpv:Obligation .
+aiact:LegalProvision      rdfs:subClassOf eli:LegalResourceSubdivision .

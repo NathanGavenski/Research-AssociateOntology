@@ -1,0 +1,335 @@
+@prefix aiact:   <https://w3id.org/aiact-poc#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix eli:     <http://data.europa.eu/eli/ontology#> .
+
+# Hand-authored TBox (README §5.2 to §5.5). S6 never writes to this file.
+
+<https://w3id.org/aiact-poc/core> a owl:Ontology ;
+    dcterms:title "AIAct-Onto core"@en ;
+    dcterms:description "Hand-authored class and property skeleton for a proof-of-concept ontology of Regulation (EU) 2024/1689."@en ;
+    rdfs:seeAlso <http://data.europa.eu/eli/reg/2024/1689/oj> ;
+    owl:versionInfo "0.1.0" .
+
+##  External properties, declared so the ontology stays in OWL 2 DL  ###########
+
+xsd:date                     a rdfs:Datatype .
+eli:LegalResourceSubdivision a owl:Class .
+prov:Activity                a owl:Class .
+
+skos:definition     a owl:AnnotationProperty .
+prov:wasGeneratedBy a owl:AnnotationProperty .
+dcterms:title       a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:creator     a owl:AnnotationProperty .
+dcterms:created     a owl:AnnotationProperty .
+dcterms:license     a owl:AnnotationProperty .
+dcterms:source      a owl:ObjectProperty ;
+    rdfs:label "source"@en ;
+    rdfs:comment "Declared as an object property because aiact:hasLegalSource is a sub-property of it; ontology headers use rdfs:seeAlso for the source of the Act instead."@en .
+
+##  Annotation and data properties (README §5.4)  ##############################
+
+aiact:articleRef a owl:AnnotationProperty ;
+    rdfs:label "article reference"@en ;
+    skos:definition "Human-readable reference to the provision an entity comes from, e.g. \"Art. 5(1)(c)\"."@en .
+
+aiact:sourceQuote a owl:AnnotationProperty ;
+    rdfs:label "source quote"@en ;
+    skos:definition "Verbatim span of the Act that grounds the entity."@en .
+
+aiact:curationStatus a owl:AnnotationProperty ;
+    rdfs:label "curation status"@en ;
+    skos:definition "How the entity entered the ontology: accepted, edited or hand-authored."@en .
+
+aiact:applicableFrom a owl:DatatypeProperty ;
+    rdfs:label "applicable from"@en ;
+    rdfs:range xsd:date ;
+    skos:definition "Date from which the provision applies."@en .
+
+##  Object properties (README §5.3)  ###########################################
+
+aiact:hasRole a owl:ObjectProperty ;
+    rdfs:label "has role"@en ;
+    rdfs:domain aiact:Organisation ;
+    rdfs:range aiact:OperatorRole ;
+    skos:definition "Relates an organisation to a role it holds under the Act."@en .
+
+aiact:roleInRelationTo a owl:ObjectProperty ;
+    rdfs:label "role in relation to"@en ;
+    rdfs:domain aiact:OperatorRole ;
+    rdfs:range aiact:AISystem ;
+    skos:definition "Relates a role to the AI system it is held in relation to."@en .
+
+aiact:obligationOf a owl:ObjectProperty ;
+    rdfs:label "obligation of"@en ;
+    rdfs:domain aiact:Obligation ;
+    rdfs:range [ a owl:Class ; owl:unionOf ( aiact:OperatorRole aiact:Authority aiact:MemberState ) ] ;
+    rdfs:comment "The range widens README §5.3 from OperatorRole to include Authority and MemberState, because the Act also places duties on the Commission, the AI Office, national authorities and the Member States."@en ;
+    skos:definition "Relates an obligation to the role or authority that must carry it out."@en .
+
+aiact:hasObligation a owl:ObjectProperty ;
+    rdfs:label "has obligation"@en ;
+    owl:inverseOf aiact:obligationOf ;
+    skos:definition "Relates a role to an obligation it must carry out."@en .
+
+aiact:appliesToSystem a owl:ObjectProperty ;
+    rdfs:label "applies to system"@en ;
+    rdfs:domain [ a owl:Class ; owl:unionOf ( aiact:Obligation aiact:Requirement ) ] ;
+    rdfs:comment "The object may be a class of AI system used as an individual (OWL 2 punning), so no range is asserted."@en ;
+    skos:definition "Relates an obligation or requirement to the kind of AI system it covers."@en .
+
+aiact:usesPractice a owl:ObjectProperty ;
+    rdfs:label "uses practice"@en ;
+    rdfs:domain aiact:AISystem ;
+    rdfs:range aiact:AIPractice ;
+    skos:definition "Relates an AI system to a practice it puts into effect."@en .
+
+aiact:usedInArea a owl:ObjectProperty ;
+    rdfs:label "used in area"@en ;
+    rdfs:domain aiact:AISystem ;
+    rdfs:range aiact:HighRiskArea ;
+    skos:definition "Relates an AI system to the area it is intended to be used in."@en .
+
+aiact:mustSatisfy a owl:ObjectProperty ;
+    rdfs:label "must satisfy"@en ;
+    rdfs:domain aiact:HighRiskAISystem ;
+    rdfs:range aiact:Requirement ;
+    skos:definition "Relates a high-risk AI system to a requirement it must meet."@en .
+
+aiact:supervisedBy a owl:ObjectProperty ;
+    rdfs:label "supervised by"@en ;
+    rdfs:domain aiact:AISystem ;
+    rdfs:range aiact:Authority ;
+    skos:definition "Relates an AI system to an authority that supervises it."@en .
+
+aiact:hasLegalSource a owl:ObjectProperty ;
+    rdfs:label "has legal source"@en ;
+    rdfs:subPropertyOf dcterms:source ;
+    rdfs:range aiact:LegalProvision ;
+    skos:definition "Relates an entity to the provision of the Act it comes from."@en .
+
+##  Classes (README §5.2)  #####################################################
+
+aiact:AISystem a owl:Class ;
+    rdfs:label "AI system"@en ;
+    aiact:articleRef "Art. 3(1)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A machine-based system that infers, from the input it receives, how to generate outputs that can influence physical or virtual environments."@en .
+
+aiact:ProhibitedAISystem a owl:Class ;
+    rdfs:label "prohibited AI system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    aiact:articleRef "Art. 5" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "An AI system that puts a practice prohibited by Article 5 into effect."@en .
+
+aiact:HighRiskAISystem a owl:Class ;
+    rdfs:label "high-risk AI system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    aiact:articleRef "Art. 6" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "An AI system classified as high-risk under Article 6."@en .
+
+aiact:AnnexIHighRiskAISystem a owl:Class ;
+    rdfs:label "Annex I high-risk AI system"@en ;
+    rdfs:subClassOf aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 6(1)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "An AI system that is a safety component of a product covered by the Union harmonisation legislation in Annex I, or is itself such a product."@en .
+
+aiact:AnnexIIIHighRiskAISystem a owl:Class ;
+    rdfs:label "Annex III high-risk AI system"@en ;
+    rdfs:subClassOf aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 6(2)" ;
+    aiact:curationStatus "hand-authored" ;
+    rdfs:comment "This definition deliberately ignores the derogation in Article 6(3); see the documentation."@en ;
+    skos:definition "An AI system intended to be used in one of the areas listed in Annex III."@en .
+
+aiact:LimitedRiskAISystem a owl:Class ;
+    rdfs:label "limited-risk AI system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    aiact:articleRef "Art. 50" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "An AI system that is subject only to the transparency obligations of Article 50."@en .
+
+aiact:MinimalRiskAISystem a owl:Class ;
+    rdfs:label "minimal-risk AI system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "An AI system that is neither prohibited, high-risk nor subject to the transparency obligations."@en .
+
+aiact:GeneralPurposeAIModel a owl:Class ;
+    rdfs:label "general-purpose AI model"@en ;
+    aiact:articleRef "Art. 3(63)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "An AI model that displays significant generality, can competently perform a wide range of distinct tasks and can be integrated into downstream systems."@en .
+
+aiact:GPAIModelWithSystemicRisk a owl:Class ;
+    rdfs:label "general-purpose AI model with systemic risk"@en ;
+    rdfs:subClassOf aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 51" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A general-purpose AI model classified as having systemic risk under Article 51."@en .
+
+aiact:OperatorRole a owl:Class ;
+    rdfs:label "operator role"@en ;
+    aiact:articleRef "Art. 3(8)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A role an organisation or person holds towards an AI system or model."@en .
+
+aiact:ProviderRole a owl:Class ;
+    rdfs:label "provider role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    aiact:articleRef "Art. 3(3)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "The role of developing an AI system or general-purpose AI model, or having one developed, and placing it on the market or putting it into service under one's own name or trademark."@en .
+
+aiact:DeployerRole a owl:Class ;
+    rdfs:label "deployer role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    aiact:articleRef "Art. 3(4)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "The role of using an AI system under one's own authority, other than in a personal non-professional activity."@en .
+
+aiact:ImporterRole a owl:Class ;
+    rdfs:label "importer role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    aiact:articleRef "Art. 3(6)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "The role of placing on the market an AI system bearing the name or trademark of a person established outside the Union."@en .
+
+aiact:DistributorRole a owl:Class ;
+    rdfs:label "distributor role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    aiact:articleRef "Art. 3(7)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "The role, other than provider or importer, of making an AI system available on the Union market."@en .
+
+aiact:AuthorisedRepresentativeRole a owl:Class ;
+    rdfs:label "authorised representative role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    aiact:articleRef "Art. 3(5)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "The role of acting in the Union on a written mandate from a provider to carry out its obligations."@en .
+
+aiact:Authority a owl:Class ;
+    rdfs:label "authority"@en ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A public body with a function under the Act."@en .
+
+aiact:AIOffice a owl:Class ;
+    rdfs:label "AI Office"@en ;
+    rdfs:subClassOf aiact:Authority ;
+    aiact:articleRef "Art. 3(47)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "The Commission body tasked with supervising general-purpose AI models under the Act."@en .
+
+aiact:NationalCompetentAuthority a owl:Class ;
+    rdfs:label "national competent authority"@en ;
+    rdfs:subClassOf aiact:Authority ;
+    aiact:articleRef "Art. 70" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A notifying authority or market surveillance authority designated by a Member State."@en .
+
+aiact:MarketSurveillanceAuthority a owl:Class ;
+    rdfs:label "market surveillance authority"@en ;
+    rdfs:subClassOf aiact:NationalCompetentAuthority ;
+    aiact:articleRef "Art. 3(26)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "The national authority carrying out market surveillance activities under the Act."@en .
+
+aiact:NotifyingAuthority a owl:Class ;
+    rdfs:label "notifying authority"@en ;
+    rdfs:subClassOf aiact:NationalCompetentAuthority ;
+    aiact:articleRef "Art. 3(19)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "The national authority responsible for assessing, designating and monitoring conformity assessment bodies."@en .
+
+aiact:NotifiedBody a owl:Class ;
+    rdfs:label "notified body"@en ;
+    rdfs:subClassOf aiact:Authority ;
+    aiact:articleRef "Art. 3(22)" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A conformity assessment body notified under the Act."@en .
+
+aiact:Commission a owl:Class ;
+    rdfs:label "Commission"@en ;
+    rdfs:subClassOf aiact:Authority ;
+    aiact:articleRef "Art. 64" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "The European Commission, which holds duties and powers under the Act and hosts the AI Office."@en .
+
+aiact:MemberState a owl:Class ;
+    rdfs:label "Member State"@en ;
+    aiact:articleRef "Art. 70" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A Member State of the Union, which holds duties under the Act such as designating national competent authorities."@en .
+
+aiact:Organisation a owl:Class ;
+    rdfs:label "organisation"@en ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A natural or legal person, public authority, agency or other body that can hold roles under the Act."@en .
+
+aiact:AIPractice a owl:Class ;
+    rdfs:label "AI practice"@en ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A way of placing on the market, putting into service or using an AI system."@en .
+
+aiact:ProhibitedPractice a owl:Class ;
+    rdfs:label "prohibited practice"@en ;
+    rdfs:subClassOf aiact:AIPractice ;
+    aiact:articleRef "Art. 5" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "An AI practice prohibited by Article 5; its members are the individual practices listed there."@en .
+
+aiact:HighRiskArea a owl:Class ;
+    rdfs:label "high-risk area"@en ;
+    aiact:articleRef "Annex III" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "An area listed in Annex III in which an AI system counts as high-risk; its members are the individual areas."@en .
+
+aiact:Requirement a owl:Class ;
+    rdfs:label "requirement"@en ;
+    aiact:articleRef "Art. 8" ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A property a high-risk AI system must have under Section 2 of Chapter III; its members are the individual requirements."@en .
+
+aiact:Obligation a owl:Class ;
+    rdfs:label "obligation"@en ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "A duty the Act places on a role; its members are the individual duties."@en .
+
+aiact:LegalProvision a owl:Class ;
+    rdfs:label "legal provision"@en ;
+    rdfs:subClassOf eli:LegalResourceSubdivision ;
+    aiact:curationStatus "hand-authored" ;
+    skos:definition "An article, paragraph or point of the Act, identified by its ELI URI."@en .
+
+##  Key axioms (README §5.5)  ##################################################
+
+aiact:ProhibitedAISystem owl:disjointWith aiact:HighRiskAISystem .
+
+[] a owl:AllDisjointClasses ;
+   owl:members ( aiact:ProhibitedAISystem aiact:HighRiskAISystem
+                 aiact:LimitedRiskAISystem aiact:MinimalRiskAISystem ) .
+
+aiact:ProhibitedAISystem owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf ( aiact:AISystem
+        [ a owl:Restriction ; owl:onProperty aiact:usesPractice ;
+          owl:someValuesFrom aiact:ProhibitedPractice ] ) ] .
+
+aiact:AnnexIIIHighRiskAISystem owl:equivalentClass [
+    a owl:Class ;
+    owl:intersectionOf ( aiact:AISystem
+        [ a owl:Restriction ; owl:onProperty aiact:usedInArea ;
+          owl:someValuesFrom aiact:HighRiskArea ] ) ] .
+
+[] a owl:AllDisjointClasses ;
+   owl:members ( aiact:AISystem aiact:OperatorRole aiact:Authority
+                 aiact:Obligation aiact:LegalProvision ) .

@@ -1,0 +1,257 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1.6cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage[inline]{enumitem}
+\usepackage{float}
+
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=2pt,parsep=0pt}
+\titlespacing{\section}{0pt}{5pt}{2pt}
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{0.5em}{}
+\titlespacing{\subsection}{0pt}{4pt}{1pt}
+\titleformat{\subsection}{\normalfont\bfseries}{}{0em}{}
+\setlength{\parindent}{0pt}
+\setlength{\columnsep}{0.8cm}
+\pagestyle{empty}
+
+\lstdefinestyle{sparql}{
+  basicstyle=\ttfamily\scriptsize,
+  keywordstyle=\color{blue!60!black}\bfseries,
+  commentstyle=\color{black!55}\itshape,
+  morekeywords={PREFIX,SELECT,WHERE,VALUES,OPTIONAL,ORDER,BY,FILTER,a},
+  morecomment=[l]{\#},
+  columns=fullflexible,
+  xleftmargin=2pt,
+  aboveskip=3pt,belowskip=3pt,
+  breaklines=true,
+}
+
+\title{\vspace{-2cm}\textbf{Nathan's Assignment Documentation}}
+% \author{Nathan Schneider Gavenski}
+% \author{\vspace{-0.4cm}}
+\date{\vspace{-1cm}}
+
+\begin{document}
+\maketitle
+\vspace{-0.8cm}
+
+\begin{multicols}{2}
+
+\section{Scope}
+
+AIAct-Onto is an OWL~2 DL ontology of Regulation (EU) 2024/1689.
+It is built as a vertical slice instead of a complete formalisation.
+The selected scope is as follows:
+\begin{enumerate*}[label=\textbf{(\arabic*)},itemjoin={{; }},itemjoin*={{; and }}]
+      \item Art.~3 (definitions)
+      \item Art.~5 (prohibited practices)
+      \item Art.~6 and Annexes~I and~III (high-risk classification)
+      \item Art.~8--17 (requirements and provider obligations)
+      \item Art.~26--27 (deployer obligations)
+      \item Art.~50 (transparency)
+      \item Art.~51--55 (general-purpose AI models)
+      \item Art.~64 and~70 (authorities).
+\end{enumerate*}
+% In scope: Art.~3 (definitions), Art.~5 (prohibited practices), Art.~6 and Annexes~I and~III (high-risk classification), Art.~8--17 (requirements and provider obligations), Art.~26--27 (deployer obligations), Art.~50 (transparency), Art.~51--55 (general-purpose AI models), and Art.~64 and~70 (authorities): 
+Yielding a total of $23$ articles and $2$ annexes.
+
+The released ontology holds $69$ classes, $160$ individuals, $11$ object properties and $1{,}709$ axioms ($471$ logical).
+$134$ of its entities came from the pipeline; the rest is the hand-authored skeleton.
+Coverage by type: $62$ obligations, $32$ AI system categories, $13$ requirements, $8$ prohibited practices, $7$ high-risk areas, $7$ actor roles and $5$ authorities.
+
+The ontology reuses five existing vocabularies.
+\emph{AI Risk Ontology} (AIRO) models AI systems and the roles around them, so \texttt{aiact:AISystem}, \texttt{ProviderRole} and \texttt{DeployerRole} map to \texttt{airo:AISystem}, \texttt{airo:AIProvider} and \texttt{airo:AIDeployer}.
+\emph{Vocabulary of AI Risks} (VAIR), a companion to AIRO, supplies taxonomies of AI capabilities and application domains, which the Annex~III areas map onto.
+\emph{Data Privacy Vocabulary} (DPV), a W3C standard, models organisations, roles and duties in a GDPR setting, close to how the Act treats operators, so \texttt{Organisation} and \texttt{Obligation} map to their DPV counterparts.
+\emph{European Legislation Identifier} (ELI) is the EU's own scheme for citing legislation: every provision here is identified by its ELI URI ($21$ linked) and \texttt{aiact:LegalProvision} is a subclass of \texttt{eli:LegalResourceSubdivision}, so each annotation resolves on EUR-Lex, and is not a bare string.
+\emph{Simple Knowledge Organization System} (SKOS), a W3C standard, carries the one-sentence definition of every entity through \texttt{skos:definition}.
+\emph{Provenance Ontology} (PROV-O), a W3C standard, records which pipeline run generated each entity, through \texttt{prov:wasGeneratedBy} pointing at a \texttt{prov:Activity}, so every axiom traces back to its run, model and curation decision.
+
+Each design choice below is recorded in the repository \texttt{README} as a numbered architecture decision record, stating the choice and why it was made, and govern the mapping style.
+The mappings to AIRO, VAIR and DPV use \texttt{skos:closeMatch}, not \texttt{rdfs:subClassOf} or \texttt{owl:equivalentClass}.
+A SKOS mapping records the correspondence without importing the other ontology's axioms, so nothing there can make this one inconsistent.
+Subsumption is used only where the semantics are certain, as with ELI.
+All mappings live in a separate file, so they can be included or left out.
+
+\section{The AI-assisted pipeline}
+
+Nine file-based stages, each rerunnable in isolation, driven by \texttt{make}. 
+Both model stages run \emph{Qwen 3.5 (4B)} at temperature $0$.
+This avoids API costs and rate limits; any other LLM would do, with some prompt tuning.
+
+\textbf{S1 Ingest} snapshots the EUR-Lex HTML and records its SHA-256.
+\textbf{S2 Chunk} splits it into one JSON file per article or annex, keeping paragraph and point
+numbering so references reach point level (\texttt{5(1)(c)}).
+\textbf{S3 Extract} sends one chunk per call, with every passage prefixed by its reference, and
+constrains the reply to a schema (term, type, label, definition, article reference,
+verbatim quote, bearer, applies-to, confidence). 181 candidate records.
+\textbf{S4 Verify} applies a deterministic grounding check, then an LLM critic, then deduplication:
+160 records.
+\textbf{S5 Curate} is a \texttt{typer}/\texttt{rich} review tool: accept, edit, reject or merge, with every decision appended to a log.
+It allows for a human-in-the-loop approach, yielding a total of 134 entities.
+\textbf{S6 Build} turns the curated records into OWL.
+\textbf{S7 Validate} runs the reasoner, the DL profile check, SHACL and ROBOT's quality report.
+\textbf{S8--S9} produce metrics and documentation.
+Finally, we take some precautions to avoid accuracy pitfalls:
+
+\begin{itemize}
+  \item \textbf{No model writes OWL.} It only fills a pre-defined JSON schema; all axioms are
+        produced by deterministic code, thus the build is reproducible from the curated data.
+  \item \textbf{Grounding by construction.} Every record carries a verbatim quote, and a non-LLM
+        string check rejects any quote that is not in the source (fuzzy ratio $\geq 95$ after
+        normalising whitespace and quote characters). 179 of 181 passed; 158 of the survivors matched
+        the source exactly.
+  \item \textbf{Deterministic checks before model judgement}: the critic only judges records
+        that are already grounded.
+  \item \textbf{Provenance throughout the pipeline.} Each entity records its article reference, its quote, the ELI
+        URI of its provision, its curation status and the run that generated it.
+\end{itemize}
+
+\section{Key modelling decisions}
+
+\begin{itemize}
+  \item \textbf{Roles instead of agent subclasses}. One organisation can be a provider for one
+        system and a deployer for another, so \texttt{ProviderRole} is something an
+        \texttt{Organisation} holds, as in AIRO and DPV.
+  \item \textbf{Obligations and prohibited practices as individuals}. They are enumerated
+        items in specific articles and not open categories. Classes are used only where the reasoner
+        must classify, namely the risk tiers.
+  \item \textbf{Requirement $\neq$ Obligation.} Art.~8--15 state properties a high-risk system must
+        have; Art.~16(a) separately obliges the provider to ensure compliance with them. Collapsing
+        the two would make Art.~16(a) circular.
+  \item \textbf{Risk tiers are defined.} \texttt{ProhibitedAISystem} $\equiv$
+        \texttt{AISystem} $\sqcap$ $\exists$\texttt{uses\-Practice}.\allowbreak\texttt{Prohibited\-Practice},
+        and likewise \texttt{AnnexIII\-HighRisk\-AISystem} over \texttt{usedInArea}, so the reasoner does the
+        classification. The four tiers are pairwise disjoint. The Art.~6(3) derogation is
+        deliberately ignored.
+  \item \textbf{Punning} lets an obligation point at a class of system or a role
+        (\texttt{appliesToSystem}, \texttt{obligationOf}) while staying in OWL~2 DL.
+\end{itemize}
+
+\section{Competency questions}
+
+We provide six competency questions (CQ) that the ontology can answer, which are the ones the Act itself is designed to answer:
+\begin{enumerate*}[label=\textbf{CQ\arabic*},itemjoin={{; }},itemjoin*={{; and }}]
+  \item Which obligations does a provider of a high-risk AI system hold, and from which article?
+  \item Which practices does the Act prohibit, and in which words?
+  \item Which areas make a system high-risk?
+  \item What must a high-risk AI system satisfy?
+  \item For general-purpose models, which duties fall on the provider and which on the authorised
+        representative?
+  \item Which systems are prohibited or high-risk, and why?
+\end{enumerate*}
+
+All six SPARQL queries are executable (and located in \texttt{queries/*.rq}). 
+As an example, CQ1 is shown below. It returns every obligation a provider holds for a high-risk AI
+system, with its label, article reference and definition, ordered by article.
+\lstinputlisting[style=sparql,firstline=6]{../queries/cq1_provider_obligations.rq}
+
+CQ6 is the only one that needs the reasoner.
+No example is asserted to be high-risk or prohibited, so CQ6 returns nothing without a reasoner and two rows with one, which is why it makes a test of the axioms.
+% \lstinputlisting[style=sparql,firstline=6]{../queries/cq6_classified_systems.rq}
+
+\section{Validation}
+
+The classification test is the substantive one: a fictional CV screening tool asserted only as an AI
+system used in the employment area is inferred to be an Annex~III high-risk system; a social scoring
+platform is inferred to be prohibited; a chat assistant stays unclassified. Feeding the reasoner a
+system that is both prohibited and high-risk makes it report inconsistency, so the disjointness
+axioms are doing work.
+\vspace{-0.5cm}
+\begin{table}[H]
+      \centering
+      \scriptsize
+      \begin{tabular*}{0.9\columnwidth}{@{\quad}l@{\extracolsep\fill}l@{\qquad}}
+            \toprule
+            \textbf{Check} & \textbf{Result} \\
+            \midrule
+            Parses as OWL & 1{,}774 triples \\
+            OWL 2 DL profile & in profile \\
+            Consistency (HermiT) & consistent, 0 unsatisfiable \\
+            Classification (HermiT) & 3 of 3 as expected \\
+            Annotation completeness & SHACL conforms \\
+            ROBOT report & 0 errors \\
+            \bottomrule
+      \end{tabular*}
+\end{table}
+\vspace{-0.6cm}
+Getting these checks to pass found five real defects, including two undeclared annotation properties
+that put the ontology outside OWL~2 DL, and six generated IRIs that collided with hand-authored
+classes and produced \texttt{AISystem} $\sqsubseteq$ \texttt{AISystem}.
+
+\section{What the review step changed}
+
+Since the curation step would be quite lengthy to execute for this assignment, we use an AI assistant to simulate the human review step.
+In a paper or real deployment scenario, a human would be the reviewer, guaranteeing that the curated ontology is faithful and no hallucinations are introduced.
+Of the 160 verified records, 76 were accepted unchanged, 58 were edited, 20 were merged into another entity and 6 were rejected outright.
+\vskip -0.5em
+\begin{table}[H]
+      \centering
+      \scriptsize
+      \begin{tabular*}{0.9\columnwidth}{@{\quad}l@{\extracolsep\fill}rrrr@{\quad}}
+            \toprule
+            \textbf{Critic verdict} & \textbf{acc.} & \textbf{edit} & \textbf{merge} & \textbf{rej.} \\
+            \midrule
+            supported (44)   & 31 & 10 & 2  & 1 \\
+            partially (113)  & 44 & 47 & 18 & 4 \\
+            unsupported (3)  & 1  & 1  & 0  & 1 \\
+            \bottomrule
+      \end{tabular*}
+\end{table}
+\vspace{-0.4cm}
+The critic's verdict predicted the outcome poorly: 30\% of what it called supported was still
+changed, and 39\% of what it called partially supported was accepted unchanged.
+Four findings stand out.
+
+\textbf{(a) The critic pushed a systematic misclassification.} In 35 records it read ``shall'' in
+Art.~9--15 and concluded the entity type was wrong and these were provider obligations. Following it
+would have erased the Requirement/Obligation distinction the ontology is built on, and left Art.~16(a)
+as a circular duty: an obligation to comply with obligations.
+
+\textbf{(b) The critic invented a fact.} For Art.~51(2) it claimed the compute threshold was
+$10^{28}$ and the extracted $10^{25}$ was wrong. The Act says $10^{25}$. A reviewer trusting the
+critic would have introduced an error no downstream check could catch, because the value sits in a
+paraphrased definition, not a quoted span. Two further verdicts claiming that ``the record added
+this phrase'' were fabrications of the same kind.
+
+\textbf{(c) No automated check scores completeness.} Grounding and the critic both ask whether a
+record is faithful. 29 obligations arrived with no bearer and 40 records with no applies-to value, so \texttt{obligationOf} could not be asserted and CQ1 would have returned nothing. After review, all 62 obligations carry a bearer.
+
+\textbf{(d) The critic cannot see across records.} It marked ``Special Categories Processing
+Conditions'' \emph{supported}: a faithful definition with a verbatim quote. It had no way to see that
+S4's deduplication had collapsed the six distinct conditions of Art.~10(5) into one entity.
+
+\section{Metrics and proposed evaluation}
+
+Grounding pass rate $98.9\%$, of which $98.8\%$ matched the source exactly.
+Annotation completeness $100\%$: all $157$ entities carry a label and a definition, and every curated
+entity also carries an article reference, a quote and an ELI link.
+Bearer coverage $62/62$ obligations.
+Hierarchy depth $2$, with a mean of $7.1$ children per parent.
+$8$ of $30$ core classes are aligned to an external ontology.
+The ontology is consistent with $0$ unsatisfiable classes, and answers $6/6$ competency questions.
+Critic and reviewer agree on $60.6\%$ of records, Cohen's $\kappa = 0.25$, a fair agreement that
+quantifies how little the critic's verdict predicts the review outcome.
+
+A fuller evaluation would need: \textbf{(i)} a gold standard, 3--5 articles annotated by hand before
+running the pipeline, giving precision and recall per entity type: the most defensible single
+accuracy number, and the main gap here; \textbf{(ii)} inter-annotator agreement between two
+independent reviewers, separating the critic's weakness from the difficulty of the judgement;
+\textbf{(iii)} curation effort per record, which decides whether the approach scales;
+\textbf{(iv)} OOPS! for modelling pitfalls, and a task-based evaluation answering a compliance
+question with and without the ontology.
+
+\textbf{Known limitations.} The reviewer was an AI, so it shares the extractor's blind spots. The
+alignment IRIs are unverified against downloaded copies of AIRO, VAIR and DPV. The Art.~6(3)
+derogation, penalties and conformity assessment bodies are out of scope. A 4B model on a laptop GPU
+sets the quality ceiling; a larger one needs no code change.
+
+\end{multicols}
+\end{document}

@@ -1,0 +1,1985 @@
+@prefix aiact: <https://w3id.org/aiact-poc#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ex: <https://w3id.org/aiact-poc/examples#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+skos:closeMatch a owl:AnnotationProperty .
+
+skos:definition a owl:AnnotationProperty .
+
+prov:wasGeneratedBy a owl:AnnotationProperty .
+
+aiact:AccessToEssentialServicesAndBenefits a owl:NamedIndividual,
+        aiact:HighRiskArea ;
+    rdfs:label "access to and enjoyment of essential private and public services and benefits"@en ;
+    skos:definition "An area where AI systems are high-risk, covering eligibility for essential public assistance benefits and services, creditworthiness evaluation, risk assessment and pricing in life and health insurance, and the handling of emergency calls."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(5)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "Access to and enjoyment of essential private services and essential public services and benefits:" .
+
+aiact:Accuracy a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "accuracy"@en ;
+    skos:definition "High-risk AI systems shall be designed and developed in such a way that they achieve an appropriate level of accuracy."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 15(1)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_15/oj> ;
+    aiact:sourceQuote "that they achieve an appropriate level of accuracy" .
+
+aiact:AdministrationOfJusticeAndDemocraticProcesses a owl:NamedIndividual,
+        aiact:HighRiskArea ;
+    rdfs:label "Administration of justice and democratic processes"@en ;
+    skos:definition "An area where AI systems are high-risk, covering assistance to judicial authorities in researching and interpreting the law, and influencing the outcome of elections, referenda or voting behaviour."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(8)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "Administration of justice and democratic processes:" .
+
+aiact:AffixCEMarking a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "affix the CE marking to the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation, to indicate conformity with this Regulation, in accordance with Article 48"@en ;
+    skos:definition "Providers must affix the CE marking to the system or packaging to indicate conformity."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(h)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "affix the CE marking to the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation, to indicate conformity with this Regulation, in accordance with Article 48" .
+
+aiact:AlternativeComplianceDemonstration a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "Providers of general-purpose AI models with systemic risks who do not adhere to an approved code of practice or do not comply with a European harmonised standard shall demonstrate alternative adequate means of compliance for assessment by the Commission"@en ;
+    skos:definition "Providers of general-purpose AI models with systemic risks who do not adhere to an approved code of practice or do not comply with a European harmonised standard shall demonstrate alternative adequate means of compliance for assessment by the Commission."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GPAIModelWithSystemicRisk ;
+    aiact:articleRef "Art. 55(2)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_55/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "Providers of general-purpose AI models with systemic risks who do not adhere to an approved code of practice or do not comply with a European harmonised standard shall demonstrate alternative adequate means of compliance for assessment by the Commission" .
+
+aiact:AnnexIHighRiskAISystem a owl:Class ;
+    rdfs:label "Annex I high-risk AI system"@en ;
+    rdfs:subClassOf aiact:HighRiskAISystem ;
+    skos:definition "An AI system that is a safety component of a product covered by the Union harmonisation legislation in Annex I, or is itself such a product."@en ;
+    aiact:articleRef "Art. 6(1)" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:AnnexIIIHighRiskAISystem a owl:Class ;
+    rdfs:label "Annex III high-risk AI system"@en ;
+    rdfs:comment "This definition deliberately ignores the derogation in Article 6(3); see the documentation."@en ;
+    rdfs:subClassOf aiact:HighRiskAISystem ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( aiact:AISystem [ a owl:Restriction ;
+                        owl:onProperty aiact:usedInArea ;
+                        owl:someValuesFrom aiact:HighRiskArea ] ) ] ;
+    skos:definition "An AI system intended to be used in one of the areas listed in Annex III."@en ;
+    aiact:articleRef "Art. 6(2)" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:AppointmentOfAuthorisedRepresentative a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "appoint an authorised representative which is established in the Union"@en ;
+    skos:definition "Providers established in third countries must, prior to placing a general-purpose AI model on the Union market, appoint an authorised representative by written mandate."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 54(1)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_54/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "Prior to placing a general-purpose AI model on the Union market, providers established in third countries shall, by written mandate, appoint an authorised representative which is established in the Union." .
+
+aiact:AssignHumanOversight a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "assign human oversight to natural persons who have the necessary competence, training and authority"@en ;
+    skos:definition "Deployers shall assign human oversight to natural persons who have the necessary competence, training and authority, as well as the necessary support."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(2)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers shall assign human oversight to natural persons who have the necessary competence, training and authority, as well as the necessary support." .
+
+aiact:AsylumApplicationExaminationSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assist competent public authorities for the examination of applications for asylum, visa or residence permits and for associated complaints with regard to the eligibility of the natural persons applying for a status"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assist competent public authorities for the examination of applications for asylum, visa or residence permits and for associated complaints with regard to the eligibility of the natural persons applying for a status, including related assessments of the reliability of evidence."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(7)(c)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assist competent public authorities for the examination of applications for asylum, visa or residence permits and for associated complaints with regard to the eligibility of the natural persons applying for a status, including related assessments of the reliability of evidence;" .
+
+aiact:AutomaticRecordingOfEvents a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "automatic recording of events (logs)"@en ;
+    skos:definition "High-risk AI systems must technically allow for the automatic recording of events over the lifetime of the system."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 12(1)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_12/oj> ;
+    aiact:sourceQuote "High-risk AI systems shall technically allow for the automatic recording of events (logs) over the lifetime of the system." .
+
+aiact:BiasDetectionAndCorrection a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "bias detection and correction"@en ;
+    skos:definition "Training, validation and testing data sets must be examined for biases likely to affect health and safety, have a negative impact on fundamental rights or lead to discrimination prohibited by Union law, and appropriate measures must be taken to detect, prevent and mitigate them."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 10(2)(f)",
+        "Art. 10(2)(g)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_10/oj> ;
+    aiact:sourceQuote "appropriate measures to detect, prevent and mitigate possible biases identified according to point (f)",
+        "examination in view of possible biases that are likely to affect the health and safety of persons, have a negative impact on fundamental rights or lead to discrimination prohibited under Union law" .
+
+aiact:BiometricCategorisation a owl:NamedIndividual,
+        aiact:ProhibitedPractice ;
+    rdfs:label "biometric categorisation systems that categorise individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation"@en ;
+    skos:definition "The placing on the market, putting into service for this specific purpose, or use of biometric categorisation systems that categorise individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 5(1)(g)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_5/oj> ;
+    aiact:sourceQuote "biometric categorisation systems that categorise individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership" .
+
+aiact:BiometricCategorisationSystem a owl:Class ;
+    rdfs:label "biometric categorisation system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "An AI system for the purpose of assigning natural persons to specific categories on the basis of their biometric data, unless it is ancillary to another commercial service and strictly necessary for objective technical reasons."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(1)(b)",
+        "Art. 3(40)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj>,
+        <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "AI systems intended to be used for biometric categorisation, according to sensitive or protected attributes or characteristics based on the inference of those attributes or characteristics;",
+        "means an AI system for the purpose of assigning natural persons to specific categories on the basis of their biometric data, unless it is ancillary to another commercial service and strictly necessary for objective technical reasons;" .
+
+aiact:Biometrics a owl:NamedIndividual,
+        aiact:HighRiskArea ;
+    rdfs:label "Biometrics"@en ;
+    skos:definition "An area where AI systems are high-risk, specifically biometric systems whose use is permitted under relevant Union or national law."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(1)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "Biometrics, in so far as their use is permitted under relevant Union or national law:" .
+
+aiact:BuiltInOversightMeasures a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "measures identified and built... into the high-risk AI system"@en ;
+    skos:definition "The provider shall identify and build measures into the high-risk AI system before it is placed on the market or put into service, when technically feasible."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 14(3)(a)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_14/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "measures identified and built, when technically feasible, into the high-risk AI system by the provider before it is placed on the market or put into service" .
+
+aiact:CarryOutDataProtectionImpactAssessment a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "carry out a data protection impact assessment under Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680"@en ;
+    skos:definition "Where applicable, deployers of high-risk AI systems shall use the information provided under Article 13 of this Regulation to comply with their obligation to carry out a data protection impact assessment under Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(9)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Where applicable, deployers of high-risk AI systems shall use the information provided under Article 13 of this Regulation to comply with their obligation to carry out a data protection impact assessment under Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680." .
+
+aiact:ComplyWithRegistrationObligations a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "comply with the registration obligations referred to in Article 49(1)"@en ;
+    skos:definition "Providers must comply with the registration obligations referred to in Article 49(1)."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(i)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "comply with the registration obligations referred to in Article 49(1)" .
+
+aiact:ComplyWithRegistrationObligationsDeployer a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "comply with registration obligations"@en ;
+    skos:definition "Deployers of high-risk AI systems that are public authorities, or Union institutions, bodies, offices or agencies shall comply with the registration obligations referred to in Article 49."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(8)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers of high-risk AI systems that are public authorities, or Union institutions, bodies, offices or agencies shall comply with the registration obligations referred to in Article 49. When such deployers find that the high-risk AI system that they envisage using has not been registered in the EU database referred to in Article 71, they shall not use that system and shall inform the provider or the distributor." .
+
+aiact:ConsiderationOfAdverseImpactOnPersonsUnder18 a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "give consideration to whether in view of its intended purpose the high-risk AI system is likely to have an adverse impact on persons under the age of 18 and, as appropriate, other vulnerable groups."@en ;
+    skos:definition "Providers shall give consideration to whether the high-risk AI system is likely to have an adverse impact on persons under the age of 18 and, as appropriate, other vulnerable groups."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 9(9)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_9/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "providers shall give consideration to whether in view of its intended purpose the high-risk AI system is likely to have an adverse impact on persons under the age of 18 and, as appropriate, other vulnerable groups." .
+
+aiact:CooperateAsNecessaryWithTheCommissionAndTheNationalCompetentAuthorities a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "cooperate as necessary with the Commission and the national competent authorities"@en ;
+    skos:definition "The duty to cooperate as necessary with the Commission and the national competent authorities in the exercise of their competences and powers pursuant to this Regulation."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 53(3)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_53/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "cooperate as necessary with the Commission and the national competent authorities" .
+
+aiact:CooperateWithAuthorities a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "cooperate with the relevant competent authorities in any action those authorities take in relation to the high-risk AI system in order to implement this Regulation"@en ;
+    skos:definition "Deployers shall cooperate with the relevant competent authorities in any action those authorities take in relation to the high-risk AI system in order to implement this Regulation."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(12)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers shall cooperate with the relevant competent authorities in any action those authorities take in relation to the high-risk AI system in order to implement this Regulation." .
+
+aiact:CooperationWithAuthorities a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "cooperate with the AI Office and competent authorities, upon a reasoned request"@en ;
+    skos:definition "The authorised representative shall cooperate with the AI Office and competent authorities, upon a reasoned request, in any action they take in relation to the general-purpose AI model."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 54(3)(d)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_54/oj> ;
+    aiact:obligationOf aiact:AuthorisedRepresentative ;
+    aiact:sourceQuote "cooperate with the AI Office and competent authorities, upon a reasoned request, in any action they take in relation to the general-purpose AI model" .
+
+aiact:CreditworthinessEvaluationSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score, with the exception of AI systems used for the purpose of detecting financial fraud."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(5)(b)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used to evaluate the creditworthiness of natural persons or establish their credit score, with the exception of AI systems used for the purpose of detecting financial fraud;" .
+
+aiact:CriminalProfilingSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 in the course of the detection, investigation or prosecution of criminal offences"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 in the course of the detection, investigation or prosecution of criminal offences."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(6)(e)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680 in the course of the detection, investigation or prosecution of criminal offences." .
+
+aiact:CriminalRiskAssessment a owl:NamedIndividual,
+        aiact:ProhibitedPractice ;
+    rdfs:label "risk assessments of natural persons in order to assess or predict the risk of a natural person committing a criminal offence"@en ;
+    skos:definition "The placing on the market, putting into service for this specific purpose, or use of an AI system for making risk assessments of natural persons in order to assess or predict the risk of a natural person committing a criminal offence, based solely on the profiling of a natural person or on assessing their personality traits and characteristics."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 5(1)(d)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_5/oj> ;
+    aiact:sourceQuote "an AI system for making risk assessments of natural persons in order to assess or predict the risk of a natural person committing a criminal offence, based solely on the profiling of a natural person" .
+
+aiact:CriminalRiskAssessmentSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies in support of law enforcement authorities or on their behalf to assess the risk of a natural person becoming the victim of criminal offences"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies in support of law enforcement authorities or on their behalf to assess the risk of a natural person becoming the victim of criminal offences."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(6)(a)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies in support of law enforcement authorities or on their behalf to assess the risk of a natural person becoming the victim of criminal offences;" .
+
+aiact:CriticalInfrastructure a owl:NamedIndividual,
+        aiact:HighRiskArea ;
+    rdfs:label "Critical infrastructure"@en ;
+    skos:definition "An area where AI systems are high-risk, specifically safety components in the management and operation of critical digital infrastructure, road traffic, or supply of utilities."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(2)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "Critical infrastructure: AI systems intended to be used as safety components in the management and operation of critical digital infrastructure, road traffic, or in the supply of water, gas, heating or electricity." .
+
+aiact:Cybersecurity a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "cybersecurity"@en ;
+    skos:definition "High-risk AI systems shall be designed and developed in such a way that they achieve an appropriate level of cybersecurity."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 15(1)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_15/oj> ;
+    aiact:sourceQuote "that they achieve an appropriate level of accuracy, robustness, and cybersecurity" .
+
+aiact:CybersecurityProtection a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "ensure an adequate level of cybersecurity protection for the general-purpose AI model with systemic risk and the physical infrastructure of the model"@en ;
+    skos:definition "Ensure an adequate level of cybersecurity protection for the general-purpose AI model with systemic risk and the physical infrastructure of the model."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GPAIModelWithSystemicRisk ;
+    aiact:articleRef "Art. 55(1)(d)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_55/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "ensure an adequate level of cybersecurity protection for the general-purpose AI model with systemic risk and the physical infrastructure of the model" .
+
+aiact:DataGovernanceAndManagementPractices a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "data governance and management practices"@en ;
+    skos:definition "Training, validation and testing data sets must be subject to appropriate data governance and management practices for the intended purpose of the high-risk AI system."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 10(2)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_10/oj> ;
+    aiact:sourceQuote "Training, validation and testing data sets shall be subject to data governance and management practices appropriate for the intended purpose of the high-risk AI system." .
+
+aiact:DataQualityCriteria a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "data quality criteria"@en ;
+    skos:definition "Training, validation and testing data sets must be relevant, sufficiently representative, free of errors, complete, and have appropriate statistical properties."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 10(3)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_10/oj> ;
+    aiact:sourceQuote "Training, validation and testing data sets shall be relevant, sufficiently representative, and to the best extent possible, free of errors and complete in view of the intended purpose." .
+
+aiact:DemonstrateConformityUponRequest a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "upon a reasoned request of a national competent authority, demonstrate the conformity of the high-risk AI system with the requirements set out in Section 2"@en ;
+    skos:definition "Providers must demonstrate conformity upon a reasoned request of a national competent authority."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(k)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "upon a reasoned request of a national competent authority, demonstrate the conformity of the high-risk AI system with the requirements set out in Section 2" .
+
+aiact:DeployerImplementableOversightMeasures a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "measures identified... appropriate to be implemented by the deployer"@en ;
+    skos:definition "The provider shall identify measures before placing the high-risk AI system on the market or putting it into service that are appropriate to be implemented by the deployer."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 14(3)(b)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_14/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "measures identified by the provider before placing the high-risk AI system on the market or putting it into service and that are appropriate to be implemented by the deployer." .
+
+aiact:DevelopUnionAIExpertiseAndCapabilities a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "develop Union expertise and capabilities in the field of AI"@en ;
+    skos:definition "The Commission's duty to develop Union expertise and capabilities in the field of AI through the AI Office."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 64(1)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_64/oj> ;
+    aiact:obligationOf aiact:Commission ;
+    aiact:sourceQuote "The Commission shall develop Union expertise and capabilities in the field of AI through the AI Office." .
+
+aiact:DiscloseDeepfakeContent a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "disclose that the content has been artificially generated or manipulated"@en ;
+    skos:definition "Deployers of an AI system that generates or manipulates image, audio or video content constituting a deep fake shall disclose that the content has been artificially generated or manipulated."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:AISystemGeneratingDeepfakeContent ;
+    aiact:articleRef "Art. 50(4)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers of an AI system that generates or manipulates image, audio or video content constituting a deep fake, shall disclose that the content has been artificially generated or manipulated." .
+
+aiact:DisclosePublicInterestText a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "disclose that the text has been artificially generated or manipulated"@en ;
+    skos:definition "Deployers of an AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest shall disclose that the text has been artificially generated or manipulated."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:AISystemGeneratingPublicInterestText ;
+    aiact:articleRef "Art. 50(4)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers of an AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest shall disclose that the text has been artificially generated or manipulated." .
+
+aiact:Distributor a owl:Class ;
+    rdfs:label "distributor"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    owl:equivalentClass aiact:DistributorRole ;
+    skos:definition "A natural or legal person in the supply chain, other than the provider or the importer, that makes an AI system available on the Union market."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(7)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a natural or legal person in the supply chain, other than the provider or the importer, that makes an AI system available on the Union market;" .
+
+aiact:DocumentationOfAssessment a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "document its assessment"@en ;
+    skos:definition "A provider who considers an AI system referred to in Annex III is not high-risk shall document its assessment before that system is placed on the market or put into service."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 6(4)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_6/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "A provider who considers that an AI system referred to in Annex III is not high-risk shall document its assessment before that system is placed on the market or put into service." .
+
+aiact:DownstreamProvider a owl:Class ;
+    rdfs:label "downstream provider"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    skos:definition "A provider of an AI system, including a general-purpose AI system, which integrates an AI model, regardless of whether the AI model is provided by themselves and vertically integrated or provided by another entity based on contractual relations."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(68)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a provider of an AI system, including a general-purpose AI system, which integrates an AI model, regardless of whether the AI model is provided by themselves and vertically integrated or provided by another entity based on contractual relations." .
+
+aiact:DrawUpAndKeepUpToDateTechnicalDocumentation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "draw up and keep up-to-date the technical documentation of the model"@en ;
+    skos:definition "The duty to draw up and keep up-to-date the technical documentation of the model, including its training and testing process and the results of its evaluation."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 53(1)(a)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_53/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "draw up and keep up-to-date the technical documentation of the model" .
+
+aiact:DrawUpAndMakePubliclyAvailableASummaryAboutTrainingContent a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "draw up and make publicly available a sufficiently detailed summary about the content used for training"@en ;
+    skos:definition "The duty to draw up and make publicly available a sufficiently detailed summary about the content used for training of the general-purpose AI model, according to a template provided by the AI Office."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 53(1)(d)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_53/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "draw up and make publicly available a sufficiently detailed summary about the content used for training" .
+
+aiact:DrawUpEUDeclarationOfConformity a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "draw up an EU declaration of conformity in accordance with Article 47"@en ;
+    skos:definition "Providers must draw up an EU declaration of conformity in accordance with Article 47."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(g)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "draw up an EU declaration of conformity in accordance with Article 47" .
+
+aiact:EducationAccessSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used to determine access or admission"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used to determine access or admission or to assign natural persons to educational and vocational training institutions."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(3)(a)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used to determine access or admission or to assign natural persons to educational and vocational training institutions at all levels;" .
+
+aiact:EducationLevelAssessmentSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used for the purpose of assessing the appropriate level of education"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or will be able to access."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(3)(c)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or will be able to access, in the context of or within educational and vocational training institutions at all levels;" .
+
+aiact:EffectiveHumanOversightCapability a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "effectively overseen by natural persons"@en ;
+    skos:definition "High-risk AI systems shall be designed and developed in such a way that they can be effectively overseen by natural persons during the period in which they are in use."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 14(1)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_14/oj> ;
+    aiact:sourceQuote "High-risk AI systems shall be designed and developed in such a way, including with appropriate human-machine interface tools, that they can be effectively overseen by natural persons during the period in which they are in use." .
+
+aiact:ElectionOutcomeInfluenceSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used for influencing the outcome of an election or referendum or the voting behaviour of natural persons in the exercise of their vote in elections or referenda"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used for influencing the outcome of an election or referendum or the voting behaviour of natural persons in the exercise of their vote in elections or referenda, excluding tools used to organise, optimise or structure political campaigns from an administrative or logistical point of view."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(8)(b)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used for influencing the outcome of an election or referendum or the voting behaviour of natural persons in the exercise of their vote in elections or referenda. This does not include AI systems to the output of which natural persons are not directly exposed, such as tools used to organise, optimise or structure political campaigns from an administrative or logistical point of view." .
+
+aiact:EmergencyCallEvaluationSystems a owl:Class ;
+    rdfs:label "AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid, as well as of emergency healthcare patient triage systems."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(5)(d)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to evaluate and classify emergency calls by natural persons or to be used to dispatch, or to establish priority in the dispatching of, emergency first response services, including by police, firefighters and medical aid, as well as of emergency healthcare patient triage systems." .
+
+aiact:EmotionInference a owl:NamedIndividual,
+        aiact:ProhibitedPractice ;
+    rdfs:label "infer emotions of a natural person in the areas of workplace and education institutions"@en ;
+    skos:definition "The placing on the market, putting into service for this specific purpose, or use of an AI system to infer emotions of a natural person in the areas of workplace and education institutions, except where the use of the AI system is intended to be put in place or into the market for medical or safety reasons."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 5(1)(f)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_5/oj> ;
+    aiact:sourceQuote "AI systems to infer emotions of a natural person in the areas of workplace and education institutions" .
+
+aiact:EmotionRecognitionSystem a owl:Class ;
+    rdfs:label "emotion recognition system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "An AI system for the purpose of identifying or inferring emotions or intentions of natural persons on the basis of their biometric data."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(1)(c)",
+        "Art. 3(39)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj>,
+        <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "AI systems intended to be used for emotion recognition.",
+        "means an AI system for the purpose of identifying or inferring emotions or intentions of natural persons on the basis of their biometric data;" .
+
+aiact:EnablementOfTasks a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "enable its authorised representative to perform the tasks specified in the mandate"@en ;
+    skos:definition "The provider shall enable its authorised representative to perform the tasks specified in the mandate received from the provider."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 54(2)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_54/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "The provider shall enable its authorised representative to perform the tasks specified in the mandate received from the provider." .
+
+aiact:EncourageCodesOfPractice a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "encourage and facilitate the drawing up of codes of practice at Union level"@en ;
+    skos:definition "The AI Office shall encourage and facilitate the drawing up of codes of practice at Union level to facilitate the effective implementation of the obligations regarding the detection and labelling of artificially generated or manipulated content."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 50(7)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:obligationOf aiact:AIOffice ;
+    aiact:sourceQuote "The AI Office shall encourage and facilitate the drawing up of codes of practice at Union level to facilitate the effective implementation of the obligations regarding the detection and labelling of artificially generated or manipulated content." .
+
+aiact:EnsureAccessibilityCompliance a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "ensure that the high-risk AI system complies with accessibility requirements in accordance with Directives (EU) 2016/2102 and (EU) 2019/882"@en ;
+    skos:definition "Providers must ensure their high-risk AI systems comply with accessibility requirements in accordance with specific EU Directives."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(l)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "ensure that the high-risk AI system complies with accessibility requirements in accordance with Directives (EU) 2016/2102 and (EU) 2019/882" .
+
+aiact:EnsureComplianceWithSection2Requirements a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "ensure that their high-risk AI systems are compliant with the requirements set out in Section 2"@en ;
+    skos:definition "Providers of high-risk AI systems must ensure their systems comply with Section 2 requirements."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(a)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "ensure that their high-risk AI systems are compliant with the requirements set out in Section 2" .
+
+aiact:EnsureConformityAssessment a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "ensure that the high-risk AI system undergoes the relevant conformity assessment procedure as referred to in Article 43, prior to its being placed on the market or put into service"@en ;
+    skos:definition "Providers must ensure their high-risk AI systems undergo a conformity assessment procedure before placement."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(f)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "ensure that the high-risk AI system undergoes the relevant conformity assessment procedure as referred to in Article 43, prior to its being placed on the market or put into service" .
+
+aiact:EnsureInputDataRelevance a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "ensure that input data is relevant and sufficiently representative in view of the intended purpose of the high-risk AI system"@en ;
+    skos:definition "To the extent the deployer exercises control over the input data, that deployer shall ensure that input data is relevant and sufficiently representative in view of the intended purpose of the high-risk AI system."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(4)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Without prejudice to paragraphs 1 and 2, to the extent the deployer exercises control over the input data, that deployer shall ensure that input data is relevant and sufficiently representative in view of the intended purpose of the high-risk AI system." .
+
+aiact:EvidenceReliabilityEvaluationSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies, in support of law enforcement authorities to evaluate the reliability of evidence in the course of the investigation or prosecution of criminal offences"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies, in support of law enforcement authorities to evaluate the reliability of evidence in the course of the investigation or prosecution of criminal offences."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(6)(c)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by or on behalf of law enforcement authorities, or by Union institutions, bodies, offices or agencies, in support of law enforcement authorities to evaluate the reliability of evidence in the course of the investigation or prosecution of criminal offences;" .
+
+aiact:ExploitingVulnerabilities a owl:NamedIndividual,
+        aiact:ProhibitedPractice ;
+    rdfs:label "exploits any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability or a specific social or economic situation"@en ;
+    skos:definition "An AI system that exploits any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability or a specific social or economic situation, with the objective of materially distorting the behaviour of that person or a person belonging to that group."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 5(1)(b)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_5/oj> ;
+    aiact:sourceQuote "an AI system that exploits any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability or a specific social or economic situation" .
+
+aiact:FacialRecognitionDatabases a owl:NamedIndividual,
+        aiact:ProhibitedPractice ;
+    rdfs:label "facial recognition databases through the untargeted scraping of facial images from the internet or CCTV footage"@en ;
+    skos:definition "The placing on the market, putting into service for this specific purpose, or use of an AI system that create or expand facial recognition databases through the untargeted scraping of facial images from the internet or CCTV footage."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 5(1)(e)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_5/oj> ;
+    aiact:sourceQuote "AI systems that create or expand facial recognition databases through the untargeted scraping of facial images from the internet or CCTV footage" .
+
+aiact:FacilitateTheTasksOfTheAIOffice a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "facilitate the tasks entrusted to the AI Office"@en ;
+    skos:definition "The Member States' duty to facilitate the tasks entrusted to the AI Office, as reflected in this Regulation."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 64(2)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_64/oj> ;
+    aiact:obligationOf aiact:MemberState ;
+    aiact:sourceQuote "Member States shall facilitate the tasks entrusted to the AI Office, as reflected in this Regulation." .
+
+aiact:FinancialInstitutionsLogsObligation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "maintain the logs as part of the documentation kept pursuant to the relevant Union financial service law"@en ;
+    skos:definition "Deployers that are financial institutions subject to requirements regarding their internal governance, arrangements or processes under Union financial services law shall maintain the logs as part of the documentation kept pursuant to the relevant Union financial service law."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(6)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers that are financial institutions subject to requirements regarding their internal governance, arrangements or processes under Union financial services law shall maintain the logs as part of the documentation kept pursuant to the relevant Union financial service law." .
+
+aiact:FinancialInstitutionsMonitoringObligation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "the monitoring obligation set out in the first subparagraph shall be deemed to be fulfilled by complying with the rules on internal governance arrangements, processes and mechanisms pursuant to the relevant financial service law"@en ;
+    skos:definition "For deployers that are financial institutions subject to requirements regarding their internal governance, arrangements or processes under Union financial services law, the monitoring obligation set out in the first subparagraph shall be deemed to be fulfilled by complying with the rules on internal governance arrangements, processes and mechanisms pursuant to the relevant financial service law."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(5)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "For deployers that are financial institutions subject to requirements regarding their internal governance, arrangements or processes under Union financial services law, the monitoring obligation set out in the first subparagraph shall be deemed to be fulfilled by complying with the rules on internal governance arrangements, processes and mechanisms pursuant to the relevant financial service law." .
+
+aiact:FundamentalRightsImpactAssessment a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "perform fundamental rights impact assessment"@en ;
+    skos:definition "The duty to perform a fundamental rights impact assessment prior to deploying certain high-risk AI systems, consisting of specific descriptions regarding usage, affected persons, risks, and oversight measures."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 27(1)",
+        "Art. 27(2)",
+        "Art. 27(3)",
+        "Art. 27(4)",
+        "Art. 27(5)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_27/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "If any of the obligations laid down in this Article is already met through the data protection impact assessment conducted pursuant to Article 35 of Regulation (EU) 2016/679 or Article 27 of Directive (EU) 2016/680, the fundamental rights impact assessment referred to in paragraph 1 of this Article shall complement that data protection impact assessment.",
+        "If, during the use of the high-risk AI system, the deployer considers that any of the elements listed in paragraph 1 has changed or is no longer up to date, the deployer shall take the necessary steps to update the information.",
+        "Once the assessment referred to in paragraph 1 of this Article has been performed, the deployer shall notify the market surveillance authority of its results, submitting the filled-out template referred to in paragraph 5 of this Article as part of the notification.",
+        "The AI Office shall develop a template for a questionnaire, including through an automated tool, to facilitate deployers in complying with their obligations under this Article in a simplified manner.",
+        "deployers that are bodies governed by public law, or are private entities providing public services, and deployers of high-risk AI systems referred to in points 5 (b) and (c) of Annex III, shall perform an assessment of the impact on fundamental rights",
+        "perform an assessment of the impact on fundamental rights that the use of such system may produce. For that purpose, deployers shall perform an assessment consisting of: a description of the deployer's processes in which the high-risk AI system will be used in line with its intended purpose; a description of the period of time within which, and the frequency with which, each high-risk AI system is intended to be used; the categories of natural persons and groups likely to be affected by its use in the specific context; the specific risks of harm likely to have an impact on the categories of natural persons or groups of persons identified pursuant to point (c) of this paragraph, taking into account the information given by the provider pursuant to Article 13; a description of the implementation of human oversight measures, according to the instructions for use; the measures to be taken in the case of the materialisation of those risks, including the arrangements for internal governance and complaint mechanisms." .
+
+aiact:GeneralPurposeAISystem a owl:Class ;
+    rdfs:label "general-purpose AI system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "An AI system which is based on a general-purpose AI model and which has the capability to serve a variety of purposes, both for direct use as well as for integration in other AI systems."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(66)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means an AI system which is based on a general-purpose AI model and which has the capability to serve a variety of purposes, both for direct use as well as for integration in other AI systems;" .
+
+aiact:HumanOversightEnablement a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "natural persons... are enabled, as appropriate and proportionate"@en ;
+    skos:definition "The high-risk AI system shall be provided to the deployer in such a way that natural persons to whom human oversight is assigned are enabled, as appropriate and proportionate, to properly understand the relevant capacities and limitations of the high-risk AI system and be able to duly monitor its operation, including in view of detecting and addressing anomalies, dysfunctions and unexpected performance; to remain aware of the possible tendency of automatically relying or over-relying on the output produced by a high-risk AI system (automation bias), in particular for high-risk AI systems used to provide information or recommendations for decisions to be taken by natural persons; to correctly interpret the high-risk AI system’s output, taking into account, for example, the interpretation tools and methods available; to decide, in any particular situation, not to use the high-risk AI system or to otherwise disregard, override or reverse the output of the high-risk AI system; to intervene in the operation of the high-risk AI system or interrupt the system through a ‘stop’ button or a similar procedure that allows the system to come to a halt in a safe state."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 14(4)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_14/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "the high-risk AI system shall be provided to the deployer in such a way that natural persons to whom human oversight is assigned are enabled, as appropriate and proportionate:" .
+
+aiact:ImplementationGuidelines a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "provide guidelines"@en ;
+    skos:definition "The Commission shall provide guidelines specifying the practical implementation of this Article in line with Article 96 together with a comprehensive list of practical examples of use cases of AI systems that are high-risk and not high-risk."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 6(5)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_6/oj> ;
+    aiact:obligationOf aiact:Commission ;
+    aiact:sourceQuote "The Commission shall, after consulting the European Artificial Intelligence Board (the 'Board'), and no later than 2 February 2026, provide guidelines specifying the practical implementation of this Article in line with Article 96 together with a comprehensive list of practical examples of use cases of AI systems that are high-risk and not high-risk." .
+
+aiact:Importer a owl:Class ;
+    rdfs:label "importer"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    owl:equivalentClass aiact:ImporterRole ;
+    skos:definition "A natural or legal person located or established in the Union that places on the market an AI system that bears the name or trademark of a natural or legal person established in a third country."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(6)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a natural or legal person located or established in the Union that places on the market an AI system that bears the name or trademark of a natural or legal person established in a third country;" .
+
+aiact:IncidentReporting a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "keep track of, document, and report, without undue delay, to the AI Office and, as appropriate, to national competent authorities, relevant information about serious incidents and possible corrective measures to address them"@en ;
+    skos:definition "Keep track of, document, and report, without undue delay, to the AI Office and, as appropriate, to national competent authorities, relevant information about serious incidents and possible corrective measures to address them."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GPAIModelWithSystemicRisk ;
+    aiact:articleRef "Art. 55(1)(c)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_55/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "keep track of, document, and report, without undue delay, to the AI Office and, as appropriate, to national competent authorities, relevant information about serious incidents and possible corrective measures to address them" .
+
+aiact:IndicateNameAndContactDetails a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "indicate on the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation, as applicable, their name, registered trade name or registered trade mark, the address at which they can be contacted"@en ;
+    skos:definition "Providers must indicate on the high-risk AI system or, where that is not possible, on its packaging or accompanying documentation, their name, registered trade name or registered trade mark, and contact address."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(b)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "indicate on the high-risk AI system or, where that is not possible, on its packaging or its accompanying documentation, as applicable, their name, registered trade name or registered trade mark, the address at which they can be contacted" .
+
+aiact:InformNaturalPersons a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "inform the natural persons that they are subject to the use of the high-risk AI system"@en ;
+    skos:definition "Where applicable, deployers of high-risk AI systems referred to in Annex III that make decisions or assist in making decisions related to natural persons shall inform the natural persons that they are subject to the use of the high-risk AI system."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(11)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Where applicable, deployers of high-risk AI systems referred to in Annex III that make decisions or assist in making decisions related to natural persons shall inform the natural persons that they are subject to the use of the high-risk AI system." .
+
+aiact:InformNaturalPersonsOfSystemOperation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "inform the natural persons exposed thereto of the operation of the system"@en ;
+    skos:definition "Deployers of an emotion recognition system or a biometric categorisation system shall inform the natural persons exposed thereto of the operation of the system."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 50(3)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers of an emotion recognition system or a biometric categorisation system shall inform the natural persons exposed thereto of the operation of the system" .
+
+aiact:InformUsersOfAIInteraction a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "inform users of AI interaction"@en ;
+    skos:definition "Providers shall ensure AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:AISystemsIntendedToInteractDirectlyWithNaturalPersons ;
+    aiact:articleRef "Art. 50(1)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system" .
+
+aiact:InformWorkers a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "inform workers’ representatives and the affected workers that they will be subject to the use of the high-risk AI system"@en ;
+    skos:definition "Before putting into service or using a high-risk AI system at the workplace, deployers who are employers shall inform workers’ representatives and the affected workers that they will be subject to the use of the high-risk AI system."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(7)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Before putting into service or using a high-risk AI system at the workplace, deployers who are employers shall inform workers’ representatives and the affected workers that they will be subject to the use of the high-risk AI system." .
+
+aiact:InstructionsForUse a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "instructions for use"@en ;
+    skos:definition "High-risk AI systems shall be accompanied by instructions for use in an appropriate digital format or otherwise that include concise, complete, correct and clear information that is relevant, accessible and comprehensible to deployers."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 13(2)",
+        "Art. 13(3)(a)",
+        "Art. 13(3)(b)",
+        "Art. 13(3)(c)",
+        "Art. 13(3)(d)",
+        "Art. 13(3)(e)",
+        "Art. 13(3)(f)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_13/oj> ;
+    aiact:sourceQuote "High-risk AI systems shall be accompanied by instructions for use in an appropriate digital format or otherwise that include concise, complete, correct and clear information that is relevant, accessible and comprehensible to deployers.",
+        "the changes to the high-risk AI system and its performance which have been pre-determined by the provider at the moment of the initial conformity assessment, if any;",
+        "the characteristics, capabilities and limitations of performance of the high-risk AI system, including:",
+        "the computational and hardware resources needed, the expected lifetime of the high-risk AI system and any necessary maintenance and care measures, including their frequency, to ensure the proper functioning of that AI system, including as regards software updates;",
+        "the human oversight measures referred to in Article 14, including the technical measures put in place to facilitate the interpretation of the outputs of the high-risk AI systems by the deployers;",
+        "the identity and the contact details of the provider and, where applicable, of its authorised representative;",
+        "where relevant, a description of the mechanisms included within the high-risk AI system that allows deployers to properly collect, store and interpret the logs in accordance with Article 12." .
+
+aiact:IrregularMigrationRiskAssessmentSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assess a risk, including a security risk, a risk of irregular migration, or a health risk, posed by a natural person who intends to enter or who has entered into the territory of a Member State"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assess a risk, including a security risk, a risk of irregular migration, or a health risk, posed by a natural person who intends to enter or who has entered into the territory of a Member State."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(7)(b)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by or on behalf of competent public authorities or by Union institutions, bodies, offices or agencies to assess a risk, including a security risk, a risk of irregular migration, or a health risk, posed by a natural person who intends to enter or who has entered into the territory of a Member State;" .
+
+aiact:JudicialResearchAndInterpretationSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or to be used in a similar way in alternative dispute resolution"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or to be used in a similar way in alternative dispute resolution."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(8)(a)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by a judicial authority or on their behalf to assist a judicial authority in researching and interpreting facts and the law and in applying the law to a concrete set of facts, or to be used in a similar way in alternative dispute resolution;" .
+
+aiact:KeepDocumentation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "keep the documentation referred to in Article 18"@en ;
+    skos:definition "Providers must keep the documentation referred to in Article 18."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(d)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "keep the documentation referred to in Article 18" .
+
+aiact:KeepLogs a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "when under their control, keep the logs automatically generated by their high-risk AI systems as referred to in Article 19"@en ;
+    skos:definition "Providers must keep logs automatically generated by their high-risk AI systems when under their control."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(e)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "when under their control, keep the logs automatically generated by their high-risk AI systems as referred to in Article 19" .
+
+aiact:KeepLogsDeployer a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "keep logs"@en ;
+    skos:definition "Deployers of high-risk AI systems shall keep the logs automatically generated by that high-risk AI system to the extent such logs are under their control, for a period appropriate to the intended purpose of the high-risk AI system, of at least six months."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(6)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers of high-risk AI systems shall keep the logs automatically generated by that high-risk AI system to the extent such logs are under their control, for a period appropriate to the intended purpose of the high-risk AI system, of at least six months, unless provided otherwise in applicable Union or national law, in particular in Union law on the protection of personal data." .
+
+aiact:LawEnforcement a owl:NamedIndividual,
+        aiact:HighRiskArea ;
+    rdfs:label "Law enforcement"@en ;
+    skos:definition "An area where AI systems are high-risk, covering law enforcement uses such as victim and offending risk assessment, polygraphs, evaluation of the reliability of evidence, and the profiling of natural persons."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(6)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "Law enforcement, in so far as their use is permitted under relevant Union or national law:" .
+
+aiact:LawEnforcementAuthority a owl:Class ;
+    rdfs:label "law enforcement authority"@en ;
+    rdfs:subClassOf aiact:Authority ;
+    skos:definition "Any public authority competent for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(45)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "any public authority competent for the prevention, investigation, detection or prosecution of criminal offences or the execution of criminal penalties, including the safeguarding against and the prevention of threats to public security;" .
+
+aiact:LearningOutcomeEvaluationSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used to evaluate learning outcomes"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(3)(b)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons in educational and vocational training institutions at all levels;" .
+
+aiact:LifeAndHealthInsuranceRiskAssessmentSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(5)(c)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used for risk assessment and pricing in relation to natural persons in the case of life and health insurance;" .
+
+aiact:MaintainQualityManagementSystem a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "have a quality management system in place which complies with Article 17"@en ;
+    skos:definition "Providers must have a quality management system that complies with Article 17."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(c)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "have a quality management system in place which complies with Article 17" .
+
+aiact:MarkSyntheticContentOutputs a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "mark outputs as artificially generated or manipulated"@en ;
+    skos:definition "Providers of AI systems generating synthetic audio, image, video or text content shall ensure that the outputs are marked in a machine-readable format and detectable as artificially generated or manipulated."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:AISystemsGeneratingSyntheticContent ;
+    aiact:articleRef "Art. 50(2)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "Providers of AI systems, including general-purpose AI systems, generating synthetic audio, image, video or text content, shall ensure that the outputs of the AI system are marked in a machine-readable format and detectable as artificially generated or manipulated." .
+
+aiact:MarketSurveillanceAuthority a owl:Class ;
+    rdfs:label "market surveillance authority"@en ;
+    rdfs:subClassOf aiact:NationalCompetentAuthority ;
+    skos:definition "The national authority carrying out market surveillance activities under the Act."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(26)" ;
+    aiact:curationStatus "hand-authored" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means the national authority carrying out the activities and taking the measures pursuant to Regulation (EU) 2019/1020;" .
+
+aiact:MigrationAsylumAndBorderControlManagement a owl:NamedIndividual,
+        aiact:HighRiskArea ;
+    rdfs:label "Migration, asylum and border control management"@en ;
+    skos:definition "An area where AI systems are high-risk, covering migration, asylum and border control uses such as polygraphs, risk assessment of persons entering a Member State, examination of applications, and the identification of natural persons."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(7)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "Migration, asylum and border control management, in so far as their use is permitted under relevant Union or national law:" .
+
+aiact:ModelEvaluation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting adversarial testing of the model with a view to identifying and mitigating systemic risks"@en ;
+    skos:definition "Perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting adversarial testing of the model with a view to identifying and mitigating systemic risks."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GPAIModelWithSystemicRisk ;
+    aiact:articleRef "Art. 55(1)(a)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_55/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "perform model evaluation in accordance with standardised protocols and tools reflecting the state of the art, including conducting and documenting adversarial testing of the model with a view to identifying and mitigating systemic risks" .
+
+aiact:MonitorOperation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "monitor the operation of the high-risk AI system on the basis of the instructions for use"@en ;
+    skos:definition "Deployers shall monitor the operation of the high-risk AI system on the basis of the instructions for use and, where relevant, inform providers in accordance with Article 72."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(5)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers shall monitor the operation of the high-risk AI system on the basis of the instructions for use and, where relevant, inform providers in accordance with Article 72." .
+
+aiact:NaturalPersonIdentificationSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by or on behalf of competent public authorities, or by Union institutions, bodies, offices or agencies, in the context of migration, asylum or border control management, for the purpose of detecting, recognising or identifying natural persons"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by or on behalf of competent public authorities, or by Union institutions, bodies, offices or agencies, in the context of migration, asylum or border control management, for the purpose of detecting, recognising or identifying natural persons, with the exception of the verification of travel documents."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(7)(d)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by or on behalf of competent public authorities, or by Union institutions, bodies, offices or agencies, in the context of migration, asylum or border control management, for the purpose of detecting, recognising or identifying natural persons, with the exception of the verification of travel documents." .
+
+aiact:NotificationOfSystemicRisk a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "notify"@en ;
+    skos:definition "The provider must notify the Commission without delay and within two weeks after meeting a specific requirement or knowing it will be met."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 52(1)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_52/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "the relevant provider shall notify the Commission without delay and in any event within two weeks after that requirement is met or it becomes known that it will be met" .
+
+aiact:NotifiedBody a owl:Class ;
+    rdfs:label "notified body"@en ;
+    rdfs:subClassOf aiact:Authority ;
+    skos:definition "A conformity assessment body notified under the Act."@en ;
+    aiact:articleRef "Art. 3(22)" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:NotifyingAuthority a owl:Class ;
+    rdfs:label "notifying authority"@en ;
+    rdfs:subClassOf aiact:NationalCompetentAuthority ;
+    skos:definition "The national authority responsible for assessing, designating and monitoring conformity assessment bodies."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(19)" ;
+    aiact:curationStatus "hand-authored" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means the national authority responsible for setting up and carrying out the necessary procedures for the assessment, designation and notification of conformity assessment bodies and for their monitoring;" .
+
+aiact:Operator a owl:Class ;
+    rdfs:label "operator"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    skos:definition "A provider, product manufacturer, deployer, authorised representative, importer or distributor."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(8)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a provider, product manufacturer, deployer, authorised representative, importer or distributor;" .
+
+aiact:PolygraphSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities as polygraphs or similar tools"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities as polygraphs or similar tools."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(6)(b)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by or on behalf of law enforcement authorities or by Union institutions, bodies, offices or agencies in support of law enforcement authorities as polygraphs or similar tools;" .
+
+aiact:ProvideInformationAndDocumentationToIntegrators a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "draw up, keep up-to-date and make available information and documentation to providers of AI systems"@en ;
+    skos:definition "The duty to draw up, keep up-to-date and make available information and documentation to providers of AI systems who intend to integrate the general-purpose AI model into their AI systems."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 53(1)(b)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_53/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "draw up, keep up-to-date and make available information and documentation to providers of AI systems" .
+
+aiact:ProvisionOfInformation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "provide the AI Office, upon a reasoned request, with all the information and documentation"@en ;
+    skos:definition "The authorised representative shall provide the AI Office, upon a reasoned request, with all the information and documentation, including that referred to in point (b), necessary to demonstrate compliance with the obligations in this Chapter."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 54(3)(c)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_54/oj> ;
+    aiact:obligationOf aiact:AuthorisedRepresentative ;
+    aiact:sourceQuote "provide the AI Office, upon a reasoned request, with all the information and documentation, including that referred to in point (b), necessary to demonstrate compliance with the obligations in this Chapter;" .
+
+aiact:PublicAssistanceEligibilitySystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services, including healthcare services, as well as to grant, reduce, revoke, or reclaim such benefits and services."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(5)(a)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by public authorities or on behalf of public authorities to evaluate the eligibility of natural persons for essential public assistance benefits and services, including healthcare services, as well as to grant, reduce, revoke, or reclaim such benefits and services;" .
+
+aiact:PutInPlaceAPolicyToComplyWithUnionLawOnCopyright a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "put in place a policy to comply with Union law on copyright and related rights"@en ;
+    skos:definition "The duty to put in place a policy to comply with Union law on copyright and related rights, and in particular to identify and comply with, including through state-of-the-art technologies, a reservation of rights expressed pursuant to Article 4(3) of Directive (EU) 2019/790."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 53(1)(c)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_53/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "put in place a policy to comply with Union law on copyright and related rights" .
+
+aiact:PutInPlaceAQualityManagementSystem a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "put in place a quality management system"@en ;
+    skos:definition "A documented system ensuring compliance with the Regulation, including strategies for regulatory compliance, design controls, data management, risk management, post-market monitoring, incident reporting, and accountability frameworks."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 17(1)",
+        "Art. 17(1)(a)",
+        "Art. 17(1)(b)",
+        "Art. 17(1)(c)",
+        "Art. 17(1)(d)",
+        "Art. 17(1)(e)",
+        "Art. 17(1)(f)",
+        "Art. 17(1)(g)",
+        "Art. 17(1)(h)",
+        "Art. 17(1)(i)",
+        "Art. 17(1)(j)",
+        "Art. 17(1)(k)",
+        "Art. 17(1)(l)",
+        "Art. 17(1)(m)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_17/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "Providers of high-risk AI systems shall put a quality management system in place that ensures compliance with this Regulation",
+        "a strategy for regulatory compliance, including compliance with conformity assessment procedures and procedures for the management of modifications to the high-risk AI system",
+        "an accountability framework setting out the responsibilities of the management and other staff with regard to all the aspects listed in this paragraph",
+        "examination, test and validation procedures to be carried out before, during and after the development of the high-risk AI system",
+        "procedures related to the reporting of a serious incident in accordance with Article 73",
+        "resource management, including security-of-supply related measures",
+        "systems and procedures for data management, including data acquisition, data collection, data analysis, data labelling, data storage, data filtration, data mining, data aggregation, data retention and any other operation regarding the data that is performed before and for the purpose of the placing on the market or the putting into service of high-risk AI systems",
+        "systems and procedures for record-keeping of all relevant documentation and information",
+        "technical specifications, including standards, to be applied and, where the relevant harmonised standards are not applied in full or do not cover all of the relevant requirements set out in Section 2, the means to be used to ensure that the high-risk AI system complies with those requirements",
+        "techniques, procedures and systematic actions to be used for the design, design control and design verification of the high-risk AI system",
+        "techniques, procedures and systematic actions to be used for the development, quality control and quality assurance of the high-risk AI system",
+        "the handling of communication with national competent authorities, other relevant authorities, including those providing or supporting the access to data, notified bodies, other operators, customers or other interested parties",
+        "the risk management system referred to in Article 9",
+        "the setting-up, implementation and maintenance of a post-market monitoring system, in accordance with Article 72" .
+
+aiact:ReOffendingRiskAssessmentSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used by law enforcement authorities or on their behalf or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for assessing the risk of a natural person offending or re-offending not solely on the basis of the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used by law enforcement authorities or on their behalf or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for assessing the risk of a natural person offending or re-offending not solely on the basis of the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680, or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(6)(d)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used by law enforcement authorities or on their behalf or by Union institutions, bodies, offices or agencies in support of law enforcement authorities for assessing the risk of a natural person offending or re-offending not solely on the basis of the profiling of natural persons as referred to in Article 3(4) of Directive (EU) 2016/680, or to assess personality traits and characteristics or past criminal behaviour of natural persons or groups;" .
+
+aiact:RealTimeRemoteBiometricIdentification a owl:NamedIndividual,
+        aiact:ProhibitedPractice ;
+    rdfs:label "real-time remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement"@en ;
+    skos:definition "The use of 'real-time' remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement, unless and in so far as such use is strictly necessary for one of the following objectives."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 5(1)(h)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_5/oj> ;
+    aiact:sourceQuote "the use of ‘real-time’ remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement" .
+
+aiact:RealTimeRemoteBiometricIdentificationSystem a owl:Class ;
+    rdfs:label "real-time remote biometric identification system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "A remote biometric identification system, whereby the capturing of biometric data, the comparison and the identification all occur without a significant delay, comprising not only instant identification, but also limited short delays in order to avoid circumvention."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(42)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a remote biometric identification system, whereby the capturing of biometric data, the comparison and the identification all occur without a significant delay, comprising not only instant identification, but also limited short delays in order to avoid circumvention;" .
+
+aiact:RecruitmentAndSelectionSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used for the recruitment or selection of natural persons"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(4)(a)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates;" .
+
+aiact:RemoteBiometricIdentificationSystem a owl:Class ;
+    rdfs:label "remote biometric identification system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "An AI system for the purpose of identifying natural persons, without their active involvement, typically at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(1)(a)",
+        "Art. 3(41)",
+        "Art. 3(43)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj>,
+        <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a remote biometric identification system other than a real-time remote biometric identification system;",
+        "means an AI system for the purpose of identifying natural persons, without their active involvement, typically at a distance through the comparison of a person’s biometric data with the biometric data contained in a reference database;",
+        "remote biometric identification systems. This shall not include AI systems intended to be used for biometric verification the sole purpose of which is to confirm that a specific natural person is the person he or she claims to be;" .
+
+aiact:ReportPostRemoteBiometricIdentificationUse a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "report on the use of post-remote biometric identification"@en ;
+    skos:definition "Deployers shall submit annual reports to the relevant market surveillance and national data protection authorities on their use of post-remote biometric identification systems, excluding the disclosure of sensitive operational data related to law enforcement."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(10)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers shall submit annual reports to the relevant market surveillance and national data protection authorities on their use of post-remote biometric identification systems, excluding the disclosure of sensitive operational data related to law enforcement. The reports may be aggregated to cover more than one deployment." .
+
+aiact:RequestAuthorisation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "request an authorisation, ex ante, or without undue delay and no later than 48 hours, by a judicial authority or an administrative authority whose decision is binding and subject to judicial review, for the use of that system"@en ;
+    skos:definition "In the framework of an investigation for the targeted search of a person suspected or convicted of having committed a criminal offence, the deployer of a high-risk AI system for post-remote biometric identification shall request an authorisation, ex ante, or without undue delay and no later than 48 hours, by a judicial authority or an administrative authority whose decision is binding and subject to judicial review, for the use of that system."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(10)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Without prejudice to Directive (EU) 2016/680, in the framework of an investigation for the targeted search of a person suspected or convicted of having committed a criminal offence, the deployer of a high-risk AI system for post-remote biometric identification shall request an authorisation, ex ante, or without undue delay and no later than 48 hours, by a judicial authority or an administrative authority whose decision is binding and subject to judicial review, for the use of that system, except when it is used for the initial identification of a potential suspect based on objective and verifiable facts directly linked to the offence." .
+
+aiact:Resilience a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "resilience"@en ;
+    skos:definition "High-risk AI systems shall be as resilient as possible regarding errors, faults or inconsistencies that may occur within the system or the environment in which the system operates."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 15(4)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_15/oj> ;
+    aiact:sourceQuote "High-risk AI systems shall be as resilient as possible regarding errors, faults or inconsistencies" .
+
+aiact:RetentionOfTechnicalDocumentation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "keep a copy of the technical documentation specified in Annex XI at the disposal"@en ;
+    skos:definition "The authorised representative shall keep a copy of the technical documentation specified in Annex XI at the disposal of the AI Office and national competent authorities, for a period of 10 years after the general-purpose AI model has been placed on the market."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 54(3)(b)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_54/oj> ;
+    aiact:obligationOf aiact:AuthorisedRepresentative ;
+    aiact:sourceQuote "keep a copy of the technical documentation specified in Annex XI at the disposal of the AI Office and national competent authorities, for a period of 10 years after the general-purpose AI model has been placed on the market" .
+
+aiact:RiskManagementSystem a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "risk management system"@en ;
+    skos:definition "A risk management system that must be established, implemented, documented and maintained in relation to high-risk AI systems."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 9(1)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_9/oj> ;
+    aiact:sourceQuote "A risk management system shall be established, implemented, documented and maintained in relation to high-risk AI systems." .
+
+aiact:Robustness a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "robustness"@en ;
+    skos:definition "High-risk AI systems shall be designed and developed in such a way that they achieve an appropriate level of robustness."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 15(1)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_15/oj> ;
+    aiact:sourceQuote "that they achieve an appropriate level of accuracy, robustness, and cybersecurity" .
+
+aiact:SeparateVerification a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "identification has been separately verified and confirmed by at least two natural persons"@en ;
+    skos:definition "For high-risk AI systems referred to in point 1(a) of Annex III, no action or decision is taken by the deployer on the basis of the identification resulting from the system unless that identification has been separately verified and confirmed by at least two natural persons with the necessary competence, training and authority."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 14(5)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_14/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "no action or decision is taken by the deployer on the basis of the identification resulting from the system unless that identification has been separately verified and confirmed by at least two natural persons with the necessary competence, training and authority." .
+
+aiact:StopUseOnRejection a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "stop with immediate effect and the personal data linked to the use of the high-risk AI system for which the authorisation was requested shall be deleted"@en ;
+    skos:definition "If the authorisation requested pursuant to the first subparagraph is rejected, the use of the post-remote biometric identification system linked to that requested authorisation shall be stopped with immediate effect and the personal data linked to the use of the high-risk AI system for which the authorisation was requested shall be deleted."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(10)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "If the authorisation requested pursuant to the first subparagraph is rejected, the use of the post-remote biometric identification system linked to that requested authorisation shall be stopped with immediate effect and the personal data linked to the use of the high-risk AI system for which the authorisation was requested shall be deleted." .
+
+aiact:StudentBehaviourMonitoringSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used for monitoring and detecting prohibited behaviour of students"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational and vocational training institutions."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(3)(d)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational and vocational training institutions at all levels." .
+
+aiact:SubliminalTechniquesAndManipulation a owl:NamedIndividual,
+        aiact:ProhibitedPractice ;
+    rdfs:label "subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive techniques"@en ;
+    skos:definition "An AI system that deploys subliminal techniques beyond a person's consciousness or purposefully manipulative or deceptive techniques, with the objective of materially distorting the behaviour of a person or group of persons by appreciably impairing their ability to make an informed decision."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 5(1)(a)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_5/oj> ;
+    aiact:sourceQuote "an AI system that deploys subliminal techniques beyond a person’s consciousness or purposefully manipulative or deceptive techniques" .
+
+aiact:SystemicRiskAssessment a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "assess and mitigate possible systemic risks at Union level, including their sources, that may stem from the development, the placing on the market, or the use of general-purpose AI models with systemic risk"@en ;
+    skos:definition "Assess and mitigate possible systemic risks at Union level, including their sources, that may stem from the development, the placing on the market, or the use of general-purpose AI models with systemic risk."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GPAIModelWithSystemicRisk ;
+    aiact:articleRef "Art. 55(1)(b)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_55/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "assess and mitigate possible systemic risks at Union level, including their sources, that may stem from the development, the placing on the market, or the use of general-purpose AI models with systemic risk" .
+
+aiact:TakeCorrectiveActions a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "take the necessary corrective actions and provide information as required in Article 20"@en ;
+    skos:definition "Providers must take necessary corrective actions and provide information as required in Article 20."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 16(j)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_16/oj> ;
+    aiact:obligationOf aiact:Provider ;
+    aiact:sourceQuote "take the necessary corrective actions and provide information as required in Article 20" .
+
+aiact:TerminationOfMandate a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "terminate the mandate if it considers or has reason to consider the provider to be acting contrary to its obligations"@en ;
+    skos:definition "The authorised representative shall terminate the mandate if it considers or has reason to consider the provider to be acting contrary to its obligations pursuant to this Regulation. In such a case, it shall also immediately inform the AI Office about the termination of the mandate and the reasons therefor."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 54(5)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_54/oj> ;
+    aiact:obligationOf aiact:AuthorisedRepresentative ;
+    aiact:sourceQuote "The authorised representative shall terminate the mandate if it considers or has reason to consider the provider to be acting contrary to its obligations pursuant to this Regulation." .
+
+aiact:Testing a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "testing"@en ;
+    skos:definition "High-risk AI systems shall be tested for the purpose of identifying the most appropriate and targeted risk management measures."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 9(6)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_9/oj> ;
+    aiact:sourceQuote "High-risk AI systems shall be tested for the purpose of identifying the most appropriate and targeted risk management measures." .
+
+aiact:Transparency a owl:NamedIndividual,
+        aiact:Requirement ;
+    rdfs:label "sufficiently transparent"@en ;
+    skos:definition "High-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently transparent to enable deployers to interpret a system's output and use it appropriately."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 13(1)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_13/oj> ;
+    aiact:sourceQuote "High-risk AI systems shall be designed and developed in such a way as to ensure that their operation is sufficiently transparent to enable deployers to interpret a system's output and use it appropriately." .
+
+aiact:UseInAccordanceWithInstructions a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "use such systems in accordance with the instructions for use accompanying the systems"@en ;
+    skos:definition "Deployers of high-risk AI systems shall take appropriate technical and organisational measures to ensure they use such systems in accordance with the instructions for use accompanying the systems."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:HighRiskAISystem ;
+    aiact:articleRef "Art. 26(1)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_26/oj> ;
+    aiact:obligationOf aiact:Deployer ;
+    aiact:sourceQuote "Deployers of high-risk AI systems shall take appropriate technical and organisational measures to ensure they use such systems in accordance with the instructions for use accompanying the systems, pursuant to paragraphs 3 and 6." .
+
+aiact:VerificationOfTechnicalDocumentation a owl:NamedIndividual,
+        aiact:Obligation ;
+    rdfs:label "verify that the technical documentation specified in Annex XI has been drawn up"@en ;
+    skos:definition "The authorised representative shall verify that the technical documentation specified in Annex XI has been drawn up and all obligations referred to in Article 53 and, where applicable, Article 55 have been fulfilled by the provider."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:appliesToSystem aiact:GeneralPurposeAIModel ;
+    aiact:articleRef "Art. 54(3)(a)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_54/oj> ;
+    aiact:obligationOf aiact:AuthorisedRepresentative ;
+    aiact:sourceQuote "verify that the technical documentation specified in Annex XI has been drawn up and all obligations referred to in Article 53 and, where applicable, Article 55 have been fulfilled by the provider;" .
+
+aiact:WorkRelatedRelationshipDecisionSystems a owl:Class ;
+    rdfs:label "AI systems intended to be used to make decisions affecting terms of work-related relationships"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics or to monitor and evaluate the performance and behaviour of persons in such relationships."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(4)(b)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "AI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics or to monitor and evaluate the performance and behaviour of persons in such relationships." .
+
+aiact:applicableFrom a owl:DatatypeProperty ;
+    rdfs:label "applicable from"@en ;
+    rdfs:range xsd:date ;
+    skos:definition "Date from which the provision applies."@en .
+
+aiact:appliesToSystem a owl:ObjectProperty ;
+    rdfs:label "applies to system"@en ;
+    rdfs:comment "The object may be a class of AI system used as an individual (OWL 2 punning), so no range is asserted."@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf ( aiact:Obligation aiact:Requirement ) ] ;
+    skos:definition "Relates an obligation or requirement to the kind of AI system it covers."@en .
+
+aiact:articleRef a owl:AnnotationProperty ;
+    rdfs:label "article reference"@en ;
+    skos:definition "Human-readable reference to the provision an entity comes from, e.g. \"Art. 5(1)(c)\"."@en .
+
+aiact:curationStatus a owl:AnnotationProperty ;
+    rdfs:label "curation status"@en ;
+    skos:definition "How the entity entered the ontology: accepted, edited or hand-authored."@en .
+
+aiact:hasLegalSource a owl:ObjectProperty ;
+    rdfs:label "has legal source"@en ;
+    rdfs:range aiact:LegalProvision ;
+    rdfs:subPropertyOf dcterms:source ;
+    skos:definition "Relates an entity to the provision of the Act it comes from."@en .
+
+aiact:hasObligation a owl:ObjectProperty ;
+    rdfs:label "has obligation"@en ;
+    owl:inverseOf aiact:obligationOf ;
+    skos:definition "Relates a role to an obligation it must carry out."@en .
+
+aiact:hasRole a owl:ObjectProperty ;
+    rdfs:label "has role"@en ;
+    rdfs:domain aiact:Organisation ;
+    rdfs:range aiact:OperatorRole ;
+    skos:definition "Relates an organisation to a role it holds under the Act."@en .
+
+aiact:mustSatisfy a owl:ObjectProperty ;
+    rdfs:label "must satisfy"@en ;
+    rdfs:domain aiact:HighRiskAISystem ;
+    rdfs:range aiact:Requirement ;
+    skos:definition "Relates a high-risk AI system to a requirement it must meet."@en .
+
+aiact:roleInRelationTo a owl:ObjectProperty ;
+    rdfs:label "role in relation to"@en ;
+    rdfs:domain aiact:OperatorRole ;
+    rdfs:range aiact:AISystem ;
+    skos:definition "Relates a role to the AI system it is held in relation to."@en .
+
+aiact:sourceQuote a owl:AnnotationProperty ;
+    rdfs:label "source quote"@en ;
+    skos:definition "Verbatim span of the Act that grounds the entity."@en .
+
+aiact:supervisedBy a owl:ObjectProperty ;
+    rdfs:label "supervised by"@en ;
+    rdfs:domain aiact:AISystem ;
+    rdfs:range aiact:Authority ;
+    skos:definition "Relates an AI system to an authority that supervises it."@en .
+
+<https://w3id.org/aiact-poc/alignments> a owl:Ontology ;
+    dcterms:description "Mappings from the core classes to AIRO, VAIR, DPV and ELI."@en ;
+    dcterms:title "AIAct-Onto alignments"@en ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/aiact-poc/core> a owl:Ontology ;
+    dcterms:description "Hand-authored class and property skeleton for a proof-of-concept ontology of Regulation (EU) 2024/1689."@en ;
+    dcterms:title "AIAct-Onto core"@en ;
+    rdfs:seeAlso <http://data.europa.eu/eli/reg/2024/1689/oj> ;
+    owl:versionInfo "0.1.0" .
+
+<https://w3id.org/aiact-poc/examples> a owl:Ontology ;
+    dcterms:description "Fictional AI systems and organisations used to test classification. S7 loads this file together with the merged ontology, so it declares no import."@en ;
+    dcterms:title "AIAct-Onto examples"@en ;
+    owl:versionInfo "0.1.0" .
+
+ex:AcmeAI a owl:NamedIndividual,
+        aiact:Organisation ;
+    rdfs:label "Acme AI"@en ;
+    rdfs:comment "Fictional provider of the CV screening tool."@en ;
+    aiact:hasRole ex:AcmeProviderRole .
+
+ex:ChatAssistant a owl:NamedIndividual,
+        aiact:AISystem ;
+    rdfs:label "chat assistant"@en ;
+    rdfs:comment "Fictional. Uses no prohibited practice and no Annex III area."@en .
+
+ex:SocialScoringPlatform a owl:NamedIndividual,
+        aiact:AISystem ;
+    rdfs:label "social scoring platform"@en ;
+    rdfs:comment "Fictional. Expected to be inferred as a prohibited AI system."@en ;
+    aiact:usesPractice aiact:SocialScoring .
+
+<https://w3id.org/aiact-poc/generated> a owl:Ontology ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "AIAct-Onto generated entities"@en ;
+    rdfs:comment "Built by S6 from data/curated/entities.json. Do not edit by hand."@en .
+
+<http://data.europa.eu/eli/ontology#LegalResourceSubdivision> a owl:Class .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_12/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 12"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_17/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 17"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_27/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 27"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_51/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 51"@en .
+
+dcterms:source a owl:ObjectProperty ;
+    rdfs:label "source"@en ;
+    rdfs:comment "Declared as an object property because aiact:hasLegalSource is a sub-property of it; ontology headers use rdfs:seeAlso for the source of the Act instead."@en .
+
+xsd:date a rdfs:Datatype .
+
+prov:Activity a owl:Class .
+
+aiact:AIOffice a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "AI Office"@en ;
+    rdfs:subClassOf aiact:Authority ;
+    skos:definition "The Commission body tasked with supervising general-purpose AI models under the Act."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(47)",
+        "Art. 50(7)" ;
+    aiact:curationStatus "hand-authored" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj>,
+        <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:sourceQuote "The AI Office shall encourage and facilitate the drawing up of codes of practice at Union level",
+        "means the Commission’s function of contributing to the implementation, monitoring and supervision of AI systems and general-purpose AI models, and AI governance, provided for in Commission Decision of 24 January 2024;" .
+
+aiact:AISystemGeneratingDeepfakeContent a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "AI system that generates or manipulates image, audio or video content constituting a deep fake"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems that generate or manipulate image, audio or video content constituting a deep fake."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 50(4)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:sourceQuote "AI system that generates or manipulates image, audio or video content constituting a deep fake" .
+
+aiact:AISystemGeneratingPublicInterestText a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems that generate or manipulate text which is published with the purpose of informing the public on matters of public interest."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 50(4)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:sourceQuote "AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest" .
+
+aiact:AISystemsGeneratingSyntheticContent a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "AI systems generating synthetic audio, image, video or text content"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems that generate synthetic audio, image, video or text content."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 50(2)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:sourceQuote "generating synthetic audio, image, video or text content" .
+
+aiact:AISystemsIntendedToInteractDirectlyWithNaturalPersons a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "AI systems intended to interact directly with natural persons"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "AI systems intended to interact directly with natural persons."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 50(1)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_50/oj> ;
+    aiact:sourceQuote "AI systems intended to interact directly with natural persons" .
+
+aiact:AuthorisedRepresentativeRole a owl:Class ;
+    rdfs:label "authorised representative role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    skos:definition "The role of acting in the Union on a written mandate from a provider to carry out its obligations."@en ;
+    aiact:articleRef "Art. 3(5)" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:DeployerRole a owl:Class ;
+    rdfs:label "deployer role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    skos:closeMatch <https://w3id.org/airo#AIDeployer> ;
+    skos:definition "The role of using an AI system under one's own authority, other than in a personal non-professional activity."@en ;
+    aiact:articleRef "Art. 3(4)" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:DistributorRole a owl:Class ;
+    rdfs:label "distributor role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    skos:definition "The role, other than provider or importer, of making an AI system available on the Union market."@en ;
+    aiact:articleRef "Art. 3(7)" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:EmploymentAndWorkersManagement a owl:NamedIndividual,
+        aiact:HighRiskArea ;
+    rdfs:label "employment, workers’ management and access to self-employment"@en ;
+    skos:definition "An area where AI systems are high-risk, covering recruitment and selection, decisions on the terms of work-related relationships, task allocation, and the monitoring and evaluation of performance and behaviour."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Annex III(4)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> ;
+    aiact:sourceQuote "Employment, workers’ management and access to self-employment:" .
+
+aiact:ImporterRole a owl:Class ;
+    rdfs:label "importer role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    skos:definition "The role of placing on the market an AI system bearing the name or trademark of a person established outside the Union."@en ;
+    aiact:articleRef "Art. 3(6)" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:LimitedRiskAISystem a owl:Class ;
+    rdfs:label "limited-risk AI system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "An AI system that is subject only to the transparency obligations of Article 50."@en ;
+    aiact:articleRef "Art. 50" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:MinimalRiskAISystem a owl:Class ;
+    rdfs:label "minimal-risk AI system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:definition "An AI system that is neither prohibited, high-risk nor subject to the transparency obligations."@en ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:ProhibitedAISystem a owl:Class ;
+    rdfs:label "prohibited AI system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    owl:disjointWith aiact:HighRiskAISystem ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( aiact:AISystem [ a owl:Restriction ;
+                        owl:onProperty aiact:usesPractice ;
+                        owl:someValuesFrom aiact:ProhibitedPractice ] ) ] ;
+    skos:definition "An AI system that puts a practice prohibited by Article 5 into effect."@en ;
+    aiact:articleRef "Art. 5" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:SocialScoring a owl:NamedIndividual,
+        aiact:ProhibitedPractice ;
+    rdfs:label "social scoring"@en ;
+    skos:definition "The placing on the market, putting into service or use of AI systems that evaluate or classify natural persons over a period of time on the basis of their social behaviour or personal characteristics, where the resulting social score leads to detrimental or unfavourable treatment that is unrelated to the original context or is unjustified or disproportionate."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 5(1)(c)" ;
+    aiact:curationStatus "edited" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_5/oj> ;
+    aiact:sourceQuote "the placing on the market, the putting into service or the use of AI systems for the evaluation or classification of natural persons or groups of persons over a certain period of time based on their social behaviour" .
+
+aiact:obligationOf a owl:ObjectProperty ;
+    rdfs:label "obligation of"@en ;
+    rdfs:comment "The range widens README §5.3 from OperatorRole to include Authority and MemberState, because the Act also places duties on the Commission, the AI Office, national authorities and the Member States."@en ;
+    rdfs:domain aiact:Obligation ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf ( aiact:OperatorRole aiact:Authority aiact:MemberState ) ] ;
+    skos:definition "Relates an obligation to the role or authority that must carry it out."@en .
+
+aiact:usedInArea a owl:ObjectProperty ;
+    rdfs:label "used in area"@en ;
+    rdfs:domain aiact:AISystem ;
+    rdfs:range aiact:HighRiskArea ;
+    skos:definition "Relates an AI system to the area it is intended to be used in."@en .
+
+aiact:usesPractice a owl:ObjectProperty ;
+    rdfs:label "uses practice"@en ;
+    rdfs:domain aiact:AISystem ;
+    rdfs:range aiact:AIPractice ;
+    skos:definition "Relates an AI system to a practice it puts into effect."@en .
+
+ex:AcmeProviderRole a owl:NamedIndividual,
+        aiact:ProviderRole ;
+    rdfs:label "Acme AI as provider of the CV screening tool"@en ;
+    aiact:roleInRelationTo ex:CVScreeningTool .
+
+ex:CVScreeningTool a owl:NamedIndividual,
+        aiact:AISystem ;
+    rdfs:label "CV screening tool"@en ;
+    rdfs:comment "Fictional. Expected to be inferred as an Annex III high-risk AI system."@en ;
+    aiact:usedInArea aiact:EmploymentAndWorkersManagement .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_13/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 13"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_52/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 52"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_6/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 6"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_64/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 64"@en .
+
+aiact:AIPractice a owl:Class ;
+    rdfs:label "AI practice"@en ;
+    skos:definition "A way of placing on the market, putting into service or using an AI system."@en ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:Commission a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "Commission"@en ;
+    rdfs:subClassOf aiact:Authority ;
+    skos:definition "The European Commission, which holds duties and powers under the Act and hosts the AI Office."@en ;
+    aiact:articleRef "Art. 64" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:MemberState a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "Member State"@en ;
+    skos:definition "A Member State of the Union, which holds duties under the Act such as designating national competent authorities."@en ;
+    aiact:articleRef "Art. 70" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:NationalCompetentAuthority a owl:Class ;
+    rdfs:label "national competent authority"@en ;
+    rdfs:subClassOf aiact:Authority ;
+    skos:definition "A notifying authority or market surveillance authority designated by a Member State."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(48)",
+        "Art. 70" ;
+    aiact:curationStatus "hand-authored" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a notifying authority or a market surveillance authority;" .
+
+aiact:Organisation a owl:Class ;
+    rdfs:label "organisation"@en ;
+    skos:closeMatch <https://w3id.org/dpv#Organisation> ;
+    skos:definition "A natural or legal person, public authority, agency or other body that can hold roles under the Act."@en ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:ProviderRole a owl:Class ;
+    rdfs:label "provider role"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    skos:closeMatch <https://w3id.org/airo#AIProvider> ;
+    skos:definition "The role of developing an AI system or general-purpose AI model, or having one developed, and placing it on the market or putting it into service under one's own name or trademark."@en ;
+    aiact:articleRef "Art. 3(3)" ;
+    aiact:curationStatus "hand-authored" .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_10/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 10"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_9/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 9"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_15/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 15"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_14/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 14"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_55/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 55"@en .
+
+aiact:AuthorisedRepresentative a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "authorised representative"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    owl:equivalentClass aiact:AuthorisedRepresentativeRole ;
+    skos:definition "A natural or legal person located or established in the Union who has received and accepted a written mandate from a provider of an AI system or a general-purpose AI model to, respectively, perform and carry out on its behalf the obligations and procedures established by this Regulation."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(5)",
+        "Art. 54(1)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj>,
+        <http://data.europa.eu/eli/reg/2024/1689/art_54/oj> ;
+    aiact:sourceQuote "appoint an authorised representative which is established in the Union",
+        "means a natural or legal person located or established in the Union who has received and accepted a written mandate from a provider of an AI system or a general-purpose AI model to, respectively, perform and carry out on its behalf the obligations and procedures established by this Regulation;" .
+
+aiact:GPAIModelWithSystemicRisk a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "general-purpose AI model with systemic risk"@en ;
+    rdfs:subClassOf aiact:GeneralPurposeAIModel ;
+    skos:definition "A general-purpose AI model classified as having systemic risk under Article 51."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 51",
+        "Art. 51(1)",
+        "Art. 52(3)" ;
+    aiact:curationStatus "hand-authored" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_51/oj>,
+        <http://data.europa.eu/eli/reg/2024/1689/art_52/oj> ;
+    aiact:sourceQuote "A general-purpose AI model shall be classified as a general-purpose AI model with systemic risk if it meets any of the following conditions",
+        "the general-purpose AI model shall be considered to be a general-purpose AI model with systemic risk" .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_53/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 53"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_5/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 5"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_54/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 54"@en .
+
+aiact:Authority a owl:Class ;
+    rdfs:label "authority"@en ;
+    skos:definition "A public body with a function under the Act."@en ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:HighRiskArea a owl:Class ;
+    rdfs:label "high-risk area"@en ;
+    skos:closeMatch <https://w3id.org/vair#AICapability> ;
+    skos:definition "An area listed in Annex III in which an AI system counts as high-risk; its members are the individual areas."@en ;
+    aiact:articleRef "Annex III" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:ProhibitedPractice a owl:Class ;
+    rdfs:label "prohibited practice"@en ;
+    rdfs:subClassOf aiact:AIPractice ;
+    skos:definition "An AI practice prohibited by Article 5; its members are the individual practices listed there."@en ;
+    aiact:articleRef "Art. 5" ;
+    aiact:curationStatus "hand-authored" .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_50/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 50"@en .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_16/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 16"@en .
+
+aiact:GeneralPurposeAIModel a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "general-purpose AI model"@en ;
+    skos:definition "An AI model that displays significant generality, can competently perform a wide range of distinct tasks and can be integrated into downstream systems."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(63)",
+        "Art. 53(1)" ;
+    aiact:curationStatus "hand-authored" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj>,
+        <http://data.europa.eu/eli/reg/2024/1689/art_53/oj> ;
+    aiact:sourceQuote "general-purpose AI model",
+        "means an AI model, including where such an AI model is trained with a large amount of data using self-supervision at scale, that displays significant generality and is capable of competently performing a wide range of distinct tasks regardless of the way the model is placed on the market" .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_26/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 26"@en .
+
+aiact:Requirement a owl:Class ;
+    rdfs:label "requirement"@en ;
+    skos:definition "A property a high-risk AI system must have under Section 2 of Chapter III; its members are the individual requirements."@en ;
+    aiact:articleRef "Art. 8" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:OperatorRole a owl:Class ;
+    rdfs:label "operator role"@en ;
+    skos:definition "A role an organisation or person holds towards an AI system or model."@en ;
+    aiact:articleRef "Art. 3(8)" ;
+    aiact:curationStatus "hand-authored" .
+
+<http://data.europa.eu/eli/reg/2024/1689/art_3/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Art. 3"@en .
+
+aiact:Deployer a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "deployer"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    owl:equivalentClass aiact:DeployerRole ;
+    skos:definition "A natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(4)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a natural or legal person, public authority, agency or other body using an AI system under its authority except where the AI system is used in the course of a personal non-professional activity;" .
+
+aiact:LegalProvision a owl:Class ;
+    rdfs:label "legal provision"@en ;
+    rdfs:subClassOf <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> ;
+    skos:definition "An article, paragraph or point of the Act, identified by its ELI URI."@en ;
+    aiact:curationStatus "hand-authored" .
+
+<http://data.europa.eu/eli/reg/2024/1689/anx_III/oj> a owl:NamedIndividual,
+        aiact:LegalProvision ;
+    rdfs:label "Annex III"@en .
+
+aiact:Provider a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "provider"@en ;
+    rdfs:subClassOf aiact:OperatorRole ;
+    owl:equivalentClass aiact:ProviderRole ;
+    skos:definition "A natural or legal person, public authority, agency or other body that develops an AI system or general-purpose AI model, or has one developed, and places it on the market or puts it into service under its own name or trademark."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(3)" ;
+    aiact:curationStatus "accepted" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a natural or legal person, public authority, agency or other body that develops an AI system or a general-purpose AI model" .
+
+aiact:AISystem a owl:Class ;
+    rdfs:label "AI system"@en ;
+    skos:closeMatch <https://w3id.org/airo#AISystem> ;
+    skos:definition "A machine-based system that infers, from the input it receives, how to generate outputs that can influence physical or virtual environments."@en ;
+    prov:wasGeneratedBy aiact:run_7dfe75ab2f03 ;
+    aiact:articleRef "Art. 3(1)" ;
+    aiact:curationStatus "hand-authored" ;
+    aiact:hasLegalSource <http://data.europa.eu/eli/reg/2024/1689/art_3/oj> ;
+    aiact:sourceQuote "means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments;" .
+
+aiact:HighRiskAISystem a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "high-risk AI system"@en ;
+    rdfs:subClassOf aiact:AISystem ;
+    skos:closeMatch <https://w3id.org/airo#HighRiskAISystem> ;
+    skos:definition "An AI system classified as high-risk under Article 6."@en ;
+    aiact:articleRef "Art. 6" ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:Obligation a owl:Class ;
+    rdfs:label "obligation"@en ;
+    skos:closeMatch <https://w3id.org/dpv#Obligation> ;
+    skos:definition "A duty the Act places on a role; its members are the individual duties."@en ;
+    aiact:curationStatus "hand-authored" .
+
+aiact:run_7dfe75ab2f03 a prov:Activity ;
+    rdfs:label "AIAct-Onto pipeline run 7dfe75ab2f03"@en ;
+    dcterms:description "extraction and verification model: qwen3.5:4b"@en,
+        "extraction and verification model: qwen3.5:9b"@en ;
+    dcterms:source <http://data.europa.eu/eli/reg/2024/1689/oj> .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( aiact:AISystem aiact:OperatorRole aiact:Authority aiact:Obligation aiact:LegalProvision ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( aiact:ProhibitedAISystem aiact:HighRiskAISystem aiact:LimitedRiskAISystem aiact:MinimalRiskAISystem ) .
+

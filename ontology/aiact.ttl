@@ -1,0 +1,17 @@
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+# Top-level ontology (README §5.1). It only imports; all content lives in the imported files.
+
+<https://w3id.org/aiact-poc> a owl:Ontology ;
+    dcterms:title "AIAct-Onto: a proof-of-concept ontology of the EU AI Act"@en ;
+    dcterms:creator "Nathan Gavenski" ;
+    dcterms:created "2026-09-22"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:seeAlso <http://data.europa.eu/eli/reg/2024/1689/oj> ;
+    owl:versionInfo "0.1.0" ;
+    owl:imports <https://w3id.org/aiact-poc/core> ,
+                <https://w3id.org/aiact-poc/alignments> ,
+                <https://w3id.org/aiact-poc/generated> .

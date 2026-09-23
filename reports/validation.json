@@ -1,0 +1,35 @@
+{
+  "engine": "robot",
+  "checks": [
+    {
+      "check": "parses",
+      "status": "pass",
+      "detail": "1774 triples"
+    },
+    {
+      "check": "profile",
+      "status": "pass",
+      "detail": "OWL 2 DL Profile Report: [Ontology and imports closure in profile]"
+    },
+    {
+      "check": "consistency",
+      "status": "pass",
+      "detail": "consistent, no unsatisfiable classes"
+    },
+    {
+      "check": "classification",
+      "status": "pass",
+      "detail": "{\"CVScreeningTool\": [\"AnnexIIIHighRiskAISystem\", \"HighRiskAISystem\"], \"SocialScoringPlatform\": [\"ProhibitedAISystem\"], \"ChatAssistant\": []}"
+    },
+    {
+      "check": "shacl",
+      "status": "pass",
+      "detail": "conforms"
+    },
+    {
+      "check": "robot_report",
+      "status": "pass",
+      "detail": "0 errors, 40 warnings, 10 info"
+    }
+  ]
+}

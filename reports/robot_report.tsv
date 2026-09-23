@@ -1,0 +1,51 @@
+Level	Rule Name	Subject	Property	Value
+WARN	equivalent_pair	https://w3id.org/aiact-poc#AuthorisedRepresentative	owl:equivalentClass	https://w3id.org/aiact-poc#AuthorisedRepresentativeRole
+WARN	equivalent_pair	https://w3id.org/aiact-poc#Deployer	owl:equivalentClass	https://w3id.org/aiact-poc#DeployerRole
+WARN	equivalent_pair	https://w3id.org/aiact-poc#Distributor	owl:equivalentClass	https://w3id.org/aiact-poc#DistributorRole
+WARN	equivalent_pair	https://w3id.org/aiact-poc#Importer	owl:equivalentClass	https://w3id.org/aiact-poc#ImporterRole
+WARN	equivalent_pair	https://w3id.org/aiact-poc#Provider	owl:equivalentClass	https://w3id.org/aiact-poc#ProviderRole
+WARN	missing_definition	dc:source	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#AIPractice	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#AnnexIHighRiskAISystem	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#AnnexIIIHighRiskAISystem	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#AuthorisedRepresentativeRole	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#Authority	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#DeployerRole	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#DistributorRole	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#HighRiskArea	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#ImporterRole	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#LegalProvision	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#LimitedRiskAISystem	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#MinimalRiskAISystem	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#NotifiedBody	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#Obligation	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#OperatorRole	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#Organisation	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#ProhibitedAISystem	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#ProhibitedPractice	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#ProviderRole	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#Requirement	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#applicableFrom	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#appliesToSystem	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#articleRef	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#curationStatus	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#hasLegalSource	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#hasObligation	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#hasRole	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#mustSatisfy	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#obligationOf	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#roleInRelationTo	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#sourceQuote	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#supervisedBy	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#usedInArea	IAO:0000115	
+WARN	missing_definition	https://w3id.org/aiact-poc#usesPractice	IAO:0000115	
+INFO	missing_superclass	https://w3id.org/aiact-poc#AIPractice	rdfs:subClassOf	
+INFO	missing_superclass	https://w3id.org/aiact-poc#AISystem	rdfs:subClassOf	
+INFO	missing_superclass	https://w3id.org/aiact-poc#Authority	rdfs:subClassOf	
+INFO	missing_superclass	https://w3id.org/aiact-poc#GeneralPurposeAIModel	rdfs:subClassOf	
+INFO	missing_superclass	https://w3id.org/aiact-poc#HighRiskArea	rdfs:subClassOf	
+INFO	missing_superclass	https://w3id.org/aiact-poc#MemberState	rdfs:subClassOf	
+INFO	missing_superclass	https://w3id.org/aiact-poc#Obligation	rdfs:subClassOf	
+INFO	missing_superclass	https://w3id.org/aiact-poc#OperatorRole	rdfs:subClassOf	
+INFO	missing_superclass	https://w3id.org/aiact-poc#Organisation	rdfs:subClassOf	
+INFO	missing_superclass	https://w3id.org/aiact-poc#Requirement	rdfs:subClassOf	

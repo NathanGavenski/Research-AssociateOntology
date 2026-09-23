@@ -103,4 +103,5 @@ class Ingest:
 if __name__ == "__main__":
     ingest_instance = Ingest()
     html_content = ingest_instance.ingest()
-    print(html_content)
+    print(f"{len(html_content)} characters in {ingest_instance.path}output.html "
+          f"(retrieved {ingest_instance.last_ingest()})")

@@ -216,3 +216,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# S7 scratch space (the kept evidence is reports/*.json, *.txt and *.tsv)
+reports/.work/
+
+# LaTeX build files (documentation.pdf is committed)
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.fls
+docs/*.fdb_latexmk
+
+# Submission bundle (rebuild with "make package")
+output/
+output.zip

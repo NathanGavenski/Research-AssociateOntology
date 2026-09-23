@@ -1,0 +1,15 @@
+# CQ5: For general-purpose AI models, which duties fall on the provider and which on the
+# authorised representative?
+PREFIX aiact: <https://w3id.org/aiact-poc#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?role ?obligation ?label ?article
+WHERE {
+  VALUES ?system { aiact:GeneralPurposeAIModel aiact:GPAIModelWithSystemicRisk }
+  ?obligation a aiact:Obligation ;
+              aiact:obligationOf ?role ;
+              aiact:appliesToSystem ?system ;
+              rdfs:label ?label ;
+              aiact:articleRef ?article .
+}
+ORDER BY ?role ?article

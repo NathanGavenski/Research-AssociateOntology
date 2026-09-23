@@ -1,0 +1,37 @@
+@prefix aiact: <https://w3id.org/aiact-poc#> .
+@prefix ex:    <https://w3id.org/aiact-poc/examples#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Fictional test individuals (README §5.6). They give the reasoner something to classify and the
+# competency questions something to return. They are not part of the released ontology.
+
+<https://w3id.org/aiact-poc/examples> a owl:Ontology ;
+    dcterms:title "AIAct-Onto examples"@en ;
+    dcterms:description "Fictional AI systems and organisations used to test classification. S7 loads this file together with the merged ontology, so it declares no import."@en ;
+    owl:versionInfo "0.1.0" .
+
+ex:CVScreeningTool a aiact:AISystem , owl:NamedIndividual ;
+    rdfs:label "CV screening tool"@en ;
+    rdfs:comment "Fictional. Expected to be inferred as an Annex III high-risk AI system."@en ;
+    aiact:usedInArea aiact:EmploymentAndWorkersManagement .
+
+ex:SocialScoringPlatform a aiact:AISystem , owl:NamedIndividual ;
+    rdfs:label "social scoring platform"@en ;
+    rdfs:comment "Fictional. Expected to be inferred as a prohibited AI system."@en ;
+    aiact:usesPractice aiact:SocialScoring .
+
+ex:ChatAssistant a aiact:AISystem , owl:NamedIndividual ;
+    rdfs:label "chat assistant"@en ;
+    rdfs:comment "Fictional. Uses no prohibited practice and no Annex III area."@en .
+
+ex:AcmeAI a aiact:Organisation , owl:NamedIndividual ;
+    rdfs:label "Acme AI"@en ;
+    rdfs:comment "Fictional provider of the CV screening tool."@en .
+
+ex:AcmeProviderRole a aiact:ProviderRole , owl:NamedIndividual ;
+    rdfs:label "Acme AI as provider of the CV screening tool"@en ;
+    aiact:roleInRelationTo ex:CVScreeningTool .
+
+ex:AcmeAI aiact:hasRole ex:AcmeProviderRole .
